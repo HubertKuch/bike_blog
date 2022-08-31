@@ -84,8 +84,4 @@ class NewsController {
 
         return $response->withStatus(HTTPStatus::OK)->json($newsDTOs);
     }
-
-    #[DeleteMapping("/")]
-    public function deleteNewsById() {
-    }
 }

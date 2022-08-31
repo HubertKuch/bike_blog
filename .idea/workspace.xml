@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Find news by">
-      <change afterPath="$PROJECT_DIR$/Exceptions/InvalidRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Delete delete">
       <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exceptions/NewsNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/NewsNotFoundException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/News.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/HTTP/news.http" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/HTTP/news.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Validators/NewsValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/NewsValidator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +170,12 @@
     <MESSAGE value="Implement date in news object" />
     <MESSAGE value="Add checking is news is set and throw response if not" />
     <MESSAGE value="Add `NotFoundException` and `NewsNotFoundException`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `NotFoundException` and `NewsNotFoundException`" />
+    <MESSAGE value="Change code from 400 to 404 on not found exception" />
+    <MESSAGE value="Add InvalidRequest exception" />
+    <MESSAGE value="Reformat code and fix bug with date format" />
+    <MESSAGE value="New action: find news by tag" />
+    <MESSAGE value="Validate news" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validate news" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
