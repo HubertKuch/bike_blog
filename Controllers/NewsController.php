@@ -13,9 +13,11 @@ use Avocado\ORM\AvocadoModelException;
 use Avocado\Application\RestController;
 use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Mappings\GetMapping;
+use Avocado\ORM\AvocadoRepositoryException;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Mappings\PostMapping;
 use AvocadoApplication\Mappings\DeleteMapping;
+use Hubert\BikeBlog\Exceptions\InvalidRequest;
 use Hubert\BikeBlog\Utils\Validators\NewsValidator;
 use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
 
@@ -26,11 +28,15 @@ class NewsController {
     #[Autowired("newsRepository")]
     private AvocadoRepository $newsRepository;
 
+    /**
+     * @throws AvocadoModelException
+     * @throws ReflectionException
+     * @throws AvocadoRepositoryException
+     * @throws InvalidRequest
+     */
     #[PostMapping("/")]
     public function newNews(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-        $isValid = NewsValidator::isValidNews($request);
-
-        if (!$isValid) return $response->json(["message" => "Invalid request"])->withStatus(HTTPStatus::BAD_REQUEST);
+        NewsValidator::validateNewNews($request);
 
         $news = News::from($request);
 
@@ -66,8 +72,17 @@ class NewsController {
         return $response->json([NewsDTO::from($news)]);
     }
 
-    #[GetMapping("/")]
-    public function getNewsByTag() {
+    #[GetMapping("/tag/:tag")]
+    public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response) {
+        NewsValidator::validateFindByTag($request);
+
+        $tag = $request->params['tag'];
+
+        $news = $this->newsRepository->findMany(["tags" => "%$tag%"]);
+
+        $newsDTOs = array_map(fn($n) => NewsDTO::from($n), $news);
+
+        return $response->withStatus(HTTPStatus::OK)->json($newsDTOs);
     }
 
     #[DeleteMapping("/")]
