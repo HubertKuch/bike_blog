@@ -16,7 +16,6 @@ use AvocadoApplication\Mappings\GetMapping;
 use Avocado\ORM\AvocadoRepositoryException;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Mappings\PostMapping;
-use AvocadoApplication\Mappings\DeleteMapping;
 use Hubert\BikeBlog\Exceptions\InvalidRequest;
 use Hubert\BikeBlog\Utils\Validators\NewsValidator;
 use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
@@ -45,6 +44,10 @@ class NewsController {
         return $response->withStatus(HTTPStatus::CREATED)->json(["message" => "Success"]);
     }
 
+    /**
+     * @throws AvocadoModelException
+     * @throws ReflectionException
+     */
     #[GetMapping("/")]
     public function getAllNews(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
         $news = $this->newsRepository->findMany();
@@ -73,7 +76,7 @@ class NewsController {
     }
 
     #[GetMapping("/tag/:tag")]
-    public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response) {
+    public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
         NewsValidator::validateFindByTag($request);
 
         $tag = $request->params['tag'];

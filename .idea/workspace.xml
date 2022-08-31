@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Delete delete">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/HTTP/news.http" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/HTTP/news.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +175,8 @@
     <MESSAGE value="Reformat code and fix bug with date format" />
     <MESSAGE value="New action: find news by tag" />
     <MESSAGE value="Validate news" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validate news" />
+    <MESSAGE value="Delete delete action on news" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete delete action on news" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
