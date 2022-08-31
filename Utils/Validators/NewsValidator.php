@@ -3,14 +3,32 @@
 namespace Hubert\BikeBlog\Utils\Validators;
 
 use Avocado\Router\AvocadoRequest;
+use Hubert\BikeBlog\Exceptions\InvalidRequest;
 
 class NewsValidator {
 
-    public static function isValidNews(AvocadoRequest $request): bool {
+    /**
+     * @throws InvalidRequest
+     */
+    public static function validateNewNews(AvocadoRequest $request): void {
         $title = $request->body['title'] ?? null;
         $description = $request->body['description'] ?? null;
         $tags = $request->body['tags'] ?? null;
+        $date = $request->body['date'] ?? null;
 
-        return $title && $description && is_array($tags);
+        if ($title && $description && $date && is_string($date) && is_array($tags)) return;
+
+        throw new InvalidRequest("Invalid request");
+    }
+
+    /**
+     * @throws InvalidRequest
+     */
+    public static function validateFindByTag(AvocadoRequest $request): void {
+        $tag = $request->params['tag'];
+
+        if ($tag) return;
+
+        throw new InvalidRequest("Invalid request");
     }
 }
