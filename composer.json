@@ -1,0 +1,36 @@
+{
+    "name": "hubert/bike-blog",
+    "type": "project",
+    "autoload": {
+        "classmap": [
+            "Configuration",
+            "Controllers",
+            "Exceptions",
+            "Models",
+            "Resources",
+            "Tests",
+            "BikeApplication.php"
+        ],
+        "psr-4": {
+          "Hubert\\BikeBlog\\Configuration\\": "Configuration",
+          "Hubert\\BikeBlog\\Models\\": "Models",
+          "Hubert\\BikeBlog\\Exceptions\\": "Exceptions",
+          "Hubert\\BikeBlog\\Controllers\\": "Controllers",
+          "Hubert\\BikeBlog\\Resources\\": "Resources",
+          "Hubert\\BikeBlog\\Tests\\": "Tests",
+          "Hubert\\BikeBlog\\Utils\\": "Utils"
+        }
+    },
+    "authors": [
+        {
+            "name": "hubert",
+            "email": "kuchhubert@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "vlucas/phpdotenv": "v5.0.0",
+        "ramsey/uuid": "4.4.0",
+        "hubert/avocado": "v4.1.0"
+    }
+}
