@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Basic logic for creating new news">
-      <change afterPath="$PROJECT_DIR$/Models/NewsDTO.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/HTTP/news.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bike-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bike-blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Add checking is news is set and throw response if not">
+      <change afterPath="$PROJECT_DIR$/Exceptions/NewsNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exceptions/NotFoundException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +170,9 @@
     <MESSAGE value="Implement domain tag class" />
     <MESSAGE value="Basic logic for creating new news" />
     <MESSAGE value="Rewrite all `index.php/*` requests to `*`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrite all `index.php/*` requests to `*`" />
+    <MESSAGE value="Implement date in news object" />
+    <MESSAGE value="Add checking is news is set and throw response if not" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add checking is news is set and throw response if not" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
