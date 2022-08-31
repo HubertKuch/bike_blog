@@ -34,7 +34,7 @@ class News {
     }
 
     public static function from(AvocadoRequest $request): News {
-        return new News(UuidV4::uuid4(), $request->body['title'], $request->body['description'], array_map(fn($tag) => new Tag($tag), $request->body['tags']), Carbon::createFromFormat("YYYY-MM-DD", $request['date']));
+        return new News(UuidV4::uuid4(), $request->body['title'], $request->body['description'], array_map(fn($tag) => new Tag($tag), $request->body['tags']), Carbon::createFromFormat("Y-m-d H:i:s", "{$request->body['date']} 00:00:00"));
     }
 
     public function getId(): string {
@@ -54,6 +54,6 @@ class News {
     }
 
     public function getDate(): Carbon {
-        return Carbon::createFromFormat("YYYY-MM-DD", $this->date);
+        return Carbon::createFromFormat("Y-m-d", $this->date);
     }
 }
