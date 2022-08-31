@@ -1,0 +1,21 @@
+GET http://localhost/bike-blog/api/v1/news/
+Accept: application/json
+
+###
+POST http://localhost/bike-blog/api/v1/news/
+Content-Type: application/json
+
+{
+  "title": "Test",
+  "description": "test",
+  "tags": [
+    "test",
+    "Test2"
+  ]
+}
+
+###
+GET http://localhost/bike-blog/api/v1/news/dea16e9d-f024-470d-8c45-7d1eb1a7d009
+
+###
+DELETE http://localhost/bike-blog/api/v1/news/4

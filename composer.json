@@ -29,8 +29,9 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "vlucas/phpdotenv": "v5.0.0",
-        "ramsey/uuid": "4.4.0",
-        "hubert/avocado": "v4.1.0"
+      "vlucas/phpdotenv": "v5.0.0",
+      "ramsey/uuid": "4.4.0",
+      "hubert/avocado": "dev-main",
+      "nesbot/carbon": "2.62.0"
     }
 }

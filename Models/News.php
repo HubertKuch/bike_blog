@@ -2,6 +2,7 @@
 
 namespace Hubert\BikeBlog\Models;
 
+use Carbon\Carbon;
 use Avocado\ORM\Attributes\Id;
 use Ramsey\Uuid\UuidInterface;
 use Ramsey\Uuid\Rfc4122\UuidV4;
@@ -20,17 +21,20 @@ class News {
     private string $description;
     #[Field]
     private string $tags;
+    #[Field]
+    private string $date;
 
     /** @param Tag[] $tags */
-    public function __construct(UuidInterface $id, string $title, string $description, array $tags) {
+    public function __construct(UuidInterface $id, string $title, string $description, array $tags, Carbon $date) {
         $this->id = $id->toString();
         $this->title = $title;
         $this->description = $description;
         $this->tags = implode(";", array_map(fn($tag) => $tag->getTag(), $tags));
+        $this->date = $date->toDateString();
     }
 
     public static function from(AvocadoRequest $request): News {
-        return new News(UuidV4::uuid4(), $request->body['title'], $request->body['description'], array_map(fn($tag) => new Tag($tag), $request->body['tags']),);
+        return new News(UuidV4::uuid4(), $request->body['title'], $request->body['description'], array_map(fn($tag) => new Tag($tag), $request->body['tags']), Carbon::createFromFormat("YYYY-MM-DD", $request['date']));
     }
 
     public function getId(): string {
@@ -45,8 +49,11 @@ class News {
         return $this->description;
     }
 
-    /** @return Tag[] */
     public function getTags(): array {
         return array_map(fn($tag) => new Tag($tag), explode(";", $this->tags));
+    }
+
+    public function getDate(): Carbon {
+        return Carbon::createFromFormat("YYYY-MM-DD", $this->date);
     }
 }
