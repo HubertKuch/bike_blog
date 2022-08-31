@@ -1,0 +1,13 @@
+###
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+###
+POST http://localhost/bike-blog/api/v1/meters/
+Content-Type: application/json
+
+{
+  "newsId": "1ec210a5-ee6e-4310-8288-3738c379a89b",
+  "maxSpeed": 24.2,
+  "time": 24.12,
+  "toShow": true
+}

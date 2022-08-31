@@ -4,8 +4,10 @@ namespace Hubert\BikeBlog\Models;
 
 use Avocado\ORM\Attributes\Id;
 use Ramsey\Uuid\UuidInterface;
+use Ramsey\Uuid\Rfc4122\UuidV4;
 use Avocado\ORM\Attributes\Table;
 use Avocado\ORM\Attributes\Field;
+use Avocado\Router\AvocadoRequest;
 
 #[Table("meter")]
 class Meter {
@@ -16,9 +18,9 @@ class Meter {
     private float $maxSpeed;
     #[Field]
     private float $time;
-    #[Field]
+    #[Field("to_show")]
     private bool $isToShow;
-    #[Field]
+    #[Field("news_id")]
     private string $newsId;
 
     public function __construct(UuidInterface $id, float $maxSpeed, float $time, bool $isToShow, string $newsId) {
@@ -27,6 +29,10 @@ class Meter {
         $this->time = $time;
         $this->isToShow = $isToShow;
         $this->newsId = $newsId;
+    }
+
+    public static function fromRequest(AvocadoRequest $request): Meter {
+        return new Meter(UuidV4::uuid4(), $request->body['maxSpeed'], $request->body['time'], $request->body['toShow'], $request->body['newsId'],);
     }
 
     public function getId(): string {
