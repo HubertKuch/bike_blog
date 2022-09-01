@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Resources" isTestSource="false" packagePrefix="Hubert\BikeBlog\Resources\" />
       <sourceFolder url="file://$MODULE_DIR$/Tests" isTestSource="false" packagePrefix="Hubert\BikeBlog\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/Utils" isTestSource="false" packagePrefix="Hubert\BikeBlog\Utils\" />
+      <sourceFolder url="file://$MODULE_DIR$/Client" isTestSource="false" packagePrefix="Hubert\BikeBlog\Client\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />

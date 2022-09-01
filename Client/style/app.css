@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #9f9f9f;
+    font-size: 1.6rem;
+    color: white;
+}
+
+header {
+    min-height: 5%;
+    height: fit-content;
+    background: linear-gradient(#595959, #9f9f9f);
+}
+
+.banner {
+    margin: 0 auto 0;
+    display: block;
+}
+
+header .banner {
+    width: 85%;
+    bottom: -0.3px;
+    position: relative;
+    z-index: 10;
+}
+
+nav .banner, .main-content .banner {
+    width: 100%;
+    top: 0;
+    outline: none;
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.title {
+    color: white;
+    font-size: 3.5rem;
+}
+
+.pink {
+    color: #fc6eba;
+}
+
+.main-content {
+    width: 85%;
+    min-height: 90%;
+    background: black;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+nav {
+    color: white;
+    z-index: 1000;
+    overflow: hidden;
+    height: fit-content;
+}
+
+nav ul {
+    padding: 10px;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    margin: 0 auto 0;
+}
+
+li {
+    float: left;
+    font-size: 1.4rem;
+}
+
+nav a:visited, nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-image {
+    display: block;
+    margin: 10px auto 0;
+    width: 90%;
+}
+
+.blog-description {
+    padding: 15px;
+    line-height: 2rem;
+    font-size: 1.8rem;
+}
+
+.divider {
+    width: 80%;
+}
+
+footer {
+    padding: 10px 20px 0;
+    color: black;
+    margin: 0 0 20px;
+}

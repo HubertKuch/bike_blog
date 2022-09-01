@@ -4,20 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controllers/MetersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/MeterDTO.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/HTTP/meters.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/Validators/MetersValidators.php" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Base logic for meters">
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/Hubert_Kuch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/Michal_Sak.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/statistic.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/views/components/banner_in_main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/views/components/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/views/components/head.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/views/components/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/views/components/nav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/views/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/ViewsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/Banner/banner_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/Banner/banner_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/Banner/banner_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/deutch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/saku.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/bike-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bike-blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Meter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Meter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +44,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package.json" />
         <option value="HTTP Request" />
+        <option value="package.json" />
+        <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -97,7 +110,7 @@
     </include_path>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2DQm4Ipd7jW6Jb37ZxVKQ16OAGR" />
   <component name="ProjectLevelVcsManager">
@@ -111,6 +124,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -118,18 +132,22 @@
     "code.cleanup.on.save": "true",
     "com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected": "true",
     "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
-    "last_opened_file_path": "/opt/lampp/htdocs/bike-blog/Tests/Unit",
+    "javascript.nodejs.core.library.configured.version": "16.15.1",
+    "javascript.nodejs.core.library.typings.version": "16.11.56",
+    "last_opened_file_path": "/opt/lampp/htdocs/bike-blog/Resources/Images/Banner",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/home/hubert/.nvm/versions/node/v16.15.1/bin/node",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.09302324",
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "rsyncConfigurable",
+    "settings.editor.selected.configurable": "copyright",
     "settings.editor.splitter.proportion": "0.310559"
   },
   "keyToStringList": {
@@ -140,12 +158,18 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Resources/Images/Banner" />
+      <recent name="$PROJECT_DIR$/Resources/Images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Resources/Images/Banner" />
+      <recent name="$PROJECT_DIR$/Resources/img" />
       <recent name="$PROJECT_DIR$/Resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="HTTP Request.meters | #1">
+  <component name="RunManager" selected="PHPUnit.bike-blog">
     <configuration name="meters | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Tests/HTTP/meters.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -155,21 +179,21 @@
     <configuration name="news | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Tests/HTTP/news.http" index="4" requestIdentifier="#4" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="MetersControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\MetersControllerTest" file="$PROJECT_DIR$/Tests/Unit/MetersControllerTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
     <configuration name="MetersControllerTest.testGettingMetersByNewsId" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Hubert\BikeBlog\Tests\Unit\MetersControllerTest" file="$PROJECT_DIR$/Tests/Unit/MetersControllerTest.php" method="testGettingMetersByNewsId" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="bike-blog" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.bike-blog" />
         <item itemvalue="HTTP Request.meters | #1" />
         <item itemvalue="HTTP Request.meters | #2" />
         <item itemvalue="HTTP Request.news | #4" />
         <item itemvalue="PHPUnit.MetersControllerTest.testGettingMetersByNewsId" />
-        <item itemvalue="PHPUnit.MetersControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +241,8 @@
     <MESSAGE value="Validate news" />
     <MESSAGE value="Delete delete action on news" />
     <MESSAGE value="Refactor NewsController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor NewsController" />
+    <MESSAGE value="Base logic for meters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base logic for meters" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

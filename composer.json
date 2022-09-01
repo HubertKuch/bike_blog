@@ -18,7 +18,8 @@
           "Hubert\\BikeBlog\\Controllers\\": "Controllers",
           "Hubert\\BikeBlog\\Resources\\": "Resources",
           "Hubert\\BikeBlog\\Tests\\": "Tests",
-          "Hubert\\BikeBlog\\Utils\\": "Utils"
+          "Hubert\\BikeBlog\\Utils\\": "Utils",
+          "Hubert\\BikeBlog\\Client\\": "Client"
         }
     },
     "authors": [
