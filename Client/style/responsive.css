@@ -1,0 +1,16 @@
+@media screen and (min-width: 824px) {
+    .main_image {
+        float: left;
+        display: inline-block;
+    }
+
+    .blog-description {
+        width: 70%;
+        display: inline;
+        padding: 10px;
+    }
+
+    ul li {
+        font-size: 2rem;
+    }
+}

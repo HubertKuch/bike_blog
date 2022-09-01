@@ -60,11 +60,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
     width: 85%;
-    min-height: 90%;
     background: black;
     left: 50%;
     position: relative;
     transform: translateX(-50%);
+    height: fit-content;
+    block-size: fit-content;
+    padding: 0 0 10px;
 }
 
 nav {
@@ -84,6 +86,13 @@ nav ul {
     margin: 0 auto 0;
 }
 
+.main_banner_container {
+    position: absolute;
+    height: 20px;
+    z-index: -1;
+    width: 100%;
+}
+
 li {
     float: left;
     font-size: 1.4rem;
@@ -98,11 +107,12 @@ nav a:visited, nav a {
 .main-image {
     display: block;
     margin: 10px auto 0;
+    max-height: 100%;
     width: 90%;
 }
 
 .blog-description {
-    padding: 15px;
+    padding: 20px;
     line-height: 2rem;
     font-size: 1.8rem;
 }
