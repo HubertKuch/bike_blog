@@ -37,6 +37,7 @@
             </div>
             <ul>
                 <li>
+
                 </li>
             </ul>
         </nav>
@@ -50,7 +51,6 @@
             już po godz. 11 w deszczu wróciłem z niej (ze szkoły) do domu. Tą samą tradycyjnie drogą czyli z Baszewic
             przez Grębocin.
         </article>
-
     </div>
 </main>
 
@@ -61,9 +61,17 @@
 <script src="Client/javascript/controllers/NewsController.js"></script>
 
 <script>
+    /**
+     * @param {News[]} news
+     * */
+    const showNews = (news) => {
+
+    }
+
     const main = async () => {
         const news = await NewsController.getNewsByTag("Test2");
 
+        showNews(news);
     }
 
     main()
