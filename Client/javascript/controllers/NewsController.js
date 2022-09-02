@@ -17,7 +17,7 @@ class NewsController {
         });
     }
 
-    /** @returns News[] */
+    /** @returns Promise<News[]> */
     static async getNews() {
         const data = await this.fetchData(this.baseUrl);
 
@@ -26,7 +26,7 @@ class NewsController {
 
     /**
      * @param {string} id
-     * @return News
+     * @return Promise<News>
      * */
     static async getNewsById(id) {
         const data = await this.fetchData(`${this.baseUrl}/${id}`);
@@ -36,14 +36,13 @@ class NewsController {
 
     /**
      * @param {string} tag
-     * @return News
+     * @return Promise<News[]>
      * */
     static async getNewsByTag(tag) {
         const data = await this.fetchData(`${this.baseUrl}/tag/${tag}`);
 
         return data.map(news => NewsSerializer.serialize(news));
     }
-
 
     /**
      * @param {string} url
