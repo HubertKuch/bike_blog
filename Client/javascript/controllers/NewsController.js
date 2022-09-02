@@ -21,6 +21,16 @@ class NewsController {
         return data.map(news => NewsSerializer.serialize(news))[0] ?? null;
     }
 
+    /**
+     * @param {string} tag
+     * @return News
+     * */
+    static async getNewsByTag(tag) {
+        const data = await this.fetchData(`${this.baseUrl}/tag/${tag}`);
+
+        return data.map(news => NewsSerializer.serialize(news))[0] ?? null;
+    }
+
     static async fetchData(url) {
         const res = await fetch(url);
 
