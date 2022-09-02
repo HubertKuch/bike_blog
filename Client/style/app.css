@@ -126,3 +126,21 @@ footer {
     color: black;
     margin: 0 0 20px;
 }
+
+.news-container {
+    position: relative;
+    margin: 30px 0 0;
+}
+
+.order i {
+    cursor: pointer;
+}
+
+.news-container {
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-template-rows: 2fr;
+}

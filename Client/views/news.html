@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<!-- __HEAD__ -->
+
+<body>
+
+<!-- __HEADER__ -->
+
+<main class="main-content">
+    <!-- __NAV__-->
+
+    <!-- __BANNER_IN_MAIN__ -->
+
+    <div class="news-container">
+
+        <nav class="news-navigation">
+            <div>
+
+                <span class="order order-by-date">
+                    <i class="fa-regular fa-calendar" style="color: #da2e44;"></i>
+                    <i class="fa-light fa-arrow-up"></i>
+                    <i class="fa-light fa-arrow-down"></i>
+                </span>
+
+                <span class="order oder-by-ride">
+                    <i class="fa-light fa-bicycle" style="color: #dd2d43"></i>
+                    <i class="fa-light fa-arrow-up"></i>
+                    <i class="fa-light fa-arrow-down"></i>
+                </span>
+                <span class="order oder-by-ride">
+                    <i class="fa-regular fa-clock" style="color: #dd2e44"></i>
+                    <i class="fa-light fa-arrow-up"></i>
+                    <i class="fa-light fa-arrow-down"></i>
+                </span>
+
+            </div>
+            <ul>
+                <li>
+                </li>
+            </ul>
+        </nav>
+
+        <article class="news-content">
+            Trasa z dnia dzisiejszego była nieoczekiwanie krótka i taka sobie. Słaba wręcz. Nie wiem czego się po
+            dzisiejszym dniu spodziewałem. W szkole nadal problem bo internetu od wczoraj brak: Rozterki odkrywcy. Więc
+            nie za bardzo mam co robić bo nawet swoje sprawy nie po ogarniam. Ze szkoły wychodzę za szybko by gdzieś
+            sensownie jechać. A do tego jeszcze ta pogoda. Straszna duchota połączona z deszczem, który wcale nie
+            sprawia, że jest chłodniej. Z wielką niechęcią i trudnością jednak przyjechałem z rana do szkoły. A po niej,
+            już po godz. 11 w deszczu wróciłem z niej (ze szkoły) do domu. Tą samą tradycyjnie drogą czyli z Baszewic
+            przez Grębocin.
+        </article>
+
+    </div>
+</main>
+
+<!-- __FOOTER__ -->
+
+<script src="Client/javascript/models/News.js"></script>
+<script src="Client/javascript/serializers/NewsSerializer.js"></script>
+<script src="Client/javascript/controllers/NewsController.js"></script>
+
+<script>
+    const main = async () => {
+        const news = await NewsController.getNews();
+
+        console.log(news)
+    }
+
+    main()
+</script>
+</body>
+</html>
