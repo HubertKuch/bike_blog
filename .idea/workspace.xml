@@ -7,6 +7,8 @@
     <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/models/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/models/News.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/serializers/NewsSerializer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/serializers/NewsSerializer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +203,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactor" />
     <MESSAGE value="Migrate to Avocado v4.1.0" />
     <MESSAGE value="Base news controller" />
     <MESSAGE value="Implement domain tag class" />
@@ -226,7 +227,8 @@
     <MESSAGE value="Create news serializer (api res -&gt; News object)" />
     <MESSAGE value="getNews action in controller" />
     <MESSAGE value="Implement get news by id action  in news controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement get news by id action  in news controller" />
+    <MESSAGE value="Implement get news by tag action in news controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement get news by tag action in news controller" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

@@ -4,6 +4,19 @@ class NewsController {
 
     static baseUrl = "/bike-blog/api/v1/news/";
 
+    /**
+     * @param {News} news
+     * @return undefined
+     * */
+    static async saveNews(news) {
+        const newsData = NewsSerializer.deserialize(news);
+
+        await fetch(this.baseUrl, {
+            method: "POST",
+            body: JSON.stringify(newsData)
+        });
+    }
+
     /** @returns News[] */
     static async getNews() {
         const data = await this.fetchData(this.baseUrl);
@@ -28,9 +41,14 @@ class NewsController {
     static async getNewsByTag(tag) {
         const data = await this.fetchData(`${this.baseUrl}/tag/${tag}`);
 
-        return data.map(news => NewsSerializer.serialize(news))[0] ?? null;
+        return data.map(news => NewsSerializer.serialize(news));
     }
 
+
+    /**
+     * @param {string} url
+     * @return Promise<any>
+     * */
     static async fetchData(url) {
         const res = await fetch(url);
 
