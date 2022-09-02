@@ -32,4 +32,8 @@ class Views {
     private static function getComponent(string $component): string {
         return file_get_contents(self::COMPONENTS_DIR . $component);
     }
+
+    public static function news(): void {
+        echo self::getViewContent("news.html");
+    }
 }

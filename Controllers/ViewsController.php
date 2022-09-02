@@ -13,4 +13,9 @@ class ViewsController {
     public function mainPage(): void {
         Views::main();
     }
+
+    #[GetMapping("/news")]
+    public function news(): void {
+        Views::news();
+    }
 }
