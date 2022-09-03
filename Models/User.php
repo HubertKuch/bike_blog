@@ -3,7 +3,9 @@
 namespace Hubert\BikeBlog\Models;
 
 use Ramsey\Uuid\UuidInterface;
+use Ramsey\Uuid\Rfc4122\UuidV4;
 use Avocado\ORM\Attributes\Table;
+use Avocado\Router\AvocadoRequest;
 
 #[Table("users")]
 class User {
@@ -25,6 +27,14 @@ class User {
 
     public function getIp(): IP {
         return IP::from($this->ip);
+    }
+
+    public static function from(AvocadoRequest $request): User {
+        return new User(UuidV4::uuid4(), $request->body['username'], $request->body['email'], User::hashPassword($request->body['password']), IP::from($request->getClientIP()), UserRole::GUEST);
+    }
+
+    public static function hashPassword(string $password): string {
+        return password_hash($password, PASSWORD_DEFAULT);
     }
 
     public function getId(): string {
