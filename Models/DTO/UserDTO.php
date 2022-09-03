@@ -10,6 +10,6 @@ class UserDTO {
     }
 
     public function from(User $user): UserDTO {
-        return new UserDTO($user->getId(), $user->getUsername(), $user->getEmail(), $user->getId(), $user->getRole()->value);
+        return new UserDTO($user->getId(), $user->getUsername(), $user->getEmail(), $user->getIp()->getIp(), $user->getRole()->value);
     }
 }
