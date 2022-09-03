@@ -3,17 +3,25 @@
 namespace Hubert\BikeBlog\Models;
 
 use Ramsey\Uuid\UuidInterface;
+use Avocado\ORM\Attributes\Id;
 use Ramsey\Uuid\Rfc4122\UuidV4;
 use Avocado\ORM\Attributes\Table;
+use Avocado\ORM\Attributes\Field;
 use Avocado\Router\AvocadoRequest;
 
 #[Table("users")]
 class User {
+    #[Id]
     private string $id;
+    #[Field]
     private string $username;
+    #[Field]
     private string $email;
+    #[Field]
     private string $passwordHash;
+    #[Field]
     private string $ip;
+    #[Field]
     private UserRole $role;
 
     public function __construct(UuidInterface $id, string $username, string $email, string $passwordHash, IP $ip, UserRole $role) {

@@ -50,14 +50,14 @@ class UserController {
     /**
      * @throws InvalidRequest
      */
-    #[DeleteMapping("/v1/users/:uuid")]
-    public function deleteUser(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    #[DeleteMapping("/v1/users/:id")]
+    public function deleteUser(AvocadoRequest $request, AvocadoResponse $response) {
         UsersValidator::validateDeleteUserRequest($request);
+        $uuid = $request->params['id'];
 
-        $uuid = $request->params['uuid'];
 
         $this->usersRepository->deleteOneById($uuid);
 
-        return $response->withStatus(HTTPStatus::NO_CONTENT)->json(["message" => "Deleted"]);
+        return $response->json(["message" => "Deleted"])->withStatus(HTTPStatus::OK);
     }
 }

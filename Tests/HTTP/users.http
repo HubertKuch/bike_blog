@@ -1,0 +1,2 @@
+DELETE http://localhost/bike-blog/api/v1/users/{{$uuid}}
+Accept: application/json

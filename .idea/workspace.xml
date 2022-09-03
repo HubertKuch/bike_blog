@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Fix bug with IP in user dto">
-      <change afterPath="$PROJECT_DIR$/Controllers/UserController.php" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Tests/HTTP/users.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/UsersValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/UsersValidator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +27,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTTP Request" />
         <option value="package.json" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -159,34 +163,33 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.MetersControllerTest">
+  <component name="RunManager" selected="PHPUnit.UserControllerTest">
+    <configuration name="users | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Tests/HTTP/users.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="MetersControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Hubert\BikeBlog\Tests\Unit\MetersControllerTest" file="$PROJECT_DIR$/Tests/Unit/MetersControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="NewsControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\NewsControllerTest" file="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" scope="Class" />
+    <configuration name="UserControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Hubert\BikeBlog\Tests\Unit\UserControllerTest" file="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="NewsControllerTest.testGettingNews" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\NewsControllerTest" file="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" method="testGettingNews" scope="Method" />
+    <configuration name="UserControllerTest.testDeleteUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Hubert\BikeBlog\Tests\Unit\UserControllerTest" file="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" method="testDeleteUser" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="NewsControllerTest.testGettingNewsById" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\NewsControllerTest" file="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" method="testGettingNewsById" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="NewsControllerTest.testGettingNewsByTag" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\NewsControllerTest" file="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" method="testGettingNewsByTag" scope="Method" />
+    <configuration name="UserControllerTest.testRegisteringUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Hubert\BikeBlog\Tests\Unit\UserControllerTest" file="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" method="testRegisteringUser" scope="Method" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UserControllerTest" />
+        <item itemvalue="HTTP Request.users | #1" />
+        <item itemvalue="PHPUnit.UserControllerTest.testDeleteUser" />
+        <item itemvalue="PHPUnit.UserControllerTest.testRegisteringUser" />
         <item itemvalue="PHPUnit.MetersControllerTest" />
-        <item itemvalue="PHPUnit.NewsControllerTest" />
-        <item itemvalue="PHPUnit.NewsControllerTest.testGettingNewsByTag" />
-        <item itemvalue="PHPUnit.NewsControllerTest.testGettingNewsById" />
-        <item itemvalue="PHPUnit.NewsControllerTest.testGettingNews" />
       </list>
     </recent_temporary>
   </component>
@@ -224,8 +227,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="getNews action in controller" />
-    <MESSAGE value="Implement get news by id action  in news controller" />
     <MESSAGE value="Implement get news by tag action in news controller" />
     <MESSAGE value="Add save action for news" />
     <MESSAGE value="Replace {News|News[]} types to Promise&lt;{News|News[]}&gt;" />
@@ -249,7 +250,9 @@
     <MESSAGE value="User validator for request" />
     <MESSAGE value="Make `from` method static" />
     <MESSAGE value="Add UserBusyException" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add UserBusyException" />
+    <MESSAGE value="Write from and hashPassword static method for user class" />
+    <MESSAGE value="Write `registerUser` and `deleteUser` actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write `registerUser` and `deleteUser` actions" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
