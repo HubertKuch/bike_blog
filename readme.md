@@ -7,7 +7,7 @@
 Base url
 
 ```mysql
-GET /api/v1/news/
+GET /api/v2/news/
 ```
 
 Response
@@ -76,7 +76,7 @@ Response
 Base url
 
 ```mysql
-GET /api/v1/news/:uuid
+GET /api/v2/news/:uuid
 ```
 
 Response
@@ -108,7 +108,7 @@ Code
 ### Get news by tag
 
 ```mysql
-GET /api/v1/news/tag/:tag
+GET /api/v2/news/tag/:tag
 ```
 
 Response
@@ -132,7 +132,7 @@ Code 200:
 ### Create news
 
 ```mysql
-POST /api/v1/news/
+POST /api/v2/news/
 ```
 
 Body
