@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Models/DTO/UserDTO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/style/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/responsive.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +224,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Base logic for meters" />
     <MESSAGE value="Add main page (prototype for mobile view)" />
     <MESSAGE value="Style for main page for desktop devices" />
     <MESSAGE value="Build base news page for mobile" />
@@ -248,7 +248,8 @@
     <MESSAGE value="Add meter model" />
     <MESSAGE value="Write serializer for meters" />
     <MESSAGE value="Write controller for meters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write controller for meters" />
+    <MESSAGE value="Import all models, serializers and controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Import all models, serializers and controllers" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
