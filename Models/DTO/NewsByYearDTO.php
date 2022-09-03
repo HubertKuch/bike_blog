@@ -1,6 +1,6 @@
 <?php
 
-namespace Hubert\BikeBlog\Models;
+namespace Hubert\BikeBlog\Models\DTO;
 
 class NewsByYearDTO {
 

@@ -1,6 +1,8 @@
 <?php
 
-namespace Hubert\BikeBlog\Models;
+namespace Hubert\BikeBlog\Models\DTO;
+
+use Hubert\BikeBlog\Models\Meter;
 
 class MeterDTO {
 
