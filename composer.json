@@ -36,6 +36,7 @@
     "nesbot/carbon": "2.62.0"
   },
   "require-dev": {
+    "guzzlehttp/guzzle": "7.5.0",
     "phpunit/phpunit": "9.5.24"
   }
 }

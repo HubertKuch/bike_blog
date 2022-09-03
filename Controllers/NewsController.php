@@ -23,7 +23,7 @@ use Hubert\BikeBlog\Utils\Validators\NewsValidator;
 use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
 
 #[RestController]
-#[BaseURL("/api/")]
+#[BaseURL("/api")]
 class NewsController {
 
     #[Autowired("newsRepository")]
