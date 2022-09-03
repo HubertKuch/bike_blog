@@ -28,12 +28,18 @@ class MetersController {
 
     /**
      * @throws InvalidRequest
+     * @throws NewsNotFoundException
      */
     #[GetMapping("/:newsId")]
     public function getMetersByNewsId(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
         MetersValidators::validateGetMetersByNewsIdRequest($request);
 
         $newsId = $request->params['newsId'];
+        $news = $this->newsRepository->findById($newsId);
+
+        if (!$news) {
+            throw new NewsNotFoundException("News with id $newsId not found.");
+        }
 
         $meters = $this->metersRepository->findMany(["news_id" => $newsId]);
         $metersDTOs = array_map(fn($meter) => MeterDTO::from($meter), $meters);

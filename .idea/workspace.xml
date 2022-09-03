@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Write logic for getting news and showing it">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Tests/Unit/MetersControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/MetersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MetersController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,8 +159,9 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.NewsControllerTest">
-    <configuration name="NewsControllerTest | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/NewsControllerTest.http" requestIdentifier="#1" runType="Run single request">
+  <component name="RunManager" selected="PHPUnit.MetersControllerTest">
+    <configuration name="MetersControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Hubert\BikeBlog\Tests\Unit\MetersControllerTest" file="$PROJECT_DIR$/Tests/Unit/MetersControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="NewsControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -179,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.MetersControllerTest" />
         <item itemvalue="PHPUnit.NewsControllerTest" />
         <item itemvalue="PHPUnit.NewsControllerTest.testGettingNewsByTag" />
         <item itemvalue="PHPUnit.NewsControllerTest.testGettingNewsById" />
         <item itemvalue="PHPUnit.NewsControllerTest.testGettingNews" />
-        <item itemvalue="HTTP Request.NewsControllerTest | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -210,8 +213,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add InvalidRequest exception" />
-    <MESSAGE value="Reformat code and fix bug with date format" />
     <MESSAGE value="New action: find news by tag" />
     <MESSAGE value="Validate news" />
     <MESSAGE value="Delete delete action on news" />
@@ -235,7 +236,9 @@
     <MESSAGE value="Validate is id is set for request and throw InvalidRequest if not" />
     <MESSAGE value="Implement new models support on front end" />
     <MESSAGE value="Write logic for getting news and showing it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write logic for getting news and showing it" />
+    <MESSAGE value="Change .news selector to div.news in app.css" />
+    <MESSAGE value="Move DTOs to separate package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move DTOs to separate package" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
