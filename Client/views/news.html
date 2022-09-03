@@ -35,11 +35,7 @@
                 </span>
 
             </div>
-            <ul>
-                <li>
 
-                </li>
-            </ul>
         </nav>
 
         <article class="news-content">
@@ -57,19 +53,20 @@
 <!-- __FOOTER__ -->
 
 <script src="Client/javascript/models/News.js"></script>
+<script src="Client/javascript/models/NewsGroup.js"></script>
 <script src="Client/javascript/serializers/NewsSerializer.js"></script>
 <script src="Client/javascript/controllers/NewsController.js"></script>
 
 <script>
     /**
-     * @param {News[]} news
+     * @param {NewsGroup[]} news
      * */
     const showNews = (news) => {
 
     }
 
     const main = async () => {
-        const news = await NewsController.getNewsByTag("Test2");
+        const news = await NewsController.getNews();
 
         showNews(news);
     }

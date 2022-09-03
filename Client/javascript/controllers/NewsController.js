@@ -2,26 +2,26 @@
 
 class NewsController {
 
-    static baseUrl = "/bike-blog/api/v1/news/";
+    static baseUrl = "/bike-blog/api";
 
     /**
      * @param {News} news
      * @return undefined
      * */
     static async saveNews(news) {
-        const newsData = NewsSerializer.deserialize(news);
+        const newsData = NewsSerializer.deserializeSingleNews(news);
 
-        await fetch(this.baseUrl, {
+        await fetch(`${this.baseUrl}/v1/news/`, {
             method: "POST",
             body: JSON.stringify(newsData)
         });
     }
 
-    /** @returns Promise<News[]> */
+    /** @returns Promise<NewsGroup[]> */
     static async getNews() {
-        const data = await this.fetchData(this.baseUrl);
+        const data = await this.fetchData(`${this.baseUrl}/v2/news/`);
 
-        return data.map(news => NewsSerializer.serialize(news));
+        return data.map(newsGroup => NewsSerializer.serializeGroup(newsGroup));
     }
 
     /**
@@ -29,9 +29,9 @@ class NewsController {
      * @return Promise<News>
      * */
     static async getNewsById(id) {
-        const data = await this.fetchData(`${this.baseUrl}/${id}`);
+        const data = await this.fetchData(`${this.baseUrl}/v1/news/${id}`);
 
-        return data.map(news => NewsSerializer.serialize(news))[0] ?? null;
+        return data.map(news => NewsSerializer.serializeSingleNews(news))[0] ?? null;
     }
 
     /**
@@ -39,9 +39,9 @@ class NewsController {
      * @return Promise<News[]>
      * */
     static async getNewsByTag(tag) {
-        const data = await this.fetchData(`${this.baseUrl}/tag/${tag}`);
+        const data = await this.fetchData(`${this.baseUrl}/v2/news/tag/${tag}`);
 
-        return data.map(news => NewsSerializer.serialize(news));
+        return data.map(news => NewsSerializer.serializeGroup(news));
     }
 
     /**
