@@ -97,11 +97,14 @@ class NewsController {
     /**
      * @throws ReflectionException
      * @throws AvocadoModelException
+     * @throws InvalidRequest
      * @throws NewsNotFoundException
      */
     #[GetMapping("/v1/news/:id")]
     public function getNewsById(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-        $id = $request->params['id'];
+        NewsValidator::validateFindById($request);
+
+        $id = $request->params['id'] ?? null;
 
         $news = $this->newsRepository->findById($id);
 
@@ -112,7 +115,7 @@ class NewsController {
         return $response->json([NewsDTO::from($news)]);
     }
 
-    #[GetMapping("/v1/news/tag/:tag")]
+    #[GetMapping("/v2/news/tag/:tag")]
     public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
         NewsValidator::validateFindByTag($request);
 
@@ -121,7 +124,8 @@ class NewsController {
         $news = $this->newsRepository->findMany(["tags" => "%$tag%"]);
 
         $newsDTOs = array_map(fn($n) => NewsDTO::from($n), $news);
+        $byYearDTOs = $this->groupNewsDTOsByYearToDTO($newsDTOs);
 
-        return $response->withStatus(HTTPStatus::OK)->json($newsDTOs);
+        return $response->withStatus(HTTPStatus::OK)->json($byYearDTOs);
     }
 }

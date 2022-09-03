@@ -31,4 +31,14 @@ class NewsValidator {
 
         throw new InvalidRequest("Invalid request");
     }
+
+    public static function validateFindById(AvocadoRequest $request) {
+        $id = $request->params['id'] ?? null;
+
+        if ($id) {
+            return;
+        }
+
+        throw new InvalidRequest("Invalid request");
+    }
 }
