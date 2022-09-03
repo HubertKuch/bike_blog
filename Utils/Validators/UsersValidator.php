@@ -32,4 +32,18 @@ class UsersValidator {
 
         throw new InvalidRequest("Invalid request");
     }
+
+    /**
+     * @throws InvalidRequest
+     */
+    public static function validateLoginRequest(AvocadoRequest $request): void {
+        $login = $request->body['login'] ?? null;
+        $password = $request->body['password'] ?? null;
+
+        if ($login && $password) {
+            return;
+        }
+
+        throw new InvalidRequest("Invalid request");
+    }
 }

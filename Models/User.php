@@ -45,6 +45,10 @@ class User {
         return password_hash($password, PASSWORD_DEFAULT);
     }
 
+    public function comparePassword(string $password): bool {
+        return password_verify($password, $this->passwordHash);
+    }
+
     public function getId(): string {
         return $this->id;
     }
