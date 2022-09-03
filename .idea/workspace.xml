@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/javascript/elements/TagElement.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/javascript/elements/YearContainerElement.js" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Write logic for getting news and showing it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/components/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/components/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +134,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.310559&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -215,7 +210,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change code from 400 to 404 on not found exception" />
     <MESSAGE value="Add InvalidRequest exception" />
     <MESSAGE value="Reformat code and fix bug with date format" />
     <MESSAGE value="New action: find news by tag" />
@@ -240,7 +234,8 @@
     <MESSAGE value="Write unit tests for news" />
     <MESSAGE value="Validate is id is set for request and throw InvalidRequest if not" />
     <MESSAGE value="Implement new models support on front end" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement new models support on front end" />
+    <MESSAGE value="Write logic for getting news and showing it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write logic for getting news and showing it" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

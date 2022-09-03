@@ -157,7 +157,7 @@ footer {
     color: pink;
 }
 
-.news {
+div.news {
     display: grid;
     gap: 10px;
 }
