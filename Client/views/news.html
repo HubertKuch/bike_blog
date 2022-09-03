@@ -36,17 +36,24 @@
 
             </div>
 
+            <div class="news-navigation">
+
+            </div>
         </nav>
 
-        <article class="news-content">
-            Trasa z dnia dzisiejszego była nieoczekiwanie krótka i taka sobie. Słaba wręcz. Nie wiem czego się po
-            dzisiejszym dniu spodziewałem. W szkole nadal problem bo internetu od wczoraj brak: Rozterki odkrywcy. Więc
-            nie za bardzo mam co robić bo nawet swoje sprawy nie po ogarniam. Ze szkoły wychodzę za szybko by gdzieś
-            sensownie jechać. A do tego jeszcze ta pogoda. Straszna duchota połączona z deszczem, który wcale nie
-            sprawia, że jest chłodniej. Z wielką niechęcią i trudnością jednak przyjechałem z rana do szkoły. A po niej,
-            już po godz. 11 w deszczu wróciłem z niej (ze szkoły) do domu. Tą samą tradycyjnie drogą czyli z Baszewic
-            przez Grębocin.
-        </article>
+        <div class="news">
+            <div class="date pink">
+            </div>
+
+            <div class="tags-container">
+                <span>Tagi:</span>
+                <span class="tags">
+                </span>
+            </div>
+
+            <article class="news-content">
+            </article>
+        </div>
     </div>
 </main>
 
@@ -54,21 +61,60 @@
 
 <script src="Client/javascript/models/News.js"></script>
 <script src="Client/javascript/models/NewsGroup.js"></script>
+<script src="Client/javascript/elements/YearContainerElement.js"></script>
+<script src="Client/javascript/elements/TagElement.js"></script>
 <script src="Client/javascript/serializers/NewsSerializer.js"></script>
 <script src="Client/javascript/controllers/NewsController.js"></script>
 
 <script>
+    const newsNavigationListElement = document.querySelector(".news-navigation");
+    const newsContentElement = document.querySelector(".news-content");
+    const newsDateElement = document.querySelector(".date");
+
+    const tagsContainer = document.querySelector(".tags");
+
     /**
      * @param {NewsGroup[]} news
      * */
-    const showNews = (news) => {
+    const showNewsNavigation = (news) => {
+        news.forEach(news =>
+            new YearContainerElement(news).render(newsNavigationListElement)
+        );
+    }
 
+    /**
+     * @param {string[]} tags
+     * */
+    const showTags = (tags) => {
+        tags.forEach(tag => new TagElement(tag).render(tagsContainer))
+    }
+
+    /**
+     * @param {News} news
+     * */
+    const showNews = ({tags, description, date}) => {
+        showTags(tags);
+
+        newsContentElement.textContent = description;
+        newsDateElement.textContent = date;
     }
 
     const main = async () => {
-        const news = await NewsController.getNews();
+        const allNews = await NewsController.getNews();
 
-        showNews(news);
+        const urlParams = new URLSearchParams(window.location.search);
+        const streamId = urlParams.get("id");
+        const latestNewsId = allNews[0].news[0].id;
+
+        if (!streamId) {
+            window.location.replace(`news?id=${latestNewsId}`)
+        }
+
+        showNewsNavigation(allNews);
+
+        const actualNews = await NewsController.getNewsById(urlParams.get("id"));
+
+        showNews(actualNews);
     }
 
     main()
