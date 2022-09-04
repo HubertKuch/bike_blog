@@ -32,7 +32,12 @@ class Meter {
     }
 
     public static function fromRequest(AvocadoRequest $request): Meter {
-        return new Meter(UuidV4::uuid4(), $request->body['maxSpeed'], $request->body['time'], $request->body['toShow'], $request->body['newsId'],);
+        return new Meter(
+            UuidV4::uuid4(),
+            $request->body['maxSpeed'],
+            $request->body['time'],
+            $request->body['toShow'],
+            $request->body['newsId'],);
     }
 
     public function getId(): string {

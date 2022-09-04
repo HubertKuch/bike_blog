@@ -38,7 +38,14 @@ class User {
     }
 
     public static function from(AvocadoRequest $request): User {
-        return new User(UuidV4::uuid4(), $request->body['username'], $request->body['email'], User::hashPassword($request->body['password']), IP::from($request->getClientIP()), UserRole::GUEST);
+        return new User(
+            UuidV4::uuid4(),
+            $request->body['username'],
+            $request->body['email'],
+            User::hashPassword($request->body['password']),
+            IP::from($request->getClientIP()),
+            UserRole::GUEST
+        );
     }
 
     public static function hashPassword(string $password): string {
