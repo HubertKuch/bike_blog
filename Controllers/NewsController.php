@@ -18,8 +18,8 @@ use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Mappings\PostMapping;
 use Hubert\BikeBlog\Models\DTO\NewsByYearDTO;
 use Hubert\BikeBlog\Exceptions\InvalidRequest;
-use Hubert\BikeBlog\Utils\Validators\NewsValidator;
 use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
+use Hubert\BikeBlog\Utils\Validators\NewsRequestValidators;
 
 #[RestController]
 #[BaseURL("/api")]
@@ -36,7 +36,7 @@ class NewsController {
      */
     #[PostMapping("/v1/news/")]
     public function newNews(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-        NewsValidator::validateNewNews($request);
+        NewsRequestValidators::validateNewNewsRequest($request);
 
         $news = News::from($request);
 
@@ -67,7 +67,7 @@ class NewsController {
      */
     #[GetMapping("/v1/news/:id")]
     public function getNewsById(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-        NewsValidator::validateFindById($request);
+        NewsRequestValidators::validateFindByIdRequest($request);
 
         $id = $request->params['id'] ?? null;
 
@@ -82,7 +82,7 @@ class NewsController {
 
     #[GetMapping("/v2/news/tag/:tag")]
     public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-        NewsValidator::validateFindByTag($request);
+        NewsRequestValidators::validateFindByTagRequest($request);
 
         $tag = $request->params['tag'];
 

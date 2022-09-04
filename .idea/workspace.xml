@@ -5,7 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Configuration/LoggerConfiguration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helpers/LoggerHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logger/FileLogger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logger/Logger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662295323.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662295367.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662295380.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/s-1662293296.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/s-1662293322.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/s-1662293352.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bike-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bike-blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BikeApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/BikeApplication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/MetersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/MetersController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/TagElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/TagElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/YearContainerElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/YearContainerElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/models/Meter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/models/Meter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/models/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/models/News.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/models/NewsGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/models/NewsGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/serializers/MetersSerializer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/serializers/MetersSerializer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/serializers/NewsSerializer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/serializers/NewsSerializer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/style/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/components/banner_in_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/components/banner_in_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/components/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/components/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/components/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/components/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/components/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/components/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/components/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/components/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration/DataSourceConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/DataSourceConfiguration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration/RepositoriesLeafs.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/RepositoriesLeafs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/MetersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MetersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ViewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ViewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions/InvalidRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/InvalidRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions/InvalidUserDataException.php" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/InvalidUserDataException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions/NewsNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/NewsNotFoundException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions/NotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/NotFoundException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions/UserBusyException.php" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/UserBusyException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions/UserNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/UserNotFoundException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/MeterDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/MeterDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/NewsByYearDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/NewsByYearDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/NewsDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/NewsDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/UserDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/UserDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/IP.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/IP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Meter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Meter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tag.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UserRole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Images/Banner/banner_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Images/Banner/banner_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Images/Banner/banner_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Images/Banner/banner_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Images/Banner/banner_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Images/Banner/banner_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Images/deutch.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Images/deutch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Images/saku.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Images/saku.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/HTTP/meters.http" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/HTTP/meters.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/HTTP/news.http" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/HTTP/news.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/HTTP/users.http" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/HTTP/users.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Unit/MetersControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Unit/MetersControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/MetersValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/MetersRequestValidators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/NewsValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/NewsRequestValidators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/UsersValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/UsersRequestValidators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,16 +93,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package.json" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTTP Request" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Logs/s-1662293296.log" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Logs/s-1662293322.log" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -129,6 +205,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "/home/hubert/.nvm/versions/node/v16.15.1/bin/node",
     "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.09302324",
     "project.structure.side.proportion": "0.2",
@@ -157,8 +234,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.Tests">
-    <configuration name="users | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Tests/HTTP/users.http" requestIdentifier="#1" runType="Run single request">
+  <component name="RunManager" selected="HTTP Request.meters | #1">
+    <configuration name="meters | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Tests/HTTP/meters.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="NewsControllerTest.testGettingNewsByTag" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -179,11 +256,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.meters | #1" />
+        <item itemvalue="PHPUnit.UserControllerTest.testRegisteringUser" />
         <item itemvalue="PHPUnit.Tests" />
         <item itemvalue="PHPUnit.NewsControllerTest.testGettingNewsByTag" />
-        <item itemvalue="PHPUnit.UserControllerTest.testRegisteringUser" />
         <item itemvalue="PHPUnit.UserControllerTest" />
-        <item itemvalue="HTTP Request.users | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +298,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update get all news, now return NewsByYearDTO[] instead of NewsDTO[], data is grouped and sorted by year" />
     <MESSAGE value="Change getAllNews endpoint to `v2` version" />
     <MESSAGE value="Write unit tests for news" />
     <MESSAGE value="Validate is id is set for request and throw InvalidRequest if not" />
@@ -246,7 +322,8 @@
     <MESSAGE value="Write base login controller" />
     <MESSAGE value="Refactor DTOs" />
     <MESSAGE value="Improve models code style" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve models code style" />
+    <MESSAGE value="Change password hashing algorithm to SHA256" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change password hashing algorithm to SHA256" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

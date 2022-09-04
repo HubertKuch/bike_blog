@@ -20,9 +20,9 @@ use AvocadoApplication\Mappings\PostMapping;
 use Hubert\BikeBlog\Exceptions\InvalidRequest;
 use AvocadoApplication\Mappings\DeleteMapping;
 use Hubert\BikeBlog\Exceptions\UserBusyException;
-use Hubert\BikeBlog\Utils\Validators\UsersValidator;
 use Hubert\BikeBlog\Exceptions\UserNotFoundException;
 use Hubert\BikeBlog\Exceptions\InvalidUserDataException;
+use Hubert\BikeBlog\Utils\Validators\UsersRequestValidators;
 
 #[RestController]
 #[BaseURL("/api")]
@@ -40,7 +40,7 @@ class UserController {
      */
     #[GetMapping("/v1/users/login/")]
     public function login(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-        UsersValidator::validateLoginRequest($request);
+        UsersRequestValidators::validateLoginRequest($request);
 
         $login = $request->body['login'];
         $password = $request->body['password'];
@@ -68,7 +68,7 @@ class UserController {
      */
     #[PostMapping("/v1/users/")]
     public function registerUser(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-        UsersValidator::validateRegisterUserRequest($request);
+        UsersRequestValidators::validateRegisterUserRequest($request);
 
         $username = $request->body['username'];
 
@@ -90,9 +90,9 @@ class UserController {
      */
     #[DeleteMapping("/v1/users/:id")]
     public function deleteUser(AvocadoRequest $request, AvocadoResponse $response) {
-        UsersValidator::validateDeleteUserRequest($request);
-        $uuid = $request->params['id'];
+        UsersRequestValidators::validateDeleteUserRequest($request);
 
+        $uuid = $request->params['id'];
 
         $this->usersRepository->deleteOneById($uuid);
 

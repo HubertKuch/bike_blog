@@ -17,6 +17,8 @@ class UserControllerTest extends TestCase {
 
 
         $userData = json_decode($res->getBody()->getContents());
+        var_dump($userData);
+
         static::$userId = $userData->id;
 
         self::assertSame(201, $res->getStatusCode());
