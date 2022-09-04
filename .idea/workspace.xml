@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Refactor DTOs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DTO/MeterDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/MeterDTO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DTO/NewsDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/NewsDTO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DTO/UserDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/UserDTO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Meter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Meter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/News.php" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +221,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Write docs for news API" />
     <MESSAGE value="Update get all news, now return NewsByYearDTO[] instead of NewsDTO[], data is grouped and sorted by year" />
     <MESSAGE value="Change getAllNews endpoint to `v2` version" />
     <MESSAGE value="Write unit tests for news" />
@@ -252,7 +245,8 @@
     <MESSAGE value="Test registration and deleting users" />
     <MESSAGE value="Write base login controller" />
     <MESSAGE value="Refactor DTOs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor DTOs" />
+    <MESSAGE value="Improve models code style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve models code style" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
