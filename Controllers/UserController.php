@@ -13,6 +13,7 @@ use Avocado\Router\AvocadoResponse;
 use Avocado\ORM\AvocadoModelException;
 use Avocado\Application\RestController;
 use Hubert\BikeBlog\Models\DTO\UserDTO;
+use Hubert\BikeBlog\Helpers\LoggerHelper;
 use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Mappings\GetMapping;
 use AvocadoApplication\Attributes\Autowired;
@@ -30,6 +31,8 @@ class UserController {
 
     #[Autowired("usersRepository")]
     private AvocadoRepository $usersRepository;
+    #[Autowired]
+    private LoggerHelper $logger;
 
     /**
      * @throws InvalidRequest
@@ -40,6 +43,7 @@ class UserController {
      */
     #[GetMapping("/v1/users/login/")]
     public function login(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+        $this->logger->logRequest($request);
         UsersRequestValidators::validateLoginRequest($request);
 
         $login = $request->body['login'];
@@ -48,7 +52,11 @@ class UserController {
         $user = $this->usersRepository->findFirst(["login" => $login]);
 
         if (!$user) {
-            throw new UserNotFoundException("User `$login` not found");
+            $exp = new UserNotFoundException("User `$login` not found");
+
+            $this->logger->logException($request, $exp);
+
+            throw $exp;
         }
 
         $isValidPassword = $user->comparePassword($password);
@@ -68,6 +76,7 @@ class UserController {
      */
     #[PostMapping("/v1/users/")]
     public function registerUser(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+        $this->logger->logRequest($request);
         UsersRequestValidators::validateRegisterUserRequest($request);
 
         $username = $request->body['username'];
@@ -75,7 +84,10 @@ class UserController {
         $isUserExists = $this->usersRepository->findFirst(["username" => $username]) !== null;
 
         if ($isUserExists) {
-            throw new UserBusyException("Username $username is busy.");
+            $exp = new UserBusyException("Username $username is busy.");
+            $this->logger->logException($request, $exp);
+
+            throw $exp;
         }
 
         $user = User::from($request);
@@ -90,6 +102,7 @@ class UserController {
      */
     #[DeleteMapping("/v1/users/:id")]
     public function deleteUser(AvocadoRequest $request, AvocadoResponse $response) {
+        $this->logger->logRequest($request);
         UsersRequestValidators::validateDeleteUserRequest($request);
 
         $uuid = $request->params['id'];

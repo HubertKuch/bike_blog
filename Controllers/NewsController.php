@@ -11,6 +11,7 @@ use Avocado\Router\AvocadoResponse;
 use Avocado\ORM\AvocadoModelException;
 use Hubert\BikeBlog\Models\DTO\NewsDTO;
 use Avocado\Application\RestController;
+use Hubert\BikeBlog\Helpers\LoggerHelper;
 use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Mappings\GetMapping;
 use Avocado\ORM\AvocadoRepositoryException;
@@ -27,6 +28,8 @@ class NewsController {
 
     #[Autowired("newsRepository")]
     private AvocadoRepository $newsRepository;
+    #[Autowired]
+    private LoggerHelper $logger;
 
     /**
      * @throws AvocadoModelException
@@ -36,6 +39,7 @@ class NewsController {
      */
     #[PostMapping("/v1/news/")]
     public function newNews(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+        $this->logger->logRequest($request);
         NewsRequestValidators::validateNewNewsRequest($request);
 
         $news = News::from($request);
@@ -51,6 +55,7 @@ class NewsController {
      */
     #[GetMapping("/v2/news/")]
     public function getAllNews(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+        $this->logger->logRequest($request);
         $news = $this->newsRepository->findMany();
 
         $newsDTOs = array_map(fn($n) => NewsDTO::from($n), $news);
@@ -67,6 +72,7 @@ class NewsController {
      */
     #[GetMapping("/v1/news/:id")]
     public function getNewsById(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+        $this->logger->logRequest($request);
         NewsRequestValidators::validateFindByIdRequest($request);
 
         $id = $request->params['id'] ?? null;
@@ -82,6 +88,7 @@ class NewsController {
 
     #[GetMapping("/v2/news/tag/:tag")]
     public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+        $this->logger->logRequest($request);
         NewsRequestValidators::validateFindByTagRequest($request);
 
         $tag = $request->params['tag'];
