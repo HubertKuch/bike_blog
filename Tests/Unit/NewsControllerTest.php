@@ -35,7 +35,7 @@ class NewsControllerTest extends TestCase {
     }
 
     public function testGettingNewsByTag() {
-        $res = $this->client->request("GET", "http://localhost/bike-blog/api/v1/news/tag/unnamed_tag");
+        $res = $this->client->request("GET", "http://localhost/bike-blog/api/v2/news/tag/unnamed_tag");
 
         $data = json_decode($res->getBody()->getContents());
 

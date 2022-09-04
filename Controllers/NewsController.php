@@ -2,7 +2,6 @@
 
 namespace Hubert\BikeBlog\Controllers;
 
-use Carbon\Carbon;
 use ReflectionException;
 use Avocado\HTTP\HTTPStatus;
 use Hubert\BikeBlog\Models\News;
@@ -55,43 +54,9 @@ class NewsController {
         $news = $this->newsRepository->findMany();
 
         $newsDTOs = array_map(fn($n) => NewsDTO::from($n), $news);
-        $newsByYearDTOs = $this->groupNewsDTOsByYearToDTO($newsDTOs);
+        $newsByYearDTOs = NewsByYearDTO::fromArray($newsDTOs);
 
         return $response->json($newsByYearDTOs);
-    }
-
-    /**
-     * @param NewsDTO[] $news
-     * @return NewsByYearDTO[]
-     * */
-    private function groupNewsDTOsByYearToDTO(array &$news): array {
-        usort($news, function ($a, $b) {
-            $aDate = Carbon::createFromFormat("Y-m-d", $a->time)->timestamp;
-            $bDate = Carbon::createFromFormat("Y-m-d", $b->time)->timestamp;
-
-            return $aDate - $bDate;
-        });
-
-        /** @var NewsByYearDTO[] $yearsDTOs */
-        $yearsDTOs = [];
-
-        foreach ($news as &$newsDTO) {
-            $newsDateYear = intval(explode("-", $newsDTO->time)[0]);
-            $yearDTOIfExists = array_filter($yearsDTOs, function ($yearDTO) use ($newsDTO, $newsDateYear) {
-                return $yearDTO->year == $newsDateYear;
-            });
-
-            if (empty($yearDTOIfExists)) {
-                $yearsDTOs[] = new NewsByYearDTO($newsDateYear, [$newsDTO]);
-                continue;
-            }
-
-            $yearDTOIfExists[key($yearDTOIfExists)]->news[] = $newsDTO;
-        }
-
-        usort($yearsDTOs, fn($a, $b) => $b->year - $a->year);
-
-        return $yearsDTOs;
     }
 
     /**
@@ -123,8 +88,8 @@ class NewsController {
 
         $news = $this->newsRepository->findMany(["tags" => "%$tag%"]);
 
-        $newsDTOs = array_map(fn($n) => NewsDTO::from($n), $news);
-        $byYearDTOs = $this->groupNewsDTOsByYearToDTO($newsDTOs);
+        $newsDTOs = NewsDTO::fromArray($news);
+        $byYearDTOs = NewsByYearDTO::fromArray($newsDTOs);
 
         return $response->withStatus(HTTPStatus::OK)->json($byYearDTOs);
     }

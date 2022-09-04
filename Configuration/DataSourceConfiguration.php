@@ -14,11 +14,6 @@ class DataSourceConfiguration {
     #[Leaf]
     public function getDataSource(): DataSource {
 
-        return (new DataSourceBuilder())->username($_ENV['DATABASE_USER'])->password($_ENV['DATABASE_PASSWORD'])
-            -> server($_ENV['DATABASE_SERVER'])
-            -> port($_ENV['DATABASE_PORT'])
-            -> databaseType(DatabaseType::MYSQL)
-            -> databaseName($_ENV['DATABASE_NAME'])
-            -> build();
+        return (new DataSourceBuilder())->username($_ENV['DATABASE_USER'])->password($_ENV['DATABASE_PASSWORD'])->server($_ENV['DATABASE_SERVER'])->port($_ENV['DATABASE_PORT'])->databaseType(DatabaseType::MYSQL)->databaseName($_ENV['DATABASE_NAME'])->build();
     }
 }

@@ -42,9 +42,8 @@ class MetersController {
         }
 
         $meters = $this->metersRepository->findMany(["news_id" => $newsId]);
-        $metersDTOs = array_map(fn($meter) => MeterDTO::from($meter), $meters);
 
-        return $response->json($metersDTOs)->withStatus(HTTPStatus::OK);
+        return $response->json(MeterDTO::fromArray($meters))->withStatus(HTTPStatus::OK);
     }
 
     /**
