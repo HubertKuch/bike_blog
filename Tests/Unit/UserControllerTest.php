@@ -14,11 +14,7 @@ class UserControllerTest extends TestCase {
         $payload = ['username' => "__test__", 'password' => '__test__', 'email' => 'email@email.com'];
 
         $res = $this->client->post("http://localhost/bike-blog/api/v1/users/", ['body' => json_encode($payload)]);
-
-
         $userData = json_decode($res->getBody()->getContents());
-        var_dump($userData);
-
         static::$userId = $userData->id;
 
         self::assertSame(201, $res->getStatusCode());

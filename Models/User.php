@@ -49,11 +49,11 @@ class User {
     }
 
     public static function hashPassword(string $password): string {
-        return hash(MHASH_SHA256, $password);
+        return hash('sha256', $password);
     }
 
     public function comparePassword(string $password): bool {
-        return hash(MHASH_SHA256, $password) === $this->passwordHash;
+        return hash('sha256', $password) === $this->passwordHash;
     }
 
     public function getId(): string {

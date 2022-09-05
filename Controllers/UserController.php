@@ -76,6 +76,7 @@ class UserController {
      */
     #[PostMapping("/v1/users/")]
     public function registerUser(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+
         $this->logger->logRequest($request);
         UsersRequestValidators::validateRegisterUserRequest($request);
 
@@ -91,7 +92,6 @@ class UserController {
         }
 
         $user = User::from($request);
-
         $this->usersRepository->save($user);
 
         return $response->withStatus(HTTPStatus::CREATED)->json(UserDTO::from($user));

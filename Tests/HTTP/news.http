@@ -19,4 +19,4 @@ Content-Type: application/json
 GET http://localhost/bike-blog/api/v1/news/8aae5c3f-0e30-4196-b5db-34c36e249167
 
 ###
-GET http://localhost/bike-blog/api/v1/news/tag/test12
+GET http://localhost/bike-blog/api/v2/news/tag/test12/
