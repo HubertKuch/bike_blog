@@ -32,11 +32,23 @@ class LoggerHelper {
 
         $this->logger->log([
             "request"   => $request,
-            "exception" => $exception,
+            "exception" => $this->getExceptionAsArray($exception),
             "server"    => $_SERVER,
             "session"   => $_SESSION,
             "at"        => $nowTimestamp,
             "human_at"  => date(static::LOGGER_DATE_FORMAT, $nowTimestamp)
         ], "exception_");
+    }
+
+    private function getExceptionAsArray(Exception $exception): array {
+        return [
+            "message"         => $exception->getMessage(),
+            "trace"           => $exception->getTrace(),
+            "trace_as_string" => $exception->getTraceAsString(),
+            "code"            => $exception->getCode(),
+            "file"            => $exception->getFile(),
+            "line"            => $exception->getLine(),
+            "prev"            => $exception->getPrevious(),
+        ];
     }
 }
