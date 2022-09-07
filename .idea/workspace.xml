@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Save logs for every request">
-      <change afterPath="$PROJECT_DIR$/Helpers/CustomHTMLTagsParser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/HTMLTag.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Logs/exception_1662388480.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Logs/request_1662297064.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Logs/request_1662297080.log" afterDir="false" />
@@ -23,9 +21,10 @@
       <change afterPath="$PROJECT_DIR$/Logs/request_1662567319.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Logs/request_1662567321.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Logs/request_1662567322.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/Unit/CustomHTMLParserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662567891.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662567893.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662567897.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logger/FileLogger.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/FileLogger.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/request_1662295323.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/request_1662295367.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/request_1662295380.log" beforeDir="false" />
@@ -249,8 +248,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Write logic for getting news and showing it" />
-    <MESSAGE value="Change .news selector to div.news in app.css" />
     <MESSAGE value="Move DTOs to separate package" />
     <MESSAGE value="Test meters controller" />
     <MESSAGE value="Add meter model" />
@@ -274,7 +271,9 @@
     <MESSAGE value="Save logs for every request" />
     <MESSAGE value="Map exceptions to array" />
     <MESSAGE value="Fix bug with ValueError error when creating user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bug with ValueError error when creating user" />
+    <MESSAGE value="Wrote and tested custom html tag parser" />
+    <MESSAGE value="Add readonly modifier for tag on HTMLTag class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add readonly modifier for tag on HTMLTag class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

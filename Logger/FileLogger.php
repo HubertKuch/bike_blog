@@ -17,6 +17,6 @@ class FileLogger implements Logger {
     }
 
     private function getFileName(string $prefix): string {
-        return $this->path . $prefix . time() . ".log";
+        return $this->path . $prefix . time() . ".json";
     }
 }
