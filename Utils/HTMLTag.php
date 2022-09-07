@@ -5,7 +5,7 @@ namespace Hubert\BikeBlog\Utils;
 class HTMLTag {
 
     public function __construct(
-        private string $tag,
+        private readonly string $tag,
     ) {
     }
 
