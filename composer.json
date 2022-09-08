@@ -37,10 +37,16 @@
     "vlucas/phpdotenv": "v5.0.0",
     "ramsey/uuid": "4.4.0",
     "hubert/avocado": "dev-main",
-    "nesbot/carbon": "2.62.0"
+    "nesbot/carbon": "2.62.0",
+    "salesforce/handlebars-php": "2.3.0"
   },
   "require-dev": {
     "guzzlehttp/guzzle": "7.5.0",
     "phpunit/phpunit": "9.5.24"
+  },
+  "config": {
+    "allow-plugins": {
+      "nodejs-php-fallback/nodejs-php-fallback": true
+    }
   }
 }

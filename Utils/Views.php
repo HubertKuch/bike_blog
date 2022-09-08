@@ -2,38 +2,31 @@
 
 namespace Hubert\BikeBlog\Utils;
 
+
+use Handlebars\Handlebars;
+use Handlebars\Loader\FilesystemLoader;
+use AvocadoApplication\Attributes\Resource;
+
+#[Resource]
 class Views {
 
-    private const VIEWS_DIR = "Client/views/";
-    private const COMPONENTS_DIR = "Client/views/components/";
+    private Handlebars $handlebars;
 
-    public static function main(): void {
-        echo self::getViewContent("main.html");
+    public function __construct() {
+        $templatesDir = "Client/views";
+        $loader = new FilesystemLoader($templatesDir, ["extension" => "html"]);
+
+        $this->handlebars = new Handlebars([
+            "loader"          => $loader,
+            "partials_loader" => $loader,
+        ]);
     }
 
-    private static function getViewContent(string $view): string {
-        $content = file_get_contents(self::VIEWS_DIR . $view);
-
-        $content = self::prepare($content);
-
-        return $content;
+    public function main(): void {
+        echo @$this->handlebars->render("main", []);
     }
 
-    private static function prepare(string $viewContent): string {
-        $viewContent = str_replace("<!-- __HEAD__ -->", self::getComponent("head.html"), $viewContent);
-        $viewContent = str_replace("<!-- __HEADER__ -->", self::getComponent("header.html"), $viewContent);
-        $viewContent = str_replace("<!-- __FOOTER__ -->", self::getComponent("footer.html"), $viewContent);
-        $viewContent = str_replace("<!-- __NAV__-->", self::getComponent("nav.html"), $viewContent);
-        $viewContent = str_replace("<!-- __BANNER_IN_MAIN__ -->", self::getComponent("banner_in_main.html"), $viewContent);
-
-        return $viewContent;
-    }
-
-    private static function getComponent(string $component): string {
-        return file_get_contents(self::COMPONENTS_DIR . $component);
-    }
-
-    public static function news(): void {
-        echo self::getViewContent("news.html");
+    public function news(): void {
+        echo @$this->handlebars->render("news", []);
     }
 }
