@@ -29,4 +29,8 @@ class Views {
     public function news(): void {
         echo @$this->handlebars->render("news", []);
     }
+
+    public function admin(): void {
+        echo @$this->handlebars->render("admin", []);
+    }
 }

@@ -38,7 +38,7 @@ class UsersRequestValidators {
      * @throws InvalidRequest
      */
     public static function validateLoginRequest(AvocadoRequest $request): void {
-        $login = $request->body['login'] ?? null;
+        $login = $request->body['username'] ?? null;
         $password = $request->body['password'] ?? null;
 
         if ($login && $password) {

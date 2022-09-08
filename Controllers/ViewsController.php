@@ -18,6 +18,11 @@ class ViewsController {
         $this->views->main();
     }
 
+    #[GetMapping("/admin")]
+    public function admin(): void {
+        $this->views->admin();
+    }
+
     #[GetMapping("/news")]
     public function news(): void {
         $this->views->news();

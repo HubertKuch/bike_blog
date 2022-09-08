@@ -15,7 +15,6 @@ use Avocado\Application\RestController;
 use Hubert\BikeBlog\Models\DTO\UserDTO;
 use Hubert\BikeBlog\Helpers\LoggerHelper;
 use AvocadoApplication\Attributes\BaseURL;
-use AvocadoApplication\Mappings\GetMapping;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Mappings\PostMapping;
 use Hubert\BikeBlog\Exceptions\InvalidRequest;
@@ -41,15 +40,15 @@ class UserController {
      * @throws UserNotFoundException
      * @throws InvalidUserDataException
      */
-    #[GetMapping("/v1/users/login/")]
+    #[PostMapping("/v1/users/login/")]
     public function login(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
         $this->logger->logRequest($request);
         UsersRequestValidators::validateLoginRequest($request);
 
-        $login = $request->body['login'];
+        $login = $request->body['username'];
         $password = $request->body['password'];
 
-        $user = $this->usersRepository->findFirst(["login" => $login]);
+        $user = $this->usersRepository->findFirst(["username" => $login]);
 
         if (!$user) {
             $exp = new UserNotFoundException("User `$login` not found");

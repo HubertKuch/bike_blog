@@ -4,47 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Save logs for every request">
-      <change afterPath="$PROJECT_DIR$/Logs/exception_1662388480.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662297064.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662297080.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662297085.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662297108.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662388218.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662388268.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662388474.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662388480.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662388498.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662388555.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662388572.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662567318.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662567319.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662567321.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662567322.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662567891.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662567893.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662567897.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662665060.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662665061.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662665063.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662665068.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662665069.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662665073.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1662665074.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bike-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bike-blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Client/javascript/controllers/UserController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/javascript/models/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/javascript/serializers/UsersSerializer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/views/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/views/scriptsSource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/exception_1662667207.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/exception_1662667228.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/exception_1662667280.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/exception_1662667405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/exception_1662667448.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/exception_1662667468.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665324.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665325.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665327.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665328.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665331.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665333.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665335.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665629.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665630.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662665632.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667016.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667045.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667102.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667142.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667160.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667161.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667207.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667228.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667280.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667405.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667448.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667468.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667536.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667539.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662667542.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/components/banner_in_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/banner_in_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/components/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/components/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/components/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/components/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ViewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ViewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/UsersRequestValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/UsersRequestValidators.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,10 +64,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTTP Request" />
         <option value="package.json" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -146,45 +149,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Project.color": "4e2c05",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected": "true",
-    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit < 6",
-    "javascript.nodejs.core.library.configured.version": "16.15.1",
-    "javascript.nodejs.core.library.typings.version": "16.11.56",
-    "last_opened_file_path": "/opt/lampp/htdocs/bike-blog/Resources/Images/Banner",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "/home/hubert/.nvm/versions/node/v16.15.1/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.09302324",
-    "project.structure.side.proportion": "0.2",
-    "rearrange.code.on.save": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "settings.editor.splitter.proportion": "0.1596594"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Project.color&quot;: &quot;4e2c05&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected&quot;: &quot;true&quot;,
+    &quot;com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary&quot;: &quot;PHPUnit &lt; 6&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.56&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/opt/lampp/htdocs/bike-blog/Resources/Images/Banner&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/home/hubert/.nvm/versions/node/v16.15.1/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.09302324&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.1596594&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Resources/Images/Banner" />
@@ -262,8 +265,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Test meters controller" />
-    <MESSAGE value="Add meter model" />
     <MESSAGE value="Write serializer for meters" />
     <MESSAGE value="Write controller for meters" />
     <MESSAGE value="Import all models, serializers and controllers" />
@@ -287,7 +288,9 @@
     <MESSAGE value="Wrote and tested custom html tag parser" />
     <MESSAGE value="Add readonly modifier for tag on HTMLTag class" />
     <MESSAGE value="Change logs extension from `log` to `json`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change logs extension from `log` to `json`" />
+    <MESSAGE value="Change template engine to Handlebars" />
+    <MESSAGE value="Changed template engine to Handlebars" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed template engine to Handlebars" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
