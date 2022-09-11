@@ -1,0 +1,37 @@
+form {
+    display: grid;
+    gap: 15px;
+    align-items: center;
+}
+
+.input {
+    border: 2px solid white;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+}
+
+.button {
+    background: #fab700;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 7px 15px;
+}
+
+.reset-button {
+    background: white;
+}
+
+.login-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons {
+    text-align: center;
+}

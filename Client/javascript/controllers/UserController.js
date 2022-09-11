@@ -2,13 +2,13 @@
 
 class UserController {
 
-    static baseUrl = "api/v1/users";
+    static baseUrl = "api";
 
     /**
      * @param {FormData} formData
      * */
     static async login(formData) {
-        return await this.fetchData(`${this.baseUrl}/login`, {
+        return await this.fetchData(`${this.baseUrl}/v2/users/login`, {
             method: 'POST',
             body: formData
         });

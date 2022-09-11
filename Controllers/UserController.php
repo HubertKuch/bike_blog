@@ -40,7 +40,7 @@ class UserController {
      * @throws UserNotFoundException
      * @throws InvalidUserDataException
      */
-    #[PostMapping("/v1/users/login/")]
+    #[PostMapping("/v2/users/login/")]
     public function login(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
         $this->logger->logRequest($request);
         UsersRequestValidators::validateLoginRequest($request);
@@ -66,7 +66,7 @@ class UserController {
 
         $_SESSION['user'] = $user;
 
-        return $response->withStatus(HTTPStatus::OK)->json(["message" => "Success"]);
+        return $response->withStatus(HTTPStatus::OK)->json(["message" => "Success", "status" => 200]);
     }
 
     /**
