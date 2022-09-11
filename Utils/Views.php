@@ -31,7 +31,9 @@ class Views {
     }
 
     public function admin(): void {
-        echo @$this->handlebars->render("admin", []);
+        echo @$this->handlebars->render("admin", [
+            "username" => $_SESSION['user']->getUsername()
+        ]);
     }
 
     public function login(): void {
