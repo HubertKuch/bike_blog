@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+{{> head }}
+<body>
+
+{{> header }}
+
+<main class="main-content">
+    {{> nav }}
+    {{> banner_in_main }}
+
+    <form class="login-form form" method="post">
+        <span class="errors"></span>
+        <label>
+            Login
+            <input class="input" name="username" type="text">
+        </label>
+
+        <label>
+            Haslo
+            <input class="input" name="password" type="password">
+        </label>
+
+        <div class="buttons">
+            <label>
+                <button class="button" type="submit">Zaloguj</button>
+            </label>
+
+            <label>
+                <button class="button reset-button" type="reset">Zresetuj</button>
+            </label>
+        </div>
+    </form>
+
+</main>
+
+{{> footer}}
+{{> scriptsSource }}
+
+<script>
+    "use strict";
+
+    const loginForm = document.querySelector("form.login-form");
+    const errorsContainer = document.querySelector(".errors");
+    const loginHandler = async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.currentTarget);
+
+        const response = await UserController.login(formData);
+
+        if (response.status !== 200) {
+            errorsContainer.textContent = response.message;
+            return;
+        }
+
+        window.location.replace("admin");
+    };
+
+    async function main() {
+        loginForm.addEventListener("submit", loginHandler);
+    }
+
+    main();
+</script>
+</body>
+</html>

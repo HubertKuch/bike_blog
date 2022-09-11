@@ -2,8 +2,6 @@
 
 namespace Hubert\BikeBlog\Controllers;
 
-session_start();
-
 use ReflectionException;
 use Avocado\HTTP\HTTPStatus;
 use Hubert\BikeBlog\Models\User;

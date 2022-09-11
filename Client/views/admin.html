@@ -1,60 +1,10 @@
 <!DOCTYPE html>
-<html lang="pl">
-{{> head }}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
 <body>
 
-{{> header }}
-
-<main class="main-content">
-    {{> nav }}
-    {{> banner_in_main }}
-
-    <form class="login-form" method="post">
-        <span class="errors"></span>
-        <label>
-            <input name="username" type="text">
-        </label>
-
-        <label>
-            <input name="password" type="password">
-        </label>
-
-        <label>
-            <button type="submit">Zaloguj</button>
-        </label>
-
-        <label>
-            <button type="reset">Zresetuj</button>
-        </label>
-    </form>
-
-</main>
-
-{{> footer}}
-{{> scriptsSource }}
-
-<script>
-    "use strict";
-
-    const loginForm = document.querySelector("form.login-form");
-    const errorsContainer = document.querySelector(".errors");
-    const loginHandler = async (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(event.currentTarget);
-
-        const response = await UserController.login(formData);
-
-        if (response.status !== 200) {
-            errorsContainer.textContent = response.message;
-        }
-    };
-
-    async function main() {
-        loginForm.addEventListener("submit", loginHandler);
-    }
-
-    main();
-</script>
 </body>
 </html>

@@ -18,8 +18,17 @@ class ViewsController {
         $this->views->main();
     }
 
+    #[GetMapping("/login")]
+    public function login(): void {
+        $this->views->login();
+    }
+
     #[GetMapping("/admin")]
     public function admin(): void {
+        if (!isset($_SESSION['user'])) {
+            header("Location: login");
+        }
+
         $this->views->admin();
     }
 

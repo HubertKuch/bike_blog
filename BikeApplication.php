@@ -12,6 +12,8 @@ class BikeApplication {
     public static function main(): void {
         self::loadEnvironment();
 
+        session_start();
+
         Application::run(__DIR__);
     }
 
