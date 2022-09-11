@@ -13,6 +13,7 @@ use Avocado\Application\RestController;
 use Hubert\BikeBlog\Models\DTO\UserDTO;
 use Hubert\BikeBlog\Helpers\LoggerHelper;
 use AvocadoApplication\Attributes\BaseURL;
+use AvocadoApplication\Mappings\GetMapping;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Mappings\PostMapping;
 use Hubert\BikeBlog\Exceptions\InvalidRequest;
@@ -65,6 +66,16 @@ class UserController {
         $_SESSION['user'] = $user;
 
         return $response->withStatus(HTTPStatus::OK)->json(["message" => "Success", "status" => 200]);
+    }
+
+    #[GetMapping("/v1/users/logout")]
+    public function logout(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+        session_unset();
+
+        return $response->withStatus(HTTPStatus::OK)->json([
+            "message" => "logout",
+            "status"  => 200
+        ]);
     }
 
     /**
