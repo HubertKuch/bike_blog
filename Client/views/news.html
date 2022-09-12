@@ -64,8 +64,6 @@
 <script>
     const newsNavigationListElement = document.querySelector(".news-navigation");
     const newsContentElement = document.querySelector(".news-content");
-    const newsDateElement = document.querySelector(".date");
-
     const tagsContainer = document.querySelector(".tags");
 
     /**
@@ -90,8 +88,7 @@
     const showNews = ({tags, description, date}) => {
         showTags(tags);
 
-        newsContentElement.textContent = description;
-        newsDateElement.textContent = date;
+        newsContentElement.innerHTML = description;
     }
 
     const main = async () => {

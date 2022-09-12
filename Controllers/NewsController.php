@@ -57,11 +57,10 @@ class NewsController {
     public function getAllNews(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
         $this->logger->logRequest($request);
         $news = $this->newsRepository->findMany();
-
         $newsDTOs = array_map(fn($n) => NewsDTO::from($n), $news);
         $newsByYearDTOs = NewsByYearDTO::fromArray($newsDTOs);
 
-        return $response->json($newsByYearDTOs);
+        return $response->json($newsByYearDTOs)->withStatus(HTTPStatus::OK);
     }
 
     /**

@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "21e801d77b23d637230e4875ccb7a309",
+  "content-hash": "4097c4d06f21706a88be2217a34c42ce",
   "packages": [
     {
       "name": "brick/math",
@@ -55,16 +55,16 @@
         "source": "https://github.com/brick/math/tree/0.10.2"
       },
       "funding": [
-                {
-                    "url": "https://github.com/BenMorel",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-08-10T22:54:19+00:00"
-        },
         {
-            "name": "graham-campbell/result-type",
-            "version": "1.1.x-dev",
+          "url": "https://github.com/BenMorel",
+          "type": "github"
+        }
+      ],
+      "time": "2022-08-10T22:54:19+00:00"
+    },
+    {
+      "name": "graham-campbell/result-type",
+      "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Result-Type.git",
@@ -123,20 +123,20 @@
                 "type": "tidelift"
               }
             ],
-          "time": "2022-07-30T15:56:11+00:00"
-        },
+      "time": "2022-07-30T15:56:11+00:00"
+    },
     {
       "name": "hubert/avocado",
-      "version": "dev-main",
+      "version": "v4.1.1",
       "source": {
         "type": "git",
         "url": "https://github.com/HubertKuch/Avocado.git",
-        "reference": "ee512d4b09949dfa7d06fbf052d8bc4ef83b5070"
+        "reference": "b1f7d71b67c1059e6bf1d38c39041d62bb395c0b"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/ee512d4b09949dfa7d06fbf052d8bc4ef83b5070",
-        "reference": "ee512d4b09949dfa7d06fbf052d8bc4ef83b5070",
+        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/b1f7d71b67c1059e6bf1d38c39041d62bb395c0b",
+        "reference": "b1f7d71b67c1059e6bf1d38c39041d62bb395c0b",
         "shasum": ""
       },
       "require": {
@@ -149,7 +149,6 @@
         "phpstan/phpstan": "^1.7",
         "phpunit/phpunit": "9.5.18"
       },
-      "default-branch": true,
       "type": "framework",
       "autoload": {
         "psr-4": {
@@ -177,9 +176,9 @@
       "homepage": "https://avocadoframework.com",
       "support": {
         "issues": "https://github.com/HubertKuch/Avocado/issues",
-        "source": "https://github.com/HubertKuch/Avocado/tree/main"
+        "source": "https://github.com/HubertKuch/Avocado/tree/v4.1.1"
       },
-      "time": "2022-08-31T06:16:44+00:00"
+      "time": "2022-09-12T19:26:08+00:00"
     },
     {
       "name": "kcs/class-finder",
@@ -394,16 +393,16 @@
           "name": "Graham Campbell",
           "email": "hello@gjcampbell.co.uk",
           "homepage": "https://github.com/GrahamCampbell"
-                }
-            ],
-            "description": "Option Type for PHP",
-            "keywords": [
-                "language",
-                "option",
-                "php",
-                "type"
-            ],
-            "support": {
+        }
+      ],
+      "description": "Option Type for PHP",
+      "keywords": [
+        "language",
+        "option",
+        "php",
+        "type"
+      ],
+      "support": {
                 "issues": "https://github.com/schmittjoh/php-option/issues",
                 "source": "https://github.com/schmittjoh/php-option/tree/1.9.0"
             },
@@ -669,16 +668,16 @@
         "ext-ctype": "*"
       },
       "suggest": {
-                "ext-ctype": "For best performance"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.26-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
+        "ext-ctype": "For best performance"
+      },
+      "default-branch": true,
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-main": "1.26-dev"
+        },
+        "thanks": {
+          "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
                 }
             },
@@ -1208,16 +1207,16 @@
           "generated/exec.php",
           "generated/fileinfo.php",
           "generated/filesystem.php",
-                    "generated/filter.php",
-                    "generated/fpm.php",
-                    "generated/ftp.php",
-                    "generated/funchand.php",
-                    "generated/gmp.php",
-                    "generated/gnupg.php",
-                    "generated/hash.php",
-                    "generated/ibase.php",
-                    "generated/ibmDb2.php",
-                    "generated/iconv.php",
+          "generated/filter.php",
+          "generated/fpm.php",
+          "generated/ftp.php",
+          "generated/funchand.php",
+          "generated/gmp.php",
+          "generated/gnupg.php",
+          "generated/hash.php",
+          "generated/ibase.php",
+          "generated/ibmDb2.php",
+          "generated/iconv.php",
                     "generated/image.php",
                     "generated/imap.php",
                     "generated/info.php",
@@ -3724,9 +3723,7 @@
   ],
   "aliases": [],
   "minimum-stability": "dev",
-  "stability-flags": {
-    "hubert/avocado": 20
-  },
+  "stability-flags": [],
   "prefer-stable": false,
   "prefer-lowest": false,
   "platform": [],
