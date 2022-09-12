@@ -169,3 +169,7 @@ div.news > * {
 .navigation-divider {
     margin: 0 10px 0;
 }
+
+th, td {
+    padding: 5px;
+}

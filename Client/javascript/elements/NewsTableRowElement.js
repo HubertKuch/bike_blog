@@ -13,10 +13,10 @@ class NewsTableRowElement {
         const row = document.createElement("tr");
 
         const titleColumn = document.createElement("td");
-        titleColumn.innerText = this.news.title;
+        titleColumn.innerHTML = this.news.title;
 
         const dateColumn = document.createElement("td");
-        dateColumn.innerText = this.news.date;
+        dateColumn.innerHTML = this.news.date;
 
         const editColumn = document.createElement("td");
         const editLink = document.createElement("a");
