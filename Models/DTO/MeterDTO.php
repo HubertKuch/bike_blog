@@ -11,6 +11,7 @@ class MeterDTO {
         public readonly float  $maxSpeed,
         public readonly float  $startState,
         public readonly float  $endState,
+        public readonly float  $tripLength,
         public readonly float  $time,
         public readonly string $newsId
     ) {
@@ -30,6 +31,7 @@ class MeterDTO {
             $meter->getMaxSpeed(),
             $meter->getStartState(),
             $meter->getEndState(),
+            $meter->getTripLength(),
             $meter->getTime(),
             $meter->getNewsId()
         );

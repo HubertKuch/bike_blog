@@ -39,4 +39,8 @@ class Views {
     public function login(): void {
         echo @$this->handlebars->render("login", []);
     }
+
+    public function editNews(): void {
+        echo @$this->handlebars->render("editNews", []);
+    }
 }

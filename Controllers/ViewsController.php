@@ -23,6 +23,15 @@ class ViewsController {
         $this->views->login();
     }
 
+    #[GetMapping("/edit-news")]
+    public function editNews(): void {
+        if (!isset($_SESSION['user'])) {
+            header("Location: login");
+        }
+
+        $this->views->editNews();
+    }
+
     #[GetMapping("/admin")]
     public function admin(): void {
         if (!isset($_SESSION['user'])) {

@@ -20,6 +20,8 @@ class Meter {
     private float $startState;
     #[Field("meter_end_state")]
     private float $endState;
+    #[Field("trip_length")]
+    private float $tripLength;
     #[Field]
     private float $time;
     #[Field("to_show")]
@@ -32,11 +34,15 @@ class Meter {
         float         $maxSpeed,
         float         $startState,
         float         $endState,
+        float         $tripLength,
         float         $time,
         bool          $isToShow,
         string        $newsId) {
         $this->id = $id->toString();
         $this->maxSpeed = $maxSpeed;
+        $this->endState = $endState;
+        $this->startState = $startState;
+        $this->tripLength = $tripLength;
         $this->time = $time;
         $this->isToShow = $isToShow;
         $this->newsId = $newsId;
@@ -49,6 +55,7 @@ class Meter {
             $request->body['time'],
             $request->body['startState'],
             $request->body['endState'],
+            $request->body['tripLength'],
             $request->body['toShow'],
             $request->body['newsId'],);
     }
@@ -79,5 +86,9 @@ class Meter {
 
     public function getEndState(): float {
         return $this->endState;
+    }
+
+    public function getTripLength(): float {
+        return $this->tripLength;
     }
 }
