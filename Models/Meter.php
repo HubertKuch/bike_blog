@@ -16,6 +16,10 @@ class Meter {
     private string $id;
     #[Field("max_speed")]
     private float $maxSpeed;
+    #[Field("meter_end_state")]
+    private float $startState;
+    #[Field("meter_end_state")]
+    private float $endState;
     #[Field]
     private float $time;
     #[Field("to_show")]
@@ -23,7 +27,14 @@ class Meter {
     #[Field("news_id")]
     private string $newsId;
 
-    public function __construct(UuidInterface $id, float $maxSpeed, float $time, bool $isToShow, string $newsId) {
+    public function __construct(
+        UuidInterface $id,
+        float         $maxSpeed,
+        float         $startState,
+        float         $endState,
+        float         $time,
+        bool          $isToShow,
+        string        $newsId) {
         $this->id = $id->toString();
         $this->maxSpeed = $maxSpeed;
         $this->time = $time;
@@ -36,6 +47,8 @@ class Meter {
             UuidV4::uuid4(),
             $request->body['maxSpeed'],
             $request->body['time'],
+            $request->body['startState'],
+            $request->body['endState'],
             $request->body['toShow'],
             $request->body['newsId'],);
     }
@@ -58,5 +71,13 @@ class Meter {
 
     public function getNewsId(): string {
         return $this->newsId;
+    }
+
+    public function getStartState(): float {
+        return $this->startState;
+    }
+
+    public function getEndState(): float {
+        return $this->endState;
     }
 }

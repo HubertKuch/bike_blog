@@ -9,6 +9,8 @@ class MeterDTO {
     public function __construct(
         public readonly string $id,
         public readonly float  $maxSpeed,
+        public readonly float  $startState,
+        public readonly float  $endState,
         public readonly float  $time,
         public readonly string $newsId
     ) {
@@ -23,6 +25,13 @@ class MeterDTO {
     }
 
     public static function from(Meter $meter): MeterDTO {
-        return new MeterDTO($meter->getId(), $meter->getMaxSpeed(), $meter->getTime(), $meter->getNewsId());
+        return new MeterDTO(
+            $meter->getId(),
+            $meter->getMaxSpeed(),
+            $meter->getStartState(),
+            $meter->getEndState(),
+            $meter->getTime(),
+            $meter->getNewsId()
+        );
     }
 }
