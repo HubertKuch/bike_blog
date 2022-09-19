@@ -2,16 +2,20 @@
 
 namespace Hubert\BikeBlog\Controllers;
 
-use Hubert\BikeBlog\Utils\Views;
 use Avocado\Application\RestController;
-use AvocadoApplication\Mappings\GetMapping;
+use Avocado\ORM\AvocadoRepository;
+use Avocado\Router\AvocadoRequest;
 use AvocadoApplication\Attributes\Autowired;
+use AvocadoApplication\Mappings\GetMapping;
+use Hubert\BikeBlog\Utils\Views;
 
 #[RestController]
 class ViewsController {
 
     #[Autowired]
     private Views $views;
+    #[Autowired("newsRepository")]
+    private AvocadoRepository $newsRepository;
 
     #[GetMapping("/")]
     public function mainPage(): void {
@@ -23,13 +27,16 @@ class ViewsController {
         $this->views->login();
     }
 
-    #[GetMapping("/edit-news")]
-    public function editNews(): void {
+    #[GetMapping("/edit-news/:id")]
+    public function editNews(AvocadoRequest $request): void {
         if (!isset($_SESSION['user'])) {
             header("Location: login");
         }
 
-        $this->views->editNews();
+        $newsId = $request->params['id'] ?? null;
+        $news = $this->newsRepository->findById($newsId);
+
+        $this->views->editNews($news);
     }
 
     #[GetMapping("/admin")]

@@ -1,0 +1,40 @@
+<form class="news-form" method="post">
+    <label>
+        Tytul <br>
+        <input class="input" name="title" type="text">
+    </label>
+
+    <label>
+        Tresc <br>
+        <textarea class="input" cols="30" name="description" rows="40" spellcheck="false"></textarea>
+    </label>
+
+    <div class="meters">
+        <div>
+            <label>
+                <button class="button-without-background add-button" data-add-action="add-meter" type="button">
+                    Dodaj licznik <i class="fa-solid fa-plus"></i>
+                </button>
+            </label>
+        </div>
+    </div>
+
+    <label>
+        Data <br>
+        <input class="input" name="date" type="date">
+    </label>
+
+    <div class="tags">
+        <div>
+            <label>
+                <button class="button-without-background add-button" data-add-action="add-tag" type="button">
+                    Dodaj tag <i class="fa-solid fa-plus"></i>
+                </button>
+            </label>
+        </div>
+    </div>
+
+    <div>
+        <button class="submit-news-form button" type="submit"></button>
+    </div>
+</form>

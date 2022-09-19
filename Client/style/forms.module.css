@@ -35,3 +35,10 @@ form {
 .buttons {
     text-align: center;
 }
+
+.button-without-background {
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+}

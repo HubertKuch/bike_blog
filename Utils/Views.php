@@ -3,9 +3,11 @@
 namespace Hubert\BikeBlog\Utils;
 
 
+use AvocadoApplication\Attributes\Resource;
 use Handlebars\Handlebars;
 use Handlebars\Loader\FilesystemLoader;
-use AvocadoApplication\Attributes\Resource;
+use Hubert\BikeBlog\Models\DTO\NewsDTO;
+use Hubert\BikeBlog\Models\News;
 
 #[Resource]
 class Views {
@@ -40,7 +42,13 @@ class Views {
         echo @$this->handlebars->render("login", []);
     }
 
-    public function editNews(): void {
+    public function editNews(News $news): void {
+        echo @$this->handlebars->render("editNews", [
+            "news" => json_encode(NewsDTO::from($news))
+        ]);
+    }
+
+    public function newNews(): void {
         echo @$this->handlebars->render("editNews", []);
     }
 }

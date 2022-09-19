@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+{{> head }}
+<body>
+
+{{> header }}
+
+<main class="main-content">
+    {{> admin_nav }}
+
+    {{> banner_in_main }}
+
+    <div class="news-container">
+
+        <nav class="news-navigation">
+            <div>
+                <span>
+                    Zalogowany jako {{ username }}.
+                </span>
+                <br>
+
+                <span>
+                    <a href="api/v1/users/logout">Wyloguj sie.</a>
+                </span>
+            </div>
+        </nav>
+
+        <div class="news">
+            <h3>Panel administracyjny</h3>
+            {{> newsForm }}
+        </div>
+    </div>
+</main>
+
+{{> footer }}
+
+{{> scriptsSource }}
+
+<script>
+    const titleElement = document.querySelector("[name=title]");
+    const descriptionElement = document.querySelector("[name=description]");
+    const dateElement = document.querySelector("[name=date]");
+    const submitButton = document.querySelector(".submit-news-form");
+    const buttonAddMeter = document.querySelector(".add-button[data-add-action='add-meter']");
+    const buttonAddTag = document.querySelector(".add-button[data-add-action='add-tag']");
+    const metersContainer = document.querySelector(".meters");
+    const tagsContainer = document.querySelector(".tags");
+    const form = document.querySelector(".news-form");
+
+    function getNewsBody() {
+        return {
+            title: titleElement.value,
+            description: descriptionElement.innerHTML,
+            date: dateElement.value
+        };
+    }
+
+    function getMeterDataFromContainer(container) {
+        return {
+            maxSpeed: container.querySelector("[name='max-speed']").value,
+            time: container.querySelector("[name=time]").value,
+            meterStartState: container.querySelector("[name='meter-start-state']").value,
+            meterEndState: container.querySelector("[name='meter-end-state']").value,
+        };
+    }
+
+    function getTagsDataFromContainer(container) {
+        return {
+            tag: container.querySelector("[name='tag-name']"),
+        };
+    }
+
+    /**
+     * @param {News} news
+     * */
+    function showActualData({title, description, date, tags}) {
+        titleElement.value = title;
+        descriptionElement.textContent = description;
+        dateElement.value = date;
+        submitButton.textContent = "ZAPISZ";
+
+        tags.forEach(tag => new TagInnerFormElement().render(tagsContainer, tag))
+    }
+
+    function addMeterHandler() {
+        new MeterElement().render(metersContainer)
+    }
+
+    function addTagHandler() {
+        new TagInnerFormElement().render(tagsContainer)
+    }
+
+    function buildNewsRequest() {
+        const base = getNewsBody();
+
+        base.tags = [...tagsContainer.querySelectorAll('.tag input')].map(tag => tag.value);
+
+        return base;
+    }
+
+    function submitHandler(event) {
+        event.preventDefault();
+
+        const newsRequestBody = buildNewsRequest()
+    }
+
+    async function main() {
+        const newsData = {
+        {
+            {
+                news
+            }
+        }
+    }
+        ;
+        const news = NewsSerializer.serializeSingleNews(newsData);
+        const meters = await MetersController.getMetersForNews(news.id);
+
+        console.log(meters)
+
+        buttonAddMeter.addEventListener("click", addMeterHandler);
+        buttonAddTag.addEventListener("click", addTagHandler);
+        form.addEventListener("submit", submitHandler);
+
+        showActualData(news);
+    }
+
+    main()
+
+</script>
+
+</body>
+</html>

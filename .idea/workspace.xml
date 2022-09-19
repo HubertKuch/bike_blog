@@ -25,16 +25,18 @@
       <change afterPath="$PROJECT_DIR$/Logs/request_1663074750.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Logs/request_1663074795.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Logs/request_1663075457.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663076564.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663077258.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663077302.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663077410.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663077411.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663077412.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/NewsTableRowElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/NewsTableRowElement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/style/forms.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/forms.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ViewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ViewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DTO/MeterDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/MeterDTO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Meter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Meter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Validators/MetersRequestValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/MetersRequestValidators.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Validators/NewsRequestValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/NewsRequestValidators.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,13 +56,21 @@
         <option value="HTTP Request" />
         <option value="package.json" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Client/javascript/elements/NewsTableRowElement.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client/views/editNews.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/NewsController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/ViewsController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/composer.lock" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -137,52 +147,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Project.color": "4e2c05",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected": "true",
-    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit < 6",
-    "javascript.nodejs.core.library.configured.version": "16.15.1",
-    "javascript.nodejs.core.library.typings.version": "16.11.56",
-    "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "/home/hubert/Downloads/rowerowe_test.sql",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "/home/hubert/.nvm/versions/node/v16.15.1/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.09302324",
-    "project.structure.side.proportion": "0.2",
-    "rearrange.code.on.save": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
-    "settings.editor.splitter.proportion": "0.1596594"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Project.color&quot;: &quot;4e2c05&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected&quot;: &quot;true&quot;,
+    &quot;com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary&quot;: &quot;PHPUnit &lt; 6&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.56&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/opt/lampp/htdocs/bike-blog/Client/javascript/elements&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.09302324&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.HTML&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.1596594&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;,
+      &quot;mysql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "086f6656-1b5d-45d8-92f2-fe0903d18d6d",
-      "086f6656-1b5d-45d8-92f2-fe0903d18d6d/schema/\"bike_blog\""
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;086f6656-1b5d-45d8-92f2-fe0903d18d6d&quot;,
+      &quot;086f6656-1b5d-45d8-92f2-fe0903d18d6d/schema/\&quot;bike_blog\&quot;&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Client/javascript/elements" />
       <recent name="$PROJECT_DIR$/Resources/Images/Banner" />
       <recent name="$PROJECT_DIR$/Resources/Images" />
     </key>
@@ -261,7 +272,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Test registration and deleting users" />
     <MESSAGE value="Write base login controller" />
     <MESSAGE value="Refactor DTOs" />
     <MESSAGE value="Improve models code style" />
@@ -286,7 +296,8 @@
     <MESSAGE value="Create imports scripts" />
     <MESSAGE value="Improved table style" />
     <MESSAGE value="Added `startState` and `endState` field to meter model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added `startState` and `endState` field to meter model" />
+    <MESSAGE value="Added trip length field" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added trip length field" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

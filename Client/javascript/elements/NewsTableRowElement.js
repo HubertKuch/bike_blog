@@ -21,6 +21,7 @@ class NewsTableRowElement {
         const editColumn = document.createElement("td");
         const editLink = document.createElement("a");
         editLink.innerText = "EDYTUJ";
+        editLink.href = `edit-news/${this.news.id}`
 
         const deleteColumn = document.createElement("td");
         const deleteLink = document.createElement("a");
