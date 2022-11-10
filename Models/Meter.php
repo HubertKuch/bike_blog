@@ -16,7 +16,7 @@ class Meter {
     private string $id;
     #[Field("max_speed")]
     private float $maxSpeed;
-    #[Field("meter_end_state")]
+    #[Field("meter_start_state")]
     private float $startState;
     #[Field("meter_end_state")]
     private float $endState;

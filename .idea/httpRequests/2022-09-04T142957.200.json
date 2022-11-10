@@ -1,0 +1,8 @@
+object(Hubert\BikeBlog\Helpers\LoggerHelper)#4939 (1) {
+["logger": "Hubert\BikeBlog\Helpers\LoggerHelper": private]=>
+object(Hubert\BikeBlog\Logger\FileLogger)#4965 (1) {
+["path": "Hubert\BikeBlog\Logger\FileLogger": private]=>
+string(5) "Logs/"
+}
+}
+[]

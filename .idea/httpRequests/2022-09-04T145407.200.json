@@ -1,0 +1,17 @@
+[
+  {
+    "year": 2015,
+    "news": [
+      {
+        "id": "8aae5c3f-0e30-4196-b5db-34c36e249167",
+        "title": "Test",
+        "description": "test",
+        "tags": [
+          "test",
+          "test12"
+        ],
+        "time": "2015-12-31"
+      }
+    ]
+  }
+]

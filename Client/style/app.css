@@ -173,3 +173,18 @@ div.news > * {
 th, td {
     padding: 5px;
 }
+
+div.tag, div.meter {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 2fr;
+    margin: 0 0 20px;
+}
+
+div.meter {
+    display: grid;
+}
+
+.fa-x {
+    cursor: pointer;
+}

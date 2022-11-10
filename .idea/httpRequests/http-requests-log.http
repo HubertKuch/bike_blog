@@ -1,0 +1,333 @@
+DELETE http://localhost/bike-blog/api/v1/users/450717bf-2c5f-4891-ba1a-3d040a315e72
+Accept: application/json
+
+<> 2022-09-04T145421.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v2/news/tag/test12/
+
+<> 2022-09-04T145407.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/news/tag/test12/
+
+<> 2022-09-04T145337.404.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/news/tag/test12
+
+<> 2022-09-04T145330.404.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/news/8aae5c3f-0e30-4196-b5db-34c36e249167
+
+<> 2022-09-04T145328.200.json
+
+###
+
+POST http://localhost/bike-blog/api/v1/news/
+Content-Type: application/json
+
+{
+  "title": "Test",
+  "description": "test",
+  "tags": [
+    "test",
+    "Test2"
+  ],
+  "date": "2015-12-31"
+}
+
+<> 2022-09-04T145323.201.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/news/
+Accept: application/json
+
+<> 2022-09-04T145314.400.json
+
+###
+
+POST http://localhost/bike-blog/api/v1/meters/
+Content-Type: application/json
+
+{
+  "newsId": "1ec210a5-ee6e-4310-8288-3738c379a89b",
+  "maxSpeed": 24.2,
+  "time": 24.12,
+  "toShow": true
+}
+
+<> 2022-09-04T145254.201.json
+
+###
+
+POST http://localhost/bike-blog/api/v1/meters/
+Content-Type: application/json
+
+{
+  "newsId": "1ec210a5-ee6e-4310-8288-3738c379a89b",
+  "maxSpeed": 24.2,
+  "time": 24.12,
+  "toShow": true
+}
+
+<> 2022-09-04T145249.201.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T145233.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T144330.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T144300.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T144247.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T144203.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T142957.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T142947.200.html
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T142929.200.html
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T142724.200.html
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T142707.200.html
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140912.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140842.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140816.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140745.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140736.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140605.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140559.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140529.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140501.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140453.200.json
+
+###
+
+GET http://localhost/bike-blog/api/v1/meters/1ec210a5-ee6e-4310-8288-3738c379a89b/
+
+<> 2022-09-04T140432.200.json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/fcd3fda1-1cbb-487e-850d-2d0499642b0b
+Accept: application/json
+
+<> 2022-09-03T225222.200.json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/51185445-a4d2-47fd-b62a-25d109d47b4b
+Accept: application/json
+
+<> 2022-09-03T225154.200.json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/fe8580ee-5ccf-4b95-b510-096775b257f6
+Accept: application/json
+
+<> 2022-09-03T225133.200.json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/5c75ec9e-1cb2-4385-8890-cb51e56c0cb4
+Accept: application/json
+
+<> 2022-09-03T225129.404.json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/1f85dee4-4f8e-4c84-a786-7f9cd85fd3e0
+Accept: application/json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/59f59ecf-9ecd-4ba8-b12b-b03c7a1b4e7d
+Accept: application/json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/095357bf-343b-44f4-885e-183c8b8bf194
+Accept: application/json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/73f5e2bc-f115-4ae1-8c1c-572b8f7d218f
+Accept: application/json
+
+<> 2022-09-03T225020.200.html
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/c31a0d18-a44c-4ad8-b2f5-fdf86ec43ce9
+Accept: application/json
+
+<> 2022-09-03T225010.200.html
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/df087d4c-3c39-4eda-9d72-0803076798e4
+Accept: application/json
+
+<> 2022-09-03T225002.200.html
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/2c65e4b3-8d17-417f-afc9-ef020cd791af
+Accept: application/json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/b4f0a3ce-ebd4-45dd-949b-b0e062188416
+Accept: application/json
+
+<> 2022-09-03T224947.200.html
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/09a97d44-a2c7-43cf-aee9-abc673ead6f6
+Accept: application/json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/ed7c0cd9-03ae-499c-b800-eec178fec330
+Accept: application/json
+
+<> 2022-09-03T224923-1.404.json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/eda97a82-5450-4dff-83cf-cb1ab846300c
+Accept: application/json
+
+<> 2022-09-03T224923.404.json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/02eab24e-559e-458b-8c06-cce8beb0c924
+Accept: application/json
+
+<> 2022-09-03T224918.404.json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/
+Accept: application/json
+
+<> 2022-09-03T224900.400.json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/24
+Accept: application/json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/24
+Accept: application/json
+
+###
+
+DELETE http://localhost/bike-blog/api/v1/users/24
+Accept: application/json
+
+###
+

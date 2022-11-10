@@ -7,5 +7,8 @@ class Meter {
         this.maxSpeed = data.maxSpeed;
         this.time = data.time;
         this.newsId = data.newsId;
+        this.meterStartState = data.meterStartState;
+        this.meterEndState = data.meterEndState;
+        this.tripLength = data.tripLength;
     }
 }

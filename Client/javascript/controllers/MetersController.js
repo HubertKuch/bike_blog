@@ -28,4 +28,18 @@ class MetersController {
 
         return data;
     }
+
+    /**
+    @param {Meter} meter
+    */
+    static async updateMeter(meter) {
+        const res = await fetch(`${this.baseUrl}/${meter.id}`, {
+            method: "PATCH",
+            body: JSON.stringify(meter),
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        });
+    }
 }

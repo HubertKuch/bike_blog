@@ -1,0 +1,5 @@
+object(Hubert\BikeBlog\Logger\FileLogger)#4936 (1) {
+["path": "Hubert\BikeBlog\Logger\Logger": private]=>
+string(5) "Logs/"
+}
+[]

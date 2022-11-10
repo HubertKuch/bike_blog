@@ -3,6 +3,9 @@
 namespace Hubert\BikeBlog\Controllers;
 
 use Avocado\HTTP\HTTPStatus;
+use Avocado\ORM\AvocadoModelException;
+use Avocado\ORM\AvocadoRepositoryException;
+use AvocadoApplication\Mappings\PatchMapping;
 use Hubert\BikeBlog\Models\Meter;
 use Avocado\Router\AvocadoRequest;
 use Avocado\ORM\AvocadoRepository;
@@ -17,10 +20,12 @@ use AvocadoApplication\Mappings\PostMapping;
 use Hubert\BikeBlog\Exceptions\InvalidRequest;
 use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
 use Hubert\BikeBlog\Utils\Validators\MetersRequestValidators;
+use ReflectionException;
 
 #[RestController]
 #[BaseURL("/api/v1/meters")]
-class MetersController {
+class MetersController
+{
 
     #[Autowired("metersRepository")]
     private AvocadoRepository $metersRepository;
@@ -30,11 +35,17 @@ class MetersController {
     private LoggerHelper $logger;
 
     /**
+     * @param AvocadoRequest $request
+     * @param AvocadoResponse $response
+     * @return AvocadoResponse
      * @throws InvalidRequest
      * @throws NewsNotFoundException
+     * @throws AvocadoModelException
+     * @throws ReflectionException
      */
     #[GetMapping("/:newsId")]
-    public function getMetersByNewsId(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    public function getMetersByNewsId(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse
+    {
         $this->logger->logRequest($request);
         MetersRequestValidators::validateGetMetersByNewsIdRequest($request);
 
@@ -54,11 +65,17 @@ class MetersController {
     }
 
     /**
+     * @param AvocadoRequest $request
+     * @param AvocadoResponse $response
+     * @return AvocadoResponse
+     * @throws AvocadoModelException
      * @throws InvalidRequest
-     * @throws NewsNotFoundException
+     * @throws ReflectionException
+     * @throws AvocadoRepositoryException
      */
     #[PostMapping("/")]
-    public function addNewMeter(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    public function addNewMeter(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse
+    {
         $this->logger->logRequest($request);
         MetersRequestValidators::validateNewMeterRequest($request);
 
@@ -75,5 +92,35 @@ class MetersController {
         $this->metersRepository->save($meter);
 
         return $response->withStatus(HTTPStatus::CREATED)->json(["message" => "Success"]);
+    }
+
+
+    /**
+     * @param AvocadoRequest $request
+     * @param AvocadoResponse $response
+     * @return AvocadoResponse
+     * @throws AvocadoModelException
+     * @throws InvalidRequest
+     * @throws ReflectionException
+     */
+    #[PatchMapping("/:id")]
+    public function updateMeterById(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse
+    {
+        $this->logger->logRequest($request);
+        MetersRequestValidators::validateUpdateMeterRequest($request);
+
+        $meter = Meter::fromRequest($request);
+
+        $this->metersRepository->updateById([
+            "max_speed" => $meter->getMaxSpeed(),
+            "meter_start_state" => $meter->getStartState(),
+            "meter_end_state" => $meter->getEndState(),
+            "trip_length" => $meter->getTripLength(),
+            "time" => $meter->getTime(),
+            "isToShow" => $meter->isToShow(),
+            "newsId" => $meter->getNewsId(),
+        ], $meter->getId());
+
+        return $response->withStatus(HTTPStatus::ACCEPTED)->json(["message" => "updated"]);
     }
 }

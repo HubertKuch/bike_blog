@@ -1,0 +1,18 @@
+<br/>
+<b>Fatal
+    error</b>:  Uncaught Error: Typed static property Avocado\Application\Application::$leafManager must not be accessed before initialization in /opt/lampp/htdocs/bike-blog/vendor/hubert/avocado/src/AvocadoApplication/Application.php:178
+Stack trace:
+#0 /opt/lampp/htdocs/bike-blog/Configuration/LoggerConfiguration.php(23): Avocado\Application\Application::getLeafManager()
+#1 [internal function]: Hubert\BikeBlog\Configuration\LoggerConfiguration-&gt;getLoggerHelper()
+#2 /opt/lampp/htdocs/bike-blog/vendor/hubert/avocado/src/AvocadoApplication/Attributes/Leaf.php(40): ReflectionMethod-&gt;invoke(Object(Hubert\BikeBlog\Configuration\LoggerConfiguration))
+#3 /opt/lampp/htdocs/bike-blog/vendor/hubert/avocado/src/AvocadoApplication/Attributes/Leaf.php(63): Avocado\AvocadoApplication\Attributes\Leaf-&gt;init(Object(ReflectionMethod), Object(Avocado\AvocadoApplication\Attributes\Configuration))
+#4 /opt/lampp/htdocs/bike-blog/vendor/hubert/avocado/src/AvocadoApplication/Attributes/Configuration.php(62): Avocado\AvocadoApplication\Attributes\Leaf::instance(Object(ReflectionMethod), Object(Avocado\AvocadoApplication\Attributes\Configuration))
+#5 [internal function]: Avocado\AvocadoApplication\Attributes\Configuration-&gt;Avocado\AvocadoApplication\Attributes\{closure}(Object(ReflectionMethod))
+#6 /opt/lampp/htdocs/bike-blog/vendor/hubert/avocado/src/AvocadoApplication/Attributes/Configuration.php(66): array_map(Object(Closure), Array)
+#7 /opt/lampp/htdocs/bike-blog/vendor/hubert/avocado/src/AvocadoApplication/Leafs/LeafManager.php(26): Avocado\AvocadoApplication\Attributes\Configuration-&gt;getLeafs(Object(Avocado\AvocadoApplication\Attributes\Configuration))
+#8 /opt/lampp/htdocs/bike-blog/vendor/hubert/avocado/src/AvocadoApplication/Application.php(50): Avocado\AvocadoApplication\Leafs\LeafManager::ofConfigurations(Array)
+#9 /opt/lampp/htdocs/bike-blog/BikeApplication.php(15): Avocado\Application\Application::run('/opt/lampp/htdo...')
+#10 /opt/lampp/htdocs/bike-blog/index.php(15): Hubert\BikeBlog\BikeApplication::main()
+#11 {main}
+thrown in <b>/opt/lampp/htdocs/bike-blog/vendor/hubert/avocado/src/AvocadoApplication/Application.php</b> on line
+<b>178</b><br/>

@@ -2,25 +2,26 @@
 
 namespace Hubert\BikeBlog\Controllers;
 
-use ReflectionException;
+use Avocado\Application\RestController;
 use Avocado\HTTP\HTTPStatus;
-use Hubert\BikeBlog\Models\News;
+use Avocado\ORM\AvocadoModelException;
 use Avocado\ORM\AvocadoRepository;
+use Avocado\ORM\AvocadoRepositoryException;
 use Avocado\Router\AvocadoRequest;
 use Avocado\Router\AvocadoResponse;
-use Avocado\ORM\AvocadoModelException;
-use Hubert\BikeBlog\Models\DTO\NewsDTO;
-use Avocado\Application\RestController;
-use Hubert\BikeBlog\Helpers\LoggerHelper;
+use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Mappings\GetMapping;
-use Avocado\ORM\AvocadoRepositoryException;
-use AvocadoApplication\Attributes\Autowired;
+use AvocadoApplication\Mappings\PatchMapping;
 use AvocadoApplication\Mappings\PostMapping;
-use Hubert\BikeBlog\Models\DTO\NewsByYearDTO;
 use Hubert\BikeBlog\Exceptions\InvalidRequest;
 use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
+use Hubert\BikeBlog\Helpers\LoggerHelper;
+use Hubert\BikeBlog\Models\DTO\NewsByYearDTO;
+use Hubert\BikeBlog\Models\DTO\NewsDTO;
+use Hubert\BikeBlog\Models\News;
 use Hubert\BikeBlog\Utils\Validators\NewsRequestValidators;
+use ReflectionException;
 
 #[RestController]
 #[BaseURL("/api")]
@@ -98,5 +99,25 @@ class NewsController {
         $byYearDTOs = NewsByYearDTO::fromArray($newsDTOs);
 
         return $response->withStatus(HTTPStatus::OK)->json($byYearDTOs);
+    }
+
+    /**
+     * @throws InvalidRequest
+     */
+    #[PatchMapping("/v1/news/:id")]
+    public function updateNewsById(AvocadoRequest $request, AvocadoResponse $response) {
+        $this->logger->logRequest($request);
+        NewsRequestValidators::validateFindByTagRequest($request);
+        NewsRequestValidators::validateNewNewsRequest($request);
+
+        $id = $request->params['id'];
+        $this->newsRepository->updateById([
+            "title" => $request->params['title'],
+            "description" => $request->params['description'],
+            "tags" => implode(';', $request->params['tags']),
+            "date" => $request->params['date'],
+        ], $id);
+
+        $response->withStatus(HTTPStatus::OK)->json(NewsDTO::from($this->newsRepository->findById($id)));
     }
 }

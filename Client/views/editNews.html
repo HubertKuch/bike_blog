@@ -72,13 +72,15 @@
 
     /**
      * @param {News} news
+     * @param {Meter[]} meters
      * */
-    function showActualData({title, description, date, tags}) {
+    function showActualData({title, description, date, tags}, meters) {
         titleElement.value = title;
         descriptionElement.textContent = description;
         dateElement.value = date;
         submitButton.textContent = "ZAPISZ";
 
+        meters.forEach(meter => new MeterElement(meter).render(metersContainer))
         tags.forEach(tag => new TagInnerFormElement().render(tagsContainer, tag))
     }
 
@@ -98,31 +100,41 @@
         return base;
     }
 
-    function submitHandler(event) {
-        event.preventDefault();
+    function buildMetersRequest(newsId) {
+        const meters = document.querySelectorAll(".meter");
 
-        const newsRequestBody = buildNewsRequest()
+        return [...meters].map(meter => {
+            return MetersSerializer.serialize({
+                maxSpeed: parseFloat(meter.querySelector("[name='max-speed']").value),
+                meterStartState: parseFloat(meter.querySelector("[name='meter-start-state']").value),
+                tripLength: parseFloat(meter.querySelector("[name='trip-length']").value),
+                meterEndState: parseFloat(meter.querySelector("[name='meter-end-state']").value),
+                time: parseFloat(meter.querySelector("[name='time']").value),
+                newsId: newsId,
+           })
+        });
+
+    }
+
+    function saveData(newsId) {
+        const newsRequestBody = buildNewsRequest();
+        const metersRequestBody = buildMetersRequest(newsId);
     }
 
     async function main() {
-        const newsData = {
-        {
-            {
-                news
-            }
-        }
-    }
-        ;
+        const newsData = {{{news}}};
         const news = NewsSerializer.serializeSingleNews(newsData);
         const meters = await MetersController.getMetersForNews(news.id);
 
-        console.log(meters)
-
         buttonAddMeter.addEventListener("click", addMeterHandler);
         buttonAddTag.addEventListener("click", addTagHandler);
-        form.addEventListener("submit", submitHandler);
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
 
-        showActualData(news);
+            saveData(newsData.id);
+        });
+
+        showActualData(news, meters);
     }
 
     main()

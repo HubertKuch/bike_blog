@@ -5,39 +5,373 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/views/editNews.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/views/newsForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/exception_1663074472.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/exception_1663075457.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011442.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011443.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011449.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011450.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011713.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011821.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011880.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011902.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011916.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011927.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663011934.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663013756.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663074472.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663074750.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663074795.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663075457.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663076564.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663077258.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663077302.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663077410.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663077411.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/request_1663077412.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/hubert.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T224900.400.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T224918.404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T224923-1.404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T224923.404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T224947.200.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T225002.200.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T225010.200.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T225020.200.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T225129.404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T225133.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T225154.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-03T225222.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140432.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140453.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140501.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140529.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140559.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140605.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140736.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140745.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140816.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140842.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T140912.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T142707.200.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T142724.200.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T142929.200.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T142947.200.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T142957.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T144203.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T144247.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T144300.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T144330.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145233.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145249.201.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145254.201.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145314.400.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145323.201.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145328.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145330.404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145337.404.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145407.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2022-09-04T145421.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/javascript/elements/ElementsUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/javascript/elements/MeterElement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/javascript/elements/TagInnerFormElement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662381120.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662381126.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1662928319.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663010648.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663082527.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663082529.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663082531.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663083000.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663083008.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663095760.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663095761.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663095762.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663095763.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663095772.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663095774.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663095775.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663095782.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663184839.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663184841.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663184842.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663184845.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663304793.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663304800.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663304813.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663305057.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663305082.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663601519.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/request_1663601523.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bike-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bike-blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/Hubert_Kuch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/Hubert_Kuch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/Michal_Sak.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/Michal_Sak.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/statistic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/statistic.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/NewsTableRowElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/NewsTableRowElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/style/forms.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/forms.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ViewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ViewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BikeApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/BikeApplication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/TagElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/TagElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/models/Meter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/models/Meter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/serializers/MetersSerializer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/serializers/MetersSerializer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/serializers/UsersSerializer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/serializers/UsersSerializer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/admin_nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/admin_nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/editNews.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/editNews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/scriptsSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/scriptsSource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helpers/LoggerHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/LoggerHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/exception_1662388480.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/exception_1662388480.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/exception_1662667207.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/exception_1662667207.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/exception_1662667228.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/exception_1662667228.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/exception_1662667280.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/exception_1662667280.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/exception_1662667405.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/exception_1662667405.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/exception_1662667448.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/exception_1662667448.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/exception_1662667468.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/exception_1662667468.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662295323.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662295323.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662295367.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662295367.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662295380.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662295380.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662295410.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662295410.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662297064.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662297064.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662297080.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662297080.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662297085.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662297085.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662297108.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662297108.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662388218.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662388218.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662388268.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662388268.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662388474.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662388474.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662388480.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662388480.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662388498.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662388498.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662388555.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662388555.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662388572.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662388572.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662567318.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662567318.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662567319.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662567319.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662567321.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662567321.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662567322.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662567322.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662567891.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662567891.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662567893.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662567893.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662567897.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662567897.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665060.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665060.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665061.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665061.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665063.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665063.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665068.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665068.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665069.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665069.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665073.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665073.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665074.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665074.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665324.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665324.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665325.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665325.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665327.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665327.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665328.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665328.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665331.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665331.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665333.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665333.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665335.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665335.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665629.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665629.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665630.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665630.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662665632.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662665632.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667016.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667016.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667045.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667045.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667102.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667102.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667142.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667142.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667160.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667160.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667161.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667161.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667207.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667207.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667228.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667228.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667280.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667280.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667405.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667405.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667448.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667448.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667468.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667468.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667536.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667536.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667539.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667539.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662667542.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662667542.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662732735.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662732735.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662921921.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662921921.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662921922.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662921922.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662921923.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662921923.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923405.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923405.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923421.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923421.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923446.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923446.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923528.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923528.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923633.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923633.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923634.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923634.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923637.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923637.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923639.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923639.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923860.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923860.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923861.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923861.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662923965.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662923965.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662924057.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662924057.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662925573.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662925573.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662926175.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662926175.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662926349.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662926349.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662926373.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662926373.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662926389.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662926389.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662926416.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662926416.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662930507.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662930507.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662959028.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662959028.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662959620.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662959620.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997902.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997902.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997948.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997948.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997950.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997950.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997951.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997951.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997955.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997955.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997965.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997965.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997970.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997970.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997974.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997974.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997976.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997976.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662997984.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662997984.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998095.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998095.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998168.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998168.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998175.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998175.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998177.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998177.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998184.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998184.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998192.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998192.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998194.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998194.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998197.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998197.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998902.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998902.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998904.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998904.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998906.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998906.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998908.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998908.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662998920.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662998920.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1662999537.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1662999537.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007483.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007483.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007591.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007591.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007671.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007671.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007711.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007711.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007744.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007744.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007751.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007751.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007793.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007793.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007805.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007805.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007816.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007816.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007833.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007833.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663007856.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663007856.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008006.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008006.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008028.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008028.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008065.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008065.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008068.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008068.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008081.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008081.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008109.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008109.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008151.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008151.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008178.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008178.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008202.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008202.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008405.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008405.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008421.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008421.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008426.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008426.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008434.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008434.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008453.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008453.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008468.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008468.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008480.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008480.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008492.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008492.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008496.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008496.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008501.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008501.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008512.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008512.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008544.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008544.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008550.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008550.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008565.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008565.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008580.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008580.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008625.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008625.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008640.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008640.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008651.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008651.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008672.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008672.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008713.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008713.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008736.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008736.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008752.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008752.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008758.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008758.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008762.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008762.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008788.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008788.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008927.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008927.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008944.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008944.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008971.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008971.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008980.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008980.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663008986.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663008986.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009002.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009002.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009028.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009028.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009035.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009035.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009065.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009065.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009105.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009105.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009174.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009174.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009185.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009185.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009192.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009192.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009200.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009200.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009215.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009215.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009218.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009218.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009259.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009259.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009284.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009284.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009306.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009306.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009326.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009326.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009363.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009363.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009384.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009384.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009398.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009398.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009423.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009423.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009431.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009431.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009519.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009519.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009528.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009528.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009650.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009650.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009729.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009729.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009746.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009746.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009753.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009753.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009855.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009855.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009877.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009877.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009889.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009889.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009933.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009933.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009954.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009954.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663009995.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663009995.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010051.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010051.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010177.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010177.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010206.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010206.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010225.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010225.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010229.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010229.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010283.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010283.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010287.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010287.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010290.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010290.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010292.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010292.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010436.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010436.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010470.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010470.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010483.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010483.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010495.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010495.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010498.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010498.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010923.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010923.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010940.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010940.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010953.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010953.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010983.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010983.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010985.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010985.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010986.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010986.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010993.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010993.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663010994.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663010994.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011036.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011036.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011037.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011037.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011050.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011050.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011075.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011075.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011076.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011076.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011109.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011109.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011118.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011118.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011124.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011124.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011125.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011125.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011126.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011126.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011127.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011127.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011170.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011170.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011171.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011171.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011180.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011180.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011181.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011181.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011283.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011283.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011284.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011284.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011304.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011304.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011305.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011305.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011320.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011320.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011321.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011321.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011328.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011328.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011329.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011329.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011344.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011344.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011345.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011345.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011368.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011368.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011369.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011369.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011397.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011397.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011398.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011398.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011423.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011423.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/request_1663011424.json" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/request_1663011424.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/s-1662293296.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/s-1662293296.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/s-1662293322.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/s-1662293322.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/s-1662293352.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/s-1662293352.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Unit/CustomHTMLParserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Unit/CustomHTMLParserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/CustomHTMLTagsParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/CustomHTMLTagsParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/HTMLTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/HTMLTag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/NewsRequestValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/NewsRequestValidators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bin/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +606,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Write base login controller" />
     <MESSAGE value="Refactor DTOs" />
     <MESSAGE value="Improve models code style" />
     <MESSAGE value="Change password hashing algorithm to SHA256" />
@@ -297,7 +630,8 @@
     <MESSAGE value="Improved table style" />
     <MESSAGE value="Added `startState` and `endState` field to meter model" />
     <MESSAGE value="Added trip length field" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added trip length field" />
+    <MESSAGE value="Show added tags on edit action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Show added tags on edit action" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

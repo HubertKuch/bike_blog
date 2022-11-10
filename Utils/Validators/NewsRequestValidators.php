@@ -32,12 +32,26 @@ class NewsRequestValidators {
         throw new InvalidRequest("Invalid request");
     }
 
-    public static function validateFindByIdRequest(AvocadoRequest $request) {
+    /**
+     * @throws InvalidRequest
+     */
+    public static function validateFindByIdRequest(AvocadoRequest $request): void {
         $id = $request->params['id'] ?? null;
 
         if ($id) {
             return;
         }
+
+        throw new InvalidRequest("Invalid request");
+    }
+
+    /**
+     * @throws InvalidRequest
+     */
+    public static function validateUpdateRequest(AvocadoRequest $request): void {
+        $id = $request->params['id'] ?? null;
+
+        if ($id) return;
 
         throw new InvalidRequest("Invalid request");
     }
