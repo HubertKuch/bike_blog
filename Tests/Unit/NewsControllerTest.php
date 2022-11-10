@@ -44,6 +44,17 @@ class NewsControllerTest extends TestCase {
         self::assertTrue($res->hasHeader("Content-Type"));
     }
 
+    public function testGettingTags() {
+        $res = $this->client->request("GET", "http://localhost/bike-blog/api/v1/news/tag/tags");
+
+        $data = json_decode($res->getBody()->getContents());
+
+        self::assertIsArray($data);
+        self::assertSame(200, $res->getStatusCode());
+
+        self::assertTrue(count(array_filter($data, fn($tag) => is_string($tag))) == count($data));
+    }
+
     protected function setUp(): void {
         $this->client = new Client(["http_errors" => false]);
     }
