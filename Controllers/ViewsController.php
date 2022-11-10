@@ -52,4 +52,9 @@ class ViewsController {
     public function news(): void {
         $this->views->news();
     }
+
+    #[GetMapping("/tags")]
+    public function tags(): void {
+        $this->views->tags();
+    }
 }

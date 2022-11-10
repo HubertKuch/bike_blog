@@ -43,12 +43,14 @@ class Views {
     }
 
     public function editNews(News $news): void {
-        echo @$this->handlebars->render("editNews", [
-            "news" => json_encode(NewsDTO::from($news))
-        ]);
+        echo @$this->handlebars->render("editNews", ["news" => json_encode(NewsDTO::from($news))]);
     }
 
     public function newNews(): void {
         echo @$this->handlebars->render("editNews", []);
+    }
+
+    public function tags(): void {
+        echo @$this->handlebars->render("tags", []);
     }
 }
