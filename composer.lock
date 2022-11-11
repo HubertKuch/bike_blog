@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "4097c4d06f21706a88be2217a34c42ce",
+  "content-hash": "ed63ecf5c64506f523d6676116b8d353",
   "packages": [
     {
       "name": "brick/math",
@@ -65,16 +65,16 @@
     {
       "name": "graham-campbell/result-type",
       "version": "1.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamCampbell/Result-Type.git",
-                "reference": "a878d45c1914464426dc94da61c9e1d36ae262a8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/a878d45c1914464426dc94da61c9e1d36ae262a8",
-                "reference": "a878d45c1914464426dc94da61c9e1d36ae262a8",
-                "shasum": ""
+      "source": {
+        "type": "git",
+        "url": "https://github.com/GrahamCampbell/Result-Type.git",
+        "reference": "a878d45c1914464426dc94da61c9e1d36ae262a8"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/a878d45c1914464426dc94da61c9e1d36ae262a8",
+        "reference": "a878d45c1914464426dc94da61c9e1d36ae262a8",
+        "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0",
@@ -113,30 +113,30 @@
                 "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
                 "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.0"
             },
-            "funding": [
-              {
-                "url": "https://github.com/GrahamCampbell",
-                "type": "github"
-              },
-              {
-                "url": "https://tidelift.com/funding/github/packagist/graham-campbell/result-type",
-                "type": "tidelift"
-              }
-            ],
+      "funding": [
+        {
+          "url": "https://github.com/GrahamCampbell",
+          "type": "github"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/graham-campbell/result-type",
+          "type": "tidelift"
+        }
+      ],
       "time": "2022-07-30T15:56:11+00:00"
     },
     {
       "name": "hubert/avocado",
-      "version": "v4.1.1",
+      "version": "v4.2.0",
       "source": {
         "type": "git",
         "url": "https://github.com/HubertKuch/Avocado.git",
-        "reference": "b1f7d71b67c1059e6bf1d38c39041d62bb395c0b"
+        "reference": "68fb6606f8c97419fb7bc83f11e8782e71b8a038"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/b1f7d71b67c1059e6bf1d38c39041d62bb395c0b",
-        "reference": "b1f7d71b67c1059e6bf1d38c39041d62bb395c0b",
+        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/68fb6606f8c97419fb7bc83f11e8782e71b8a038",
+        "reference": "68fb6606f8c97419fb7bc83f11e8782e71b8a038",
         "shasum": ""
       },
       "require": {
@@ -176,9 +176,9 @@
       "homepage": "https://avocadoframework.com",
       "support": {
         "issues": "https://github.com/HubertKuch/Avocado/issues",
-        "source": "https://github.com/HubertKuch/Avocado/tree/v4.1.1"
+        "source": "https://github.com/HubertKuch/Avocado/tree/v4.2.0"
       },
-      "time": "2022-09-12T19:26:08+00:00"
+      "time": "2022-11-11T14:24:40+00:00"
     },
     {
       "name": "kcs/class-finder",
@@ -403,16 +403,16 @@
         "type"
       ],
       "support": {
-                "issues": "https://github.com/schmittjoh/php-option/issues",
-                "source": "https://github.com/schmittjoh/php-option/tree/1.9.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpoption/phpoption",
+        "issues": "https://github.com/schmittjoh/php-option/issues",
+        "source": "https://github.com/schmittjoh/php-option/tree/1.9.0"
+      },
+      "funding": [
+        {
+          "url": "https://github.com/GrahamCampbell",
+          "type": "github"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/phpoption/phpoption",
                     "type": "tidelift"
                 }
             ],
@@ -678,16 +678,16 @@
         },
         "thanks": {
           "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                }
+          "url": "https://github.com/symfony/polyfill"
+        }
+      },
+      "autoload": {
+        "files": [
+          "bootstrap.php"
+        ],
+        "psr-4": {
+          "Symfony\\Polyfill\\Ctype\\": ""
+        }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1217,16 +1217,16 @@
           "generated/ibase.php",
           "generated/ibmDb2.php",
           "generated/iconv.php",
-                    "generated/image.php",
-                    "generated/imap.php",
-                    "generated/info.php",
-                    "generated/ingres-ii.php",
-                    "generated/inotify.php",
-                    "generated/json.php",
-                    "generated/ldap.php",
-                    "generated/libxml.php",
-                    "generated/lzf.php",
-                    "generated/mailparse.php",
+          "generated/image.php",
+          "generated/imap.php",
+          "generated/info.php",
+          "generated/ingres-ii.php",
+          "generated/inotify.php",
+          "generated/json.php",
+          "generated/ldap.php",
+          "generated/libxml.php",
+          "generated/lzf.php",
+          "generated/mailparse.php",
                     "generated/mbstring.php",
                     "generated/misc.php",
                     "generated/msql.php",

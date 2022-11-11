@@ -7,7 +7,7 @@ use Avocado\ORM\Attributes\Id;
 use Avocado\ORM\Attributes\Table;
 use Ramsey\Uuid\Uuid;
 
-#[Table("news_tags")]
+#[Table("tags")]
 class Tag {
     #[Id]
     private string $id;

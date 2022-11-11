@@ -35,7 +35,7 @@ class NewsControllerTest extends TestCase {
     }
 
     public function testGettingNewsByTag() {
-        $res = $this->client->request("GET", "http://localhost/bike-blog/api/v2/news/tag/unnamed_tag");
+        $res = $this->client->request("GET", "http://localhost/bike-blog/api/v3/news/tag/narnia");
 
         $data = json_decode($res->getBody()->getContents());
 
@@ -52,7 +52,9 @@ class NewsControllerTest extends TestCase {
         self::assertIsArray($data);
         self::assertSame(200, $res->getStatusCode());
 
-        self::assertTrue(count(array_filter($data, fn($tag) => is_string($tag))) == count($data));
+        self::assertTrue(count(array_filter($data, function($tag) {
+                print_r($tag);
+            })) == count($data));
     }
 
     protected function setUp(): void {

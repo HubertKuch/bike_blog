@@ -20,6 +20,7 @@ use Hubert\BikeBlog\Helpers\LoggerHelper;
 use Hubert\BikeBlog\Models\DTO\NewsByYearDTO;
 use Hubert\BikeBlog\Models\DTO\NewsDTO;
 use Hubert\BikeBlog\Models\News;
+use Hubert\BikeBlog\Services\TagsService;
 use Hubert\BikeBlog\Utils\Validators\NewsRequestValidators;
 use ReflectionException;
 
@@ -29,6 +30,8 @@ class NewsController {
 
     #[Autowired("newsRepository")]
     private AvocadoRepository $newsRepository;
+    #[Autowired("tagsService")]
+    private TagsService $tagsService;
     #[Autowired]
     private LoggerHelper $logger;
 
@@ -86,15 +89,20 @@ class NewsController {
         return $response->json([NewsDTO::from($news)]);
     }
 
-    #[GetMapping("/v2/news/tag/:tag")]
+    #[GetMapping("/v3/news/tag/:tag")]
     public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
         $this->logger->logRequest($request);
         NewsRequestValidators::validateFindByTagRequest($request);
 
-        $tag = $request->params['tag'];
+        $byTag = $request->params['tag'];
+        $tag = $this->tagsService->getTagsByName($byTag);
 
-        $news = $this->newsRepository->findMany(["tags" => "%$tag%"]);
+        if(!$tag) {
+            throw new NewsNotFoundException();
+        }
 
+        $newsTags = $this->tagsService->getNewsTagByTagId($tag->getId());
+        $news = array_map(fn($newsTag) => $this->newsRepository->findById($newsTag->getNewsId()), $newsTags);
         $newsDTOs = NewsDTO::fromArray($news);
         $byYearDTOs = NewsByYearDTO::fromArray($newsDTOs);
 
@@ -106,7 +114,7 @@ class NewsController {
     public function getTags(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
        // TO IMPLEMENT
 
-        return $response->json("ISE")->withStatus(HTTPStatus::INTERNAL_SERVER_ERROR);
+        return $response->json(["ISE"])->withStatus(HTTPStatus::INTERNAL_SERVER_ERROR);
     }
 
     /**

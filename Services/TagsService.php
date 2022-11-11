@@ -32,6 +32,17 @@ class TagsService {
         return $tags;
     }
 
+    public function getTagsByName(string $tagName): ?Tag {
+        return $this->tagsRepo->findFirst(["tag" => "$tagName"]);
+    }
+
+    /**
+     * @return NewsTag[]
+     * */
+    public function getNewsTagByTagId(string $tagId): array {
+        return $this->newsTagRepo->findMany(["tag_id" => $tagId]);
+    }
+
     public function getTagCategory(string $tagId): TagCategory {
         $tag = $this->tagsRepo->findById($tagId);
         $category = $this->newsCategoryRepo->findById($tag->getCategoryId());

@@ -38,9 +38,9 @@
   "require": {
     "vlucas/phpdotenv": "v5.0.0",
     "ramsey/uuid": "4.4.0",
-    "hubert/avocado": "v4.1.1",
     "nesbot/carbon": "2.62.0",
-    "salesforce/handlebars-php": "2.3.0"
+    "salesforce/handlebars-php": "2.3.0",
+    "hubert/avocado": "v4.2.0"
   },
   "require-dev": {
     "guzzlehttp/guzzle": "7.5.0",
