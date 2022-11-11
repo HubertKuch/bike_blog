@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Base tags view">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Implement get tags endpoint">
+      <change afterPath="$PROJECT_DIR$/Models/NewsTag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/TagCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/TagsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bike-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bike-blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BikeApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/BikeApplication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration/RepositoriesLeafs.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/RepositoriesLeafs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/NewsDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/NewsDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/NewsRequestValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/NewsRequestValidators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +54,11 @@
     <setting file="file://$PROJECT_DIR$/Controllers/ViewsController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/composer.lock" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -118,50 +135,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Project.color&quot;: &quot;4e2c05&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected&quot;: &quot;true&quot;,
-    &quot;com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary&quot;: &quot;PHPUnit &lt; 6&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.56&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/opt/lampp/htdocs/bike-blog/Client/javascript/elements&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.09302324&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.HTML&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.1596594&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Project.color": "4e2c05",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected": "true",
+    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit < 6",
+    "javascript.nodejs.core.library.configured.version": "16.15.1",
+    "javascript.nodejs.core.library.typings.version": "16.11.56",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "/opt/lampp/htdocs/bike-blog/Tests/Unit",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.09302324",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.splitter.proportion": "0.1596594"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb",
+      "mysql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;086f6656-1b5d-45d8-92f2-fe0903d18d6d&quot;,
-      &quot;086f6656-1b5d-45d8-92f2-fe0903d18d6d/schema/\&quot;bike_blog\&quot;&quot;
+    "RunConfigurationTargetLRU": [
+      "086f6656-1b5d-45d8-92f2-fe0903d18d6d",
+      "086f6656-1b5d-45d8-92f2-fe0903d18d6d/schema/\"bike_blog\""
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Client/javascript/elements" />
@@ -176,7 +193,7 @@
       <recent name="$PROJECT_DIR$/Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.NewsControllerTest.testGettingTags">
+  <component name="RunManager" selected="PHPUnit.TagsServiceTest.testGetTagCategory">
     <configuration name="rowerowe_test.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$USER_HOME$/Downloads/rowerowe_test.sql" />
       <script-mode>FILE</script-mode>
@@ -195,17 +212,17 @@
       <TestRunner class="Hubert\BikeBlog\Tests\Unit\NewsControllerTest" file="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" method="testGettingTags" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\UserControllerTest" file="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" scope="Class" />
+    <configuration name="TagsServiceTest.testGetTagCategory" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Hubert\BikeBlog\Services\TagsServiceTest" file="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" method="testGetTagCategory" scope="Method" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.TagsServiceTest.testGetTagCategory" />
         <item itemvalue="PHPUnit.NewsControllerTest.testGettingTags" />
         <item itemvalue="PHPUnit.MetersControllerTest" />
         <item itemvalue="Database Script.rowerowe_test.sql" />
         <item itemvalue="PHPUnit.CustomHTMLParserTest" />
-        <item itemvalue="PHPUnit.UserControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +260,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change password hashing algorithm to SHA256" />
     <MESSAGE value="Refactor and add base logger" />
     <MESSAGE value="Save logs for every request" />
     <MESSAGE value="Map exceptions to array" />
@@ -268,7 +284,8 @@
     <MESSAGE value="Show added tags on edit action" />
     <MESSAGE value="Ignore logs" />
     <MESSAGE value="Base tags view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base tags view" />
+    <MESSAGE value="Implement get tags endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement get tags endpoint" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

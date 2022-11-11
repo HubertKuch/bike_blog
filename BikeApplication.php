@@ -13,7 +13,6 @@ class BikeApplication {
         self::loadEnvironment();
 
         session_start();
-
         self::corsPolicy();
 
         Application::run(__DIR__);

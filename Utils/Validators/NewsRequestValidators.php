@@ -13,10 +13,10 @@ class NewsRequestValidators {
     public static function validateNewNewsRequest(AvocadoRequest $request): void {
         $title = $request->body['title'] ?? null;
         $description = $request->body['endState'] ?? null;
-        $tags = $request->body['tags'] ?? null;
         $date = $request->body['date'] ?? null;
 
-        if ($title && $description && $date && is_string($date) && is_array($tags)) return;
+        if($title && $description && $date && is_string($date))
+            return;
 
         throw new InvalidRequest("Invalid request");
     }

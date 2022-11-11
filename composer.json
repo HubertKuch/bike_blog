@@ -11,7 +11,8 @@
           "Tests",
           "BikeApplication.php",
           "Helpers",
-          "Logger"
+          "Logger",
+          "Services"
         ],
         "psr-4": {
           "Hubert\\BikeBlog\\Configuration\\": "Configuration",
@@ -23,7 +24,8 @@
           "Hubert\\BikeBlog\\Utils\\": "Utils",
           "Hubert\\BikeBlog\\Client\\": "Client",
           "Hubert\\BikeBlog\\Helpers\\": "Helpers",
-          "Hubert\\BikeBlog\\Logger\\": "Logger"
+          "Hubert\\BikeBlog\\Logger\\": "Logger",
+          "Hubert\\BikeBlog\\Services\\": "Services"
         }
     },
     "authors": [

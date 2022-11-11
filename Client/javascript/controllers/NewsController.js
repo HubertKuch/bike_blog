@@ -45,6 +45,21 @@ class NewsController {
     }
 
     /**
+     * @returns string[]
+     * */
+    static async getTags() {
+        const res = await fetch(`${this.baseUrl}/v1/news/tag/tags`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        });
+
+        return await res.json();
+    }
+
+    /**
      * @param {string} url
      * @return Promise<any>
      * */

@@ -104,16 +104,9 @@ class NewsController {
 
     #[GetMapping("/v1/news/tag/tags")]
     public function getTags(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-        $this->logger->logRequest($request);
+       // TO IMPLEMENT
 
-        $news = $this->newsRepository->findMany();
-        $tags = array_map(fn($news) => $news->getTags(), $news);
-        $tags = array_merge_recursive(...$tags);
-        $tags = array_map(fn($tag) => $tag->getTag(), $tags);
-        $tags = array_unique($tags);
-        $tags = array_values($tags);
-
-        return $response->withStatus(HTTPStatus::OK)->json($tags);
+        return $response->json("ISE")->withStatus(HTTPStatus::INTERNAL_SERVER_ERROR);
     }
 
     /**

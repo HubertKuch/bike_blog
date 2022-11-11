@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Client" isTestSource="false" packagePrefix="Hubert\BikeBlog\Client\" />
       <sourceFolder url="file://$MODULE_DIR$/Helpers" isTestSource="false" packagePrefix="Hubert\BikeBlog\Helpers\" />
       <sourceFolder url="file://$MODULE_DIR$/Logger" isTestSource="false" packagePrefix="Hubert\BikeBlog\Logger\" />
+      <sourceFolder url="file://$MODULE_DIR$/Services" isTestSource="false" packagePrefix="Hubert\BikeBlog\Services\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-client" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-factory" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/collection" />

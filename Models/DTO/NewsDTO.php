@@ -10,7 +10,6 @@ class NewsDTO {
         public readonly string $id,
         public readonly string $title,
         public readonly string $description,
-        public readonly array  $tags,
         public readonly string $time
     ) {
     }
@@ -28,7 +27,6 @@ class NewsDTO {
             $news->getId(),
             $news->getTitle(),
             $news->getDescription(),
-            array_map(fn($tag) => $tag->getTag(), $news->getTags()),
             $news->getDate()->toDateString());
     }
 }

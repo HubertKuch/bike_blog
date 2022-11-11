@@ -15,14 +15,42 @@
   </div>
 
   <article class="blog-description">
+      <div>
+          Aby wybrać kategorię kliknij w wytłuszczoną nazwę związaną z kategorią w danej grupie!
+          <br> <br>
+      </div>
 
-    <br>
-    <hr class="divider">
-    <br>
+      <div class="tags">
+
+      </div>
   </article>
 </main>
 
 {{> footer}}
+{{> scriptsSource }}
+
+<script>
+
+    const tagsContainer = document.querySelector(".tags");
+
+    const behindTagElement = (tag) => {
+        const element = document.createElement("div");
+        new TagElement(tag).render(element);
+
+        return element;
+    }
+
+    const main = async function () {
+        const tags = await NewsController.getTags();
+
+        tags.forEach(tag => {
+            tagsContainer.append(behindTagElement(tag))
+        });
+    }
+
+    main();
+
+</script>
 
 </body>
 </html>
