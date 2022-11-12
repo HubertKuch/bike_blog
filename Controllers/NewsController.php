@@ -110,13 +110,6 @@ class NewsController {
     }
 
 
-    #[GetMapping("/v1/news/tag/tags")]
-    public function getTags(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-       // TO IMPLEMENT
-
-        return $response->json(["ISE"])->withStatus(HTTPStatus::INTERNAL_SERVER_ERROR);
-    }
-
     /**
      * @throws InvalidRequest
      */

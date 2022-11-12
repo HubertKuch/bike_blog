@@ -5,6 +5,7 @@ namespace Hubert\BikeBlog\Services;
 use Avocado\ORM\AvocadoRepository;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\Resource;
+use Hubert\BikeBlog\Models\DTO\OutgoingTagDto;
 use Hubert\BikeBlog\Models\NewsTag;
 use Hubert\BikeBlog\Models\Tag;
 use Hubert\BikeBlog\Models\TagCategory;
@@ -22,12 +23,29 @@ class TagsService {
     public function __construct() {
     }
 
+    public function getAllTagsAsDto() {
+        /** @var Tag[] $tags */
+        $tags = $this->tagsRepo->findMany();
+
+        return $this->parseArrayToDto($tags);
+    }
+
+    public function parseArrayToDto(array $tags) {
+        return array_map(fn($tag) => $this->parseSingleToDto($tag), $tags);
+    }
+
+    public function parseSingleToDto(Tag $tag) {
+        $category = $this->newsCategoryRepo->findById($tag->getCategoryId());
+
+        return OutgoingTagDto::from($tag, $category);
+    }
+
     /**
      * @return Tag[]
      * */
     public function getTagsOfNews(string $newsId): array {
-        $newsTags = $this->newsTagRepo->findMany(["newsId" => $newsId]);
-        $tags = array_map(fn($newsTagData) => $this->tagsRepo->findById($newsTagData->getNewsId()), $newsTags);
+        $newsTags = $this->newsTagRepo->findMany(["news_id" => $newsId]);
+        $tags = array_map(fn($newsTagData) => $this->tagsRepo->findById($newsTagData->getTagId()), $newsTags);
 
         return $tags;
     }
