@@ -40,7 +40,8 @@
     "ramsey/uuid": "4.4.0",
     "nesbot/carbon": "2.62.0",
     "salesforce/handlebars-php": "2.3.0",
-    "hubert/avocado": "v4.2.0"
+    "hubert/avocado": "v4.2.0",
+    "ext-pdo": "*"
   },
   "require-dev": {
     "guzzlehttp/guzzle": "7.5.0",

@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Implements getting tags related to specific news">
-      <change afterPath="$PROJECT_DIR$/Controllers/TagsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DTO/OutgoingTagCategoryDto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DTO/OutgoingTagDto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/TagsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/TagsService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/importTags.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/importTags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,13 +180,9 @@
       <recent name="$PROJECT_DIR$/Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.TagsServiceTest.testGettingNewsTags">
+  <component name="RunManager" selected="PHP Script.importTags.php">
     <configuration name="NewsControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Hubert\BikeBlog\Tests\Unit\NewsControllerTest" file="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="NewsControllerTest.testGettingNewsByTag" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\NewsControllerTest" file="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" method="testGettingNewsByTag" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="NewsControllerTest.testGettingTags" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -207,13 +197,16 @@
       <TestRunner class="Hubert\BikeBlog\Tests\Unit\TagsServiceTest" file="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" method="testGettingNewsTags" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="importTags.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/bin/importTags.php">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.importTags.php" />
         <item itemvalue="PHPUnit.TagsServiceTest.testGettingNewsTags" />
         <item itemvalue="PHPUnit.TagsServiceTest.testGettingAllTags" />
         <item itemvalue="PHPUnit.NewsControllerTest" />
         <item itemvalue="PHPUnit.NewsControllerTest.testGettingTags" />
-        <item itemvalue="PHPUnit.NewsControllerTest.testGettingNewsByTag" />
       </list>
     </recent_temporary>
   </component>
