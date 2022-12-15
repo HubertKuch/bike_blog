@@ -39,7 +39,7 @@ class NewsController {
      * @return Promise<News[]>
      * */
     static async getNewsByTag(tag) {
-        const data = await this.fetchData(`${this.baseUrl}/v2/news/tag/${tag}`);
+        const data = await this.fetchData(`${this.baseUrl}/v3/news/tag/${tag}`);
 
         return data.map(news => NewsSerializer.serializeGroup(news));
     }

@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Tags as seperated entities">
-      <change afterPath="$PROJECT_DIR$/Client/javascript/models/Tag.js" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Displaying news only with matched tag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/javascript/elements/TagElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/TagElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/scriptsSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/scriptsSource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/tags.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,8 +246,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add readonly modifier for tag on HTMLTag class" />
-    <MESSAGE value="Change logs extension from `log` to `json`" />
     <MESSAGE value="Change template engine to Handlebars" />
     <MESSAGE value="Changed template engine to Handlebars" />
     <MESSAGE value="Made a simple form and login form" />
@@ -276,7 +269,9 @@
     <MESSAGE value="Implements getting tags related to specific news" />
     <MESSAGE value="Written tags importer from old database" />
     <MESSAGE value="Tags as seperated entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tags as seperated entities" />
+    <MESSAGE value="Displaying tags" />
+    <MESSAGE value="Displaying news only with matched tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="Displaying news only with matched tag" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

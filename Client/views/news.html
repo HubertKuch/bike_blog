@@ -62,6 +62,7 @@
 {{> scriptsSource }}
 
 <script>
+    const CHOSEN_TAG = localStorage.getItem("chosen-tag") ?? null;
     const newsNavigationListElement = document.querySelector(".news-navigation");
     const newsContentElement = document.querySelector(".news-content");
     const tagsContainer = document.querySelector(".tags");
@@ -85,7 +86,7 @@
     /**
      * @param {News} news
      * */
-    const showNews = async ({description, date, id}) => {
+    const showNews = async ({description, id}) => {
         const tags = await NewsController.getNewsTags(id);
         showTags(tags);
 
@@ -93,7 +94,15 @@
     }
 
     const main = async () => {
-        const allNews = await NewsController.getNews();
+        let allNews = [];
+
+        if (!CHOSEN_TAG) {
+            allNews = await NewsController.getNews()
+        } else {
+            allNews = await NewsController.getNewsByTag(CHOSEN_TAG);
+        }
+
+        console.log(allNews)
 
         const urlParams = new URLSearchParams(window.location.search);
         const streamId = urlParams.get("id");
