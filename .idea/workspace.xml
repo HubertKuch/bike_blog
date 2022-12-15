@@ -4,10 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Implements getting tags related to specific news">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Written tags importer from old database">
+      <change afterPath="$PROJECT_DIR$/Models/Meter/NewMeterDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/importTags.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/importTags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration/RepositoriesLeafs.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/RepositoriesLeafs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/MetersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MetersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/TagsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/TagsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ViewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ViewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/MeterDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/MeterDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/NewsDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/NewsDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/OutgoingTagCategoryDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/OutgoingTagCategoryDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/OutgoingTagDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/OutgoingTagDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/UserDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/UserDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Meter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Meter/Meter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/News/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/NewsTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tags/NewsTag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tags/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/TagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tags/TagCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User/UserRole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/TagsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/TagsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/UsersRequestValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/UsersRequestValidators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,8 +163,8 @@
     "code.cleanup.on.save": "true",
     "com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected": "true",
     "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit < 6",
-    "javascript.nodejs.core.library.configured.version": "16.15.1",
-    "javascript.nodejs.core.library.typings.version": "16.11.56",
+    "javascript.nodejs.core.library.configured.version": "16.17.0",
+    "javascript.nodejs.core.library.typings.version": "16.18.9",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
     "last_opened_file_path": "/opt/lampp/htdocs/bike-blog/Tests/Unit",
     "list.type.of.created.stylesheet": "CSS",
@@ -152,8 +180,9 @@
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "editing.templates",
-    "settings.editor.splitter.proportion": "0.1596594"
+    "settings.editor.selected.configurable": "fileTemplates",
+    "settings.editor.splitter.proportion": "0.1596594",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -180,21 +209,21 @@
       <recent name="$PROJECT_DIR$/Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.importTags.php">
-    <configuration name="NewsControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\NewsControllerTest" file="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.UserControllerTest.testDeleteUser">
+    <configuration name="TagsServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Hubert\BikeBlog\Tests\Unit\TagsServiceTest" file="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="NewsControllerTest.testGettingTags" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\NewsControllerTest" file="$PROJECT_DIR$/Tests/Unit/NewsControllerTest.php" method="testGettingTags" scope="Method" />
+    <configuration name="Tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/Tests" />
       <method v="2" />
     </configuration>
-    <configuration name="TagsServiceTest.testGettingAllTags" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\TagsServiceTest" file="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" method="testGettingAllTags" scope="Method" />
+    <configuration name="UserControllerTest.testDeleteUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Hubert\BikeBlog\Tests\Unit\UserControllerTest" file="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" method="testDeleteUser" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="TagsServiceTest.testGettingNewsTags" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\TagsServiceTest" file="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" method="testGettingNewsTags" scope="Method" />
+    <configuration name="UserControllerTest.testRegisteringUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Hubert\BikeBlog\Tests\Unit\UserControllerTest" directory="$PROJECT_DIR$/Tests" file="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" method="testRegisteringUser" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="importTags.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/bin/importTags.php">
@@ -202,11 +231,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UserControllerTest.testDeleteUser" />
+        <item itemvalue="PHPUnit.UserControllerTest.testRegisteringUser" />
+        <item itemvalue="PHPUnit.Tests" />
+        <item itemvalue="PHPUnit.TagsServiceTest" />
         <item itemvalue="PHP Script.importTags.php" />
-        <item itemvalue="PHPUnit.TagsServiceTest.testGettingNewsTags" />
-        <item itemvalue="PHPUnit.TagsServiceTest.testGettingAllTags" />
-        <item itemvalue="PHPUnit.NewsControllerTest" />
-        <item itemvalue="PHPUnit.NewsControllerTest.testGettingTags" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +273,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fix bug with ValueError error when creating user" />
     <MESSAGE value="Wrote and tested custom html tag parser" />
     <MESSAGE value="Add readonly modifier for tag on HTMLTag class" />
     <MESSAGE value="Change logs extension from `log` to `json`" />
@@ -269,7 +297,8 @@
     <MESSAGE value="New tags system" />
     <MESSAGE value="Implement new logic for getting news by tag" />
     <MESSAGE value="Implements getting tags related to specific news" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implements getting tags related to specific news" />
+    <MESSAGE value="Written tags importer from old database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Written tags importer from old database" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

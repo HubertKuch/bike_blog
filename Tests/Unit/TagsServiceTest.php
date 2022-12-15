@@ -48,6 +48,17 @@ class TagsServiceTest extends TestCase {
         $this->assertIsValidDto($data[0]);
     }
 
+    public function testAddingTags() {
+        $res = $this->client->request("GET", "http://localhost/bike-blog/api/v1/tags/14c45cdd-32b5-11ed-b21d-4cedfb731ba1");
+
+        $this->assertValidResponse($res);
+        $data = $res->getBody()->getContents();
+        $data = json_decode($data);
+
+        self::assertIsArray($data);
+        $this->assertIsValidDto($data[0]);
+    }
+
     protected function setUp(): void {
         $this->client = new Client(["http_errors" => false]);
     }

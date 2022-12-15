@@ -1,12 +1,13 @@
 <?php
 
-namespace Hubert\BikeBlog\Models;
+namespace Hubert\BikeBlog\Models\News;
 
 use Avocado\ORM\Attributes\Field;
 use Avocado\ORM\Attributes\Id;
 use Avocado\ORM\Attributes\Table;
 use Avocado\Router\AvocadoRequest;
 use Carbon\Carbon;
+use Hubert\BikeBlog\Models\Tags\Tag;
 use Ramsey\Uuid\Rfc4122\UuidV4;
 use Ramsey\Uuid\UuidInterface;
 

@@ -2,7 +2,7 @@
 
 namespace Hubert\BikeBlog\Models\DTO;
 
-use Hubert\BikeBlog\Models\User;
+use Hubert\BikeBlog\Models\User\User;
 
 class UserDTO {
 

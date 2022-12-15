@@ -2,7 +2,7 @@
 
 namespace Hubert\BikeBlog\Models\DTO;
 
-use Hubert\BikeBlog\Models\Meter;
+use Hubert\BikeBlog\Models\Meter\Meter;
 
 class MeterDTO {
 

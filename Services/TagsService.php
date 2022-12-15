@@ -6,9 +6,9 @@ use Avocado\ORM\AvocadoRepository;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\Resource;
 use Hubert\BikeBlog\Models\DTO\OutgoingTagDto;
-use Hubert\BikeBlog\Models\NewsTag;
-use Hubert\BikeBlog\Models\Tag;
-use Hubert\BikeBlog\Models\TagCategory;
+use Hubert\BikeBlog\Models\Tags\NewsTag;
+use Hubert\BikeBlog\Models\Tags\Tag;
+use Hubert\BikeBlog\Models\Tags\TagCategory;
 
 #[Resource(name: "tagsService")]
 class TagsService {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hubert\BikeBlog\Models;
+namespace Hubert\BikeBlog\Models\User;
 
 enum UserRole: string {
     case ADMIN = "admin";

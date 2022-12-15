@@ -2,26 +2,30 @@
 
 namespace Hubert\BikeBlog\Controllers;
 
-use ReflectionException;
+use Avocado\Application\RestController;
+use Avocado\AvocadoApplication\Attributes\Exceptions\ResponseStatus;
+use Avocado\AvocadoApplication\Attributes\Request\RequestBody;
 use Avocado\HTTP\HTTPStatus;
-use Hubert\BikeBlog\Models\User;
+use Avocado\ORM\AvocadoModelException;
 use Avocado\ORM\AvocadoRepository;
 use Avocado\Router\AvocadoRequest;
 use Avocado\Router\AvocadoResponse;
-use Avocado\ORM\AvocadoModelException;
-use Avocado\Application\RestController;
-use Hubert\BikeBlog\Models\DTO\UserDTO;
-use Hubert\BikeBlog\Helpers\LoggerHelper;
-use AvocadoApplication\Attributes\BaseURL;
-use AvocadoApplication\Mappings\GetMapping;
+use Avocado\Tests\Unit\Application\RequestParam;
 use AvocadoApplication\Attributes\Autowired;
+use AvocadoApplication\Attributes\BaseURL;
+use AvocadoApplication\Mappings\DeleteMapping;
+use AvocadoApplication\Mappings\GetMapping;
 use AvocadoApplication\Mappings\PostMapping;
 use Hubert\BikeBlog\Exceptions\InvalidRequest;
-use AvocadoApplication\Mappings\DeleteMapping;
+use Hubert\BikeBlog\Exceptions\InvalidUserDataException;
 use Hubert\BikeBlog\Exceptions\UserBusyException;
 use Hubert\BikeBlog\Exceptions\UserNotFoundException;
-use Hubert\BikeBlog\Exceptions\InvalidUserDataException;
+use Hubert\BikeBlog\Helpers\LoggerHelper;
+use Hubert\BikeBlog\Models\DTO\UserDTO;
+use Hubert\BikeBlog\Models\User\NewUserDto;
+use Hubert\BikeBlog\Models\User\User;
 use Hubert\BikeBlog\Utils\Validators\UsersRequestValidators;
+use ReflectionException;
 
 #[RestController]
 #[BaseURL("/api")]
@@ -40,7 +44,8 @@ class UserController {
      * @throws InvalidUserDataException
      */
     #[PostMapping("/v2/users/login/")]
-    public function login(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    #[ResponseStatus(HTTPStatus::OK)]
+    public function login(AvocadoRequest $request, AvocadoResponse $response): array {
         $this->logger->logRequest($request);
         UsersRequestValidators::validateLoginRequest($request);
 
@@ -49,7 +54,7 @@ class UserController {
 
         $user = $this->usersRepository->findFirst(["username" => $login]);
 
-        if (!$user) {
+        if(!$user) {
             $exp = new UserNotFoundException("User `$login` not found");
 
             $this->logger->logException($request, $exp);
@@ -65,58 +70,48 @@ class UserController {
 
         $_SESSION['user'] = $user;
 
-        return $response->withStatus(HTTPStatus::OK)->json(["message" => "Success", "status" => 200]);
+        return ["message" => "Success", "status" => 200];
     }
 
     #[GetMapping("/v1/users/logout")]
-    public function logout(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    public function logout(): array {
         session_unset();
 
-        return $response->withStatus(HTTPStatus::OK)->json([
-            "message" => "logout",
-            "status"  => 200
-        ]);
+        return ["message" => "logout", "status" => 200];
     }
 
-    /**
-     * @throws InvalidRequest
-     * @throws UserBusyException
-     */
     #[PostMapping("/v1/users/")]
-    public function registerUser(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-
+    #[ResponseStatus(HTTPStatus::CREATED)]
+    public function registerUser(AvocadoRequest $request, #[RequestBody] NewUserDto $newUserDto): UserDTO {
         $this->logger->logRequest($request);
-        UsersRequestValidators::validateRegisterUserRequest($request);
-
-        $username = $request->body['username'];
+        $username = $newUserDto->getUsername();
 
         $isUserExists = $this->usersRepository->findFirst(["username" => $username]) !== null;
 
-        if ($isUserExists) {
+        if($isUserExists) {
             $exp = new UserBusyException("Username $username is busy.");
             $this->logger->logException($request, $exp);
 
             throw $exp;
         }
 
-        $user = User::from($request);
+        $user = User::from($newUserDto, $request->getClientIP());
         $this->usersRepository->save($user);
 
-        return $response->withStatus(HTTPStatus::CREATED)->json(UserDTO::from($user));
+        return UserDTO::from($user);
     }
 
     /**
      * @throws InvalidRequest
      */
     #[DeleteMapping("/v1/users/:id")]
-    public function deleteUser(AvocadoRequest $request, AvocadoResponse $response) {
+    #[ResponseStatus(HTTPStatus::OK)]
+    public function deleteUser(AvocadoRequest $request, #[RequestParam(name: "id", required: true)] string $uuid): array {
         $this->logger->logRequest($request);
         UsersRequestValidators::validateDeleteUserRequest($request);
 
-        $uuid = $request->params['id'];
-
         $this->usersRepository->deleteOneById($uuid);
 
-        return $response->json(["message" => "Deleted"])->withStatus(HTTPStatus::OK);
+        return ["message" => "Deleted"];
     }
 }

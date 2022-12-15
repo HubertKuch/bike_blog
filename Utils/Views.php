@@ -7,7 +7,7 @@ use AvocadoApplication\Attributes\Resource;
 use Handlebars\Handlebars;
 use Handlebars\Loader\FilesystemLoader;
 use Hubert\BikeBlog\Models\DTO\NewsDTO;
-use Hubert\BikeBlog\Models\News;
+use Hubert\BikeBlog\Models\News\News;
 
 #[Resource]
 class Views {

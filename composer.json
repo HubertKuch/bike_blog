@@ -40,7 +40,7 @@
     "ramsey/uuid": "4.4.0",
     "nesbot/carbon": "2.62.0",
     "salesforce/handlebars-php": "2.3.0",
-    "hubert/avocado": "v4.2.0",
+    "hubert/avocado": "v5.0.0",
     "ext-pdo": "*"
   },
   "require-dev": {
@@ -51,5 +51,8 @@
     "allow-plugins": {
       "nodejs-php-fallback/nodejs-php-fallback": true
     }
+  },
+  "scripts": {
+    "test": "phpunit ./Tests/Unit/"
   }
 }

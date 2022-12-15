@@ -1,13 +1,12 @@
 <?php
 
-namespace Hubert\BikeBlog\Models;
+namespace Hubert\BikeBlog\Models\Meter;
 
-use Avocado\ORM\Attributes\Id;
-use Ramsey\Uuid\UuidInterface;
-use Ramsey\Uuid\Rfc4122\UuidV4;
-use Avocado\ORM\Attributes\Table;
 use Avocado\ORM\Attributes\Field;
-use Avocado\Router\AvocadoRequest;
+use Avocado\ORM\Attributes\Id;
+use Avocado\ORM\Attributes\Table;
+use Ramsey\Uuid\Rfc4122\UuidV4;
+use Ramsey\Uuid\UuidInterface;
 
 #[Table("meter")]
 class Meter {
@@ -29,15 +28,7 @@ class Meter {
     #[Field("news_id")]
     private string $newsId;
 
-    public function __construct(
-        UuidInterface $id,
-        float         $maxSpeed,
-        float         $startState,
-        float         $endState,
-        float         $tripLength,
-        float         $time,
-        bool          $isToShow,
-        string        $newsId) {
+    public function __construct(UuidInterface $id, float $maxSpeed, float $startState, float $endState, float $tripLength, float $time, bool $isToShow, string $newsId) {
         $this->id = $id->toString();
         $this->maxSpeed = $maxSpeed;
         $this->endState = $endState;
@@ -48,20 +39,8 @@ class Meter {
         $this->newsId = $newsId;
     }
 
-    public static function fromRequest(AvocadoRequest $request): Meter {
-        return new Meter(
-            UuidV4::uuid4(),
-            $request->body['maxSpeed'],
-            $request->body['time'],
-            $request->body['startState'],
-            $request->body['endState'],
-            $request->body['tripLength'],
-            $request->body['toShow'],
-            $request->body['newsId'],);
-    }
-
-    public function getId(): string {
-        return $this->id;
+    public static function from(NewMeterDto $newMeterDto): Meter {
+        return new Meter(UuidV4::uuid4(), $newMeterDto->getMaxSpeed(), $newMeterDto->getTime(), $newMeterDto->getStartState(), $newMeterDto->getEndState(), $newMeterDto->getTripLength(), $newMeterDto->isToShow(), $newMeterDto->getNewsId());
     }
 
     public function getMaxSpeed(): float {
@@ -70,14 +49,6 @@ class Meter {
 
     public function getTime(): float {
         return $this->time;
-    }
-
-    public function isToShow(): bool {
-        return $this->isToShow;
-    }
-
-    public function getNewsId(): string {
-        return $this->newsId;
     }
 
     public function getStartState(): float {
@@ -90,5 +61,17 @@ class Meter {
 
     public function getTripLength(): float {
         return $this->tripLength;
+    }
+
+    public function isToShow(): bool {
+        return $this->isToShow;
+    }
+
+    public function getNewsId(): string {
+        return $this->newsId;
+    }
+
+    public function getId(): string {
+        return $this->id;
     }
 }

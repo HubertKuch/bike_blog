@@ -2,21 +2,23 @@
 
 namespace Hubert\BikeBlog\Utils\Validators;
 
+use Avocado\AvocadoApplication\Attributes\Request\RequestBody;
 use Avocado\Router\AvocadoRequest;
 use Hubert\BikeBlog\Exceptions\InvalidRequest;
+use Hubert\BikeBlog\Models\User\NewUserDto;
 
 class UsersRequestValidators {
 
     /**
      * @throws InvalidRequest
      */
-    public static function validateRegisterUserRequest(AvocadoRequest $request): void {
+    public static function validateRegisterUserRequest(AvocadoRequest $request, #[RequestBody] NewUserDto $userDto): void {
         $username = $request->body['username'] ?? null;
         $email = $request->body['email'] ?? null;
         $password = $request->body['password'] ?? null;
 
-        if ($username && $email && $password && is_string($username) && is_string($email) && is_string($password) &&
-            filter_var($email, FILTER_VALIDATE_EMAIL)) return;
+        if($username && $email && $password && is_string($username) && is_string($email) && is_string($password) && filter_var($email, FILTER_VALIDATE_EMAIL))
+            return;
 
         throw new InvalidRequest("Invalid request");
     }

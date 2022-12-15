@@ -2,8 +2,8 @@
 
 namespace Hubert\BikeBlog\Models\DTO;
 
-use Hubert\BikeBlog\Models\Tag;
-use Hubert\BikeBlog\Models\TagCategory;
+use Hubert\BikeBlog\Models\Tags\Tag;
+use Hubert\BikeBlog\Models\Tags\TagCategory;
 
 class OutgoingTagDto {
 

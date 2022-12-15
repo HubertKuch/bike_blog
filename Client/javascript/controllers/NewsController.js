@@ -68,4 +68,8 @@ class NewsController {
 
         return await res.json();
     }
+
+    static async getNewsTags(newsId) {
+        return await this.fetchData(`${this.baseUrl}/v1/tags/${newsId}`);
+    }
 }

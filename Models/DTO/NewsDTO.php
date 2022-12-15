@@ -2,7 +2,7 @@
 
 namespace Hubert\BikeBlog\Models\DTO;
 
-use Hubert\BikeBlog\Models\News;
+use Hubert\BikeBlog\Models\News\News;
 
 class NewsDTO {
 

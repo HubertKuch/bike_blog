@@ -1,13 +1,13 @@
 <?php
 
-namespace Hubert\BikeBlog\Models;
+namespace Hubert\BikeBlog\Models\User;
 
-use Ramsey\Uuid\UuidInterface;
-use Avocado\ORM\Attributes\Id;
-use Ramsey\Uuid\Rfc4122\UuidV4;
-use Avocado\ORM\Attributes\Table;
 use Avocado\ORM\Attributes\Field;
-use Avocado\Router\AvocadoRequest;
+use Avocado\ORM\Attributes\Id;
+use Avocado\ORM\Attributes\Table;
+use Hubert\BikeBlog\Models\IP;
+use Ramsey\Uuid\Rfc4122\UuidV4;
+use Ramsey\Uuid\UuidInterface;
 
 #[Table("users")]
 class User {
@@ -37,15 +37,16 @@ class User {
         return IP::from($this->ip);
     }
 
-    public static function from(AvocadoRequest $request): User {
-        return new User(
-            UuidV4::uuid4(),
-            $request->body['username'],
-            $request->body['email'],
-            User::hashPassword($request->body['password']),
-            IP::from($request->getClientIP()),
-            UserRole::GUEST
-        );
+    public static function from(NewUserDto $userDto, string $ip): User {
+        return new User(UuidV4::uuid4(), $userDto->getUsername(), $userDto->getEmail(), User::hashPassword($userDto->getPassword()), IP::from($ip), UserRole::GUEST);
+    }
+
+    public function getUsername(): string {
+        return $this->username;
+    }
+
+    public function getEmail(): string {
+        return $this->email;
     }
 
     public static function hashPassword(string $password): string {
@@ -58,14 +59,6 @@ class User {
 
     public function getId(): string {
         return $this->id;
-    }
-
-    public function getUsername(): string {
-        return $this->username;
-    }
-
-    public function getEmail(): string {
-        return $this->email;
     }
 
     public function getPasswordHash(): string {

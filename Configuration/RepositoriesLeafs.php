@@ -5,12 +5,12 @@ namespace Hubert\BikeBlog\Configuration;
 use Avocado\AvocadoApplication\Attributes\Configuration;
 use Avocado\AvocadoApplication\Attributes\Leaf;
 use Avocado\ORM\AvocadoRepository;
-use Hubert\BikeBlog\Models\Meter;
-use Hubert\BikeBlog\Models\News;
-use Hubert\BikeBlog\Models\NewsTag;
-use Hubert\BikeBlog\Models\Tag;
-use Hubert\BikeBlog\Models\TagCategory;
-use Hubert\BikeBlog\Models\User;
+use Hubert\BikeBlog\Models\Meter\Meter;
+use Hubert\BikeBlog\Models\News\News;
+use Hubert\BikeBlog\Models\Tags\NewsTag;
+use Hubert\BikeBlog\Models\Tags\Tag;
+use Hubert\BikeBlog\Models\Tags\TagCategory;
+use Hubert\BikeBlog\Models\User\User;
 
 #[Configuration]
 class RepositoriesLeafs {

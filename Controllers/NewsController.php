@@ -3,7 +3,6 @@
 namespace Hubert\BikeBlog\Controllers;
 
 use Avocado\Application\RestController;
-use Avocado\HTTP\HTTPStatus;
 use Avocado\ORM\AvocadoModelException;
 use Avocado\ORM\AvocadoRepository;
 use Avocado\ORM\AvocadoRepositoryException;
@@ -19,7 +18,7 @@ use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
 use Hubert\BikeBlog\Helpers\LoggerHelper;
 use Hubert\BikeBlog\Models\DTO\NewsByYearDTO;
 use Hubert\BikeBlog\Models\DTO\NewsDTO;
-use Hubert\BikeBlog\Models\News;
+use Hubert\BikeBlog\Models\News\News;
 use Hubert\BikeBlog\Services\TagsService;
 use Hubert\BikeBlog\Utils\Validators\NewsRequestValidators;
 use ReflectionException;
@@ -42,7 +41,7 @@ class NewsController {
      * @throws InvalidRequest
      */
     #[PostMapping("/v1/news/")]
-    public function newNews(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    public function newNews(AvocadoRequest $request, AvocadoResponse $response): array {
         $this->logger->logRequest($request);
         NewsRequestValidators::validateNewNewsRequest($request);
 
@@ -50,7 +49,7 @@ class NewsController {
 
         $this->newsRepository->save($news);
 
-        return $response->withStatus(HTTPStatus::CREATED)->json(["message" => "Success"]);
+        return ["message" => "Success"];
     }
 
     /**
@@ -58,13 +57,12 @@ class NewsController {
      * @throws ReflectionException
      */
     #[GetMapping("/v2/news/")]
-    public function getAllNews(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    public function getAllNews(AvocadoRequest $request, AvocadoResponse $response): array {
         $this->logger->logRequest($request);
         $news = $this->newsRepository->findMany();
         $newsDTOs = array_map(fn($n) => NewsDTO::from($n), $news);
-        $newsByYearDTOs = NewsByYearDTO::fromArray($newsDTOs);
 
-        return $response->json($newsByYearDTOs)->withStatus(HTTPStatus::OK);
+        return NewsByYearDTO::fromArray($newsDTOs);
     }
 
     /**
@@ -74,7 +72,7 @@ class NewsController {
      * @throws NewsNotFoundException
      */
     #[GetMapping("/v1/news/:id")]
-    public function getNewsById(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    public function getNewsById(AvocadoRequest $request, AvocadoResponse $response): array {
         $this->logger->logRequest($request);
         NewsRequestValidators::validateFindByIdRequest($request);
 
@@ -82,15 +80,21 @@ class NewsController {
 
         $news = $this->newsRepository->findById($id);
 
-        if (!$news) {
+        if(!$news) {
             throw new NewsNotFoundException("News with id $id not found.");
         }
 
-        return $response->json([NewsDTO::from($news)]);
+        return [NewsDTO::from($news)];
     }
 
+    /**
+     * @throws AvocadoModelException
+     * @throws InvalidRequest
+     * @throws NewsNotFoundException
+     * @throws ReflectionException
+     */
     #[GetMapping("/v3/news/tag/:tag")]
-    public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response): array {
         $this->logger->logRequest($request);
         NewsRequestValidators::validateFindByTagRequest($request);
 
@@ -104,9 +108,8 @@ class NewsController {
         $newsTags = $this->tagsService->getNewsTagByTagId($tag->getId());
         $news = array_map(fn($newsTag) => $this->newsRepository->findById($newsTag->getNewsId()), $newsTags);
         $newsDTOs = NewsDTO::fromArray($news);
-        $byYearDTOs = NewsByYearDTO::fromArray($newsDTOs);
 
-        return $response->withStatus(HTTPStatus::OK)->json($byYearDTOs);
+        return NewsByYearDTO::fromArray($newsDTOs);
     }
 
 
@@ -114,19 +117,15 @@ class NewsController {
      * @throws InvalidRequest
      */
     #[PatchMapping("/v1/news/:id")]
-    public function updateNewsById(AvocadoRequest $request, AvocadoResponse $response) {
+    public function updateNewsById(AvocadoRequest $request): NewsDTO {
         $this->logger->logRequest($request);
         NewsRequestValidators::validateFindByTagRequest($request);
         NewsRequestValidators::validateNewNewsRequest($request);
 
         $id = $request->params['id'];
-        $this->newsRepository->updateById([
-            "title" => $request->params['title'],
-            "description" => $request->params['description'],
-            "tags" => implode(';', $request->params['tags']),
-            "date" => $request->params['date'],
+        $this->newsRepository->updateById(["title" => $request->params['title'], "description" => $request->params['description'], "tags" => implode(';', $request->params['tags']), "date" => $request->params['date'],
         ], $id);
 
-        $response->withStatus(HTTPStatus::OK)->json(NewsDTO::from($this->newsRepository->findById($id)));
+        return NewsDTO::from($this->newsRepository->findById($id));
     }
 }

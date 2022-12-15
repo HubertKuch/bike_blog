@@ -3,6 +3,7 @@
 namespace Hubert\BikeBlog\Controllers;
 
 use Avocado\Application\RestController;
+use Avocado\AvocadoApplication\Attributes\Exceptions\ResponseStatus;
 use Avocado\HTTP\HTTPStatus;
 use Avocado\Router\AvocadoRequest;
 use Avocado\Router\AvocadoResponse;
@@ -20,12 +21,17 @@ class TagsController {
     private TagsService $tagsService;
 
     #[GetMapping("/v1/tags")]
-    public function getAllTags(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
-        return $response->withStatus(HTTPStatus::OK)->json($this->tagsService->getAllTagsAsDto());
+    #[ResponseStatus(HTTPStatus::OK)]
+    public function getAllTags(AvocadoRequest $request, AvocadoResponse $response): array {
+        return $this->tagsService->getAllTagsAsDto();
     }
 
+    /**
+     * @throws InvalidRequest
+     */
     #[GetMapping("/v1/tags/:newsId")]
-    public function getTagsRelatedWithNews(AvocadoRequest $request, AvocadoResponse $response): AvocadoResponse {
+    #[ResponseStatus(HTTPStatus::OK)]
+    public function getTagsRelatedWithNews(AvocadoRequest $request, AvocadoResponse $response): array {
         $newsId = $request->params['newsId'];
 
         if(!$newsId) {
@@ -38,7 +44,7 @@ class TagsController {
             throw new InvalidRequest("News with that `newsId` doesn't exists.");
         }
 
-        return $response->withStatus(HTTPStatus::OK)->json($this->tagsService->parseArrayToDto($tags));
+        return $this->tagsService->parseArrayToDto($tags);
     }
 
 }
