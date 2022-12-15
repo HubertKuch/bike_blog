@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
 {{> head }}
+<head>
+    <link href="../style/app.css" rel="stylesheet" type="text/css"/>
+</head>
 <body>
 
 {{> header }}
@@ -18,11 +21,12 @@
       <div>
           Aby wybrać kategorię kliknij w wytłuszczoną nazwę związaną z kategorią w danej grupie!
           <br> <br>
-      </div>
-
-      <div class="tags">
 
       </div>
+
+      <div class="tags-container tags-categories">
+      </div>
+
   </article>
 </main>
 
@@ -31,10 +35,15 @@
 
 <script>
 
-    const tagsContainer = document.querySelector(".tags");
+    const tagsContainer = document.querySelector(".tags-container.tags-categories");
 
+    /** @param {Tag} tag */
     const behindTagElement = (tag) => {
         const element = document.createElement("div");
+
+        element.setAttribute("data-tag-id", tag.id);
+        element.setAttribute("data-tag-category-id", tag.category.id);
+
         new TagElement(tag).render(element);
 
         return element;
@@ -43,8 +52,27 @@
     const main = async function () {
         const tags = await NewsController.getTags();
 
+        /** @param {Tag[]} tags */
+        function createTagsCategoriesContainers(tags) {
+            for (const tag of tags) {
+                const el = document.createElement("div");
+                const nameEl = document.createElement("div");
+
+                nameEl.classList.add("pink");
+                el.setAttribute("data-category-id", tag.category.id);
+                nameEl.textContent = `[${tag.category.category}]`;
+
+                el.append(nameEl);
+                tagsContainer.append(el);
+            }
+        }
+
+        createTagsCategoriesContainers(tags);
+
         tags.forEach(tag => {
-            tagsContainer.append(behindTagElement(tag))
+            const el = document.querySelector(`[data-category-id="${tag.category.id}"]`);
+
+            el.append(behindTagElement(tag))
         });
     }
 

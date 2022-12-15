@@ -45,10 +45,10 @@ class NewsController {
     }
 
     /**
-     * @returns string[]
+     * @returns Promise<Tag[]>
      * */
     static async getTags() {
-        const res = await fetch(`${this.baseUrl}/v1/news/tag/tags`, {
+        const res = await fetch(`${this.baseUrl}/v1/tags`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
