@@ -2,7 +2,6 @@
 
 namespace Hubert\BikeBlog;
 
-
 use Avocado\Router\AvocadoRouter;
 
 require "vendor/autoload.php";
