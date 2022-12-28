@@ -102,8 +102,6 @@
             allNews = await NewsController.getNewsByTag(CHOSEN_TAG);
         }
 
-        console.log(allNews)
-
         const urlParams = new URLSearchParams(window.location.search);
         const streamId = urlParams.get("id");
         const latestNewsId = allNews[0].news[0].id;

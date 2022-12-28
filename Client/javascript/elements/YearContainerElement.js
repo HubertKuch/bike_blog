@@ -46,7 +46,7 @@ class YearContainerElement {
         const link = document.createElement("a");
 
         link.href = `news?id=${news.id}`;
-        link.innerText = news.title;
+        link.innerHTML = news.title;
 
         li.appendChild(link);
 
