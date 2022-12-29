@@ -200,3 +200,9 @@ div.meter {
 .bold {
     font-weight: 800;
 }
+
+mapa {
+    height: 500px;
+    width: 500px;
+    position: absolute !important;
+}
