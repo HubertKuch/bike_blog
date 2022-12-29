@@ -2,13 +2,25 @@
 
 namespace Hubert\BikeBlog\Utils;
 
+use AvocadoApplication\Attributes\Autowired;
+use AvocadoApplication\Attributes\Resource;
+use Hubert\BikeBlog\Configuration\GpsFilesConfiguration;
+
+#[Resource]
 class GpsLogFile {
+
+    #[Autowired]
+    private GpsFilesConfiguration $configuration;
+
+    public function __construct() {
+    }
+
 
     /**
      * @param string $content Contents of .log gps file
      * @return array[] Returns a nested array of longitudes and latitudes like [[50.123, 50.21344], [50.12243, 50.2124]]
      * */
-    public static function parseToArray(string $content): array {
+    public function parseToArray(string $content): array {
         $lines = explode(PHP_EOL, $content);
         $lines = array_filter($lines, fn($line) => str_starts_with($line, "\$GPGGA"));
 
@@ -18,7 +30,7 @@ class GpsLogFile {
     /**
      * @return float[] Return [latitude, longitude]
      * */
-    private static function parseLine(string $line): array {
+    private function parseLine(string $line): array {
         $elements = explode(",", $line);
         $latitude = $elements[2];
         $longitude = $elements[4];
@@ -32,8 +44,10 @@ class GpsLogFile {
         $isNorth = $elements[3] === "N";
         $isWest = $elements[5] === "W";
 
-        $latitude = round((float)"$latitudeDegrees.$latitudeMinutesAndSeconds", 6);
-        $longitude = round((float)"$longitudeDegrees.$longitudeMinutesAndSeconds", 6);
+        $precision = $this->configuration->getLongitudeAndLatitudePrecision();
+
+        $latitude = round((float)"$latitudeDegrees.$latitudeMinutesAndSeconds", $precision);
+        $longitude = round((float)"$longitudeDegrees.$longitudeMinutesAndSeconds", $precision);
 
         return [$isNorth ? $latitude : -$latitude, $isWest ? -$longitude : $longitude];
     }

@@ -18,6 +18,8 @@ class GpsController {
 
     #[Autowired]
     private GpsFilesConfiguration $gpsFilesConfiguration;
+    #[Autowired]
+    private GpsLogFile $gpsLogFile;
 
     #[GetMapping("/:newsId")]
     #[Produces(ContentType::APPLICATION_JSON)]
@@ -32,7 +34,7 @@ class GpsController {
 
         $content = file_get_contents($path);
 
-        return GpsLogFile::parseToArray($content);
+        return $this->gpsLogFile->parseToArray($content);
     }
 
 }

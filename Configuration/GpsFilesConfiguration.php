@@ -9,9 +9,14 @@ use Avocado\AvocadoApplication\Attributes\ConfigurationProperties;
 #[ConfigurationProperties("gps")]
 class GpsFilesConfiguration {
 
-    private string $root;
+    private readonly string $root;
+    private readonly int $longitudeAndLatitudePrecision;
 
     public function getRoot(): string {
         return $this->root;
+    }
+
+    public function getLongitudeAndLatitudePrecision(): int {
+        return $this->longitudeAndLatitudePrecision;
     }
 }
