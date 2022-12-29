@@ -8,3 +8,5 @@ data-source:
   charset: utf8
 images:
   root: /var/bike-blog/img/
+gps:
+  root: /var/bike-blog/img/

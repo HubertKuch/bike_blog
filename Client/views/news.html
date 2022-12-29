@@ -68,6 +68,7 @@
     const newsNavigationListElement = document.querySelector(".news-navigation");
     const newsContentElement = document.querySelector(".news-content");
     const tagsContainer = document.querySelector(".tags");
+    let currentNews = null;
 
     /**
      * @param {NewsGroup[]} news
@@ -117,27 +118,23 @@
         const actualNews = await NewsController.getNewsById(urlParams.get("id"));
 
         await showNews(actualNews);
+        currentNews = actualNews;
     }
 
-    function renderMap() {
+    async function renderMap() {
         const mapElement = document.querySelector("mapa");
-        const options = {
-            zoom: 10,
-            center: [17.385044, 78.486671]
-        };
 
-        const map = new L.map(mapElement, options).setView([45.51, -122.68], 13);
+        const coordinates = await NewsController.getGpsData(currentNews.id);
+        const twoFirstPoints = [coordinates[0], coordinates[1]];
 
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        const map = L.map(mapElement).fitBounds(twoFirstPoints);
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        const polyline = L.polyline([
-            [45.51, -122.68],
-            [37.77, -122.43],
-            [34.04, -118.2]
-        ], {color: 'red'}).addTo(map);
+
+        L.polyline(coordinates, {color: 'blue'}).addTo(map);
     }
 
     main().then(renderMap)

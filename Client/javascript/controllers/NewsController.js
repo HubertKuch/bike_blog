@@ -72,4 +72,11 @@ class NewsController {
     static async getNewsTags(newsId) {
         return await this.fetchData(`${this.baseUrl}/v1/tags/${newsId}`);
     }
+
+    /**
+     * @returns Promise<Array<Array<Number>>>
+     * */
+    static async getGpsData(newsId) {
+        return await this.fetchData(`${this.baseUrl}/v1/gps/${newsId}`);
+    }
 }
