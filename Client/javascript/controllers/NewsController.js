@@ -31,7 +31,7 @@ class NewsController {
     static async getNewsById(id) {
         const data = await this.fetchData(`${this.baseUrl}/v1/news/${id}`);
 
-        return data.map(news => NewsSerializer.serializeSingleNews(news))[0] ?? null;
+        return NewsSerializer.serializeSingleNews(data) ?? null;
     }
 
     /**

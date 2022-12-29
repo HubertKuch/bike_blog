@@ -41,7 +41,8 @@
     "nesbot/carbon": "2.62.0",
     "salesforce/handlebars-php": "2.3.0",
     "hubert/avocado": "v5.2.0",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "ext-dom": "*"
   },
   "require-dev": {
     "guzzlehttp/guzzle": "7.5.0",

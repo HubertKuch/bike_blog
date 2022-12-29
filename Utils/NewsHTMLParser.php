@@ -29,15 +29,15 @@ class NewsHTMLParser {
     }
 
     private function parseImages(string $content, News $news): string {
-        $tag = new HTMLTag("zdjecia");
+        $opening = "<div class='images-container'>";
         $newsImages = $this->imagesService->getNewsImages($news);
 
         foreach ($newsImages as $image) {
             $name = $image->getName();
 
-            $content = $this->customHTMLTagsParser->parseTag($tag, $content, "<img src='/resources/$name/'  alt='$name' />");
+            $opening .= "<img src='resources/{$news->getId()}/$name/'  alt='$name' />";
         }
 
-        return $content;
+        return $this->customHTMLTagsParser->parseTag(new HTMLTag("zdjecia"), $content, $opening . "</div>");
     }
 }
