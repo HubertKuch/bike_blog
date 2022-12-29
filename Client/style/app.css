@@ -46,7 +46,6 @@ header .banner {
 }
 
 .main-content {
-    overflow: auto;
     margin: 0 0 10px;
 }
 
@@ -203,9 +202,10 @@ div.meter {
 }
 
 .leaflet-container {
-    height: 480px !important;
-    width: 720px !important;
-    position: absolute !important;
+    height: 32rem !important;
+    width: 80% !important;
+    position: relative !important;
+    display: inline-block;
 }
 
 .images-container {

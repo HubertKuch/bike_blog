@@ -30,4 +30,8 @@
     .date {
         font-size: 2rem;
     }
+
+    .leaflet-container {
+        height: 52rem !important;
+    }
 }
