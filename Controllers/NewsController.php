@@ -20,6 +20,7 @@ use Hubert\BikeBlog\Models\DTO\NewsByYearDTO;
 use Hubert\BikeBlog\Models\DTO\NewsDTO;
 use Hubert\BikeBlog\Models\News\News;
 use Hubert\BikeBlog\Services\TagsService;
+use Hubert\BikeBlog\Utils\NewsHTMLParser;
 use Hubert\BikeBlog\Utils\Validators\NewsRequestValidators;
 use ReflectionException;
 
@@ -33,6 +34,8 @@ class NewsController {
     private TagsService $tagsService;
     #[Autowired]
     private LoggerHelper $logger;
+    #[Autowired]
+    private NewsHTMLParser $newsHTMLParser;
 
     /**
      * @throws AvocadoModelException
@@ -72,7 +75,7 @@ class NewsController {
      * @throws NewsNotFoundException
      */
     #[GetMapping("/v1/news/:id")]
-    public function getNewsById(AvocadoRequest $request, AvocadoResponse $response): array {
+    public function getNewsById(AvocadoRequest $request, AvocadoResponse $response): NewsDTO {
         $this->logger->logRequest($request);
         NewsRequestValidators::validateFindByIdRequest($request);
 
@@ -84,7 +87,9 @@ class NewsController {
             throw new NewsNotFoundException("News with id $id not found.");
         }
 
-        return [NewsDTO::from($news)];
+        $news = $this->newsHTMLParser->parse($news);
+
+        return NewsDTO::from($news);
     }
 
     /**
@@ -112,7 +117,6 @@ class NewsController {
         return NewsByYearDTO::fromArray($newsDTOs);
     }
 
-
     /**
      * @throws InvalidRequest
      */
@@ -123,8 +127,7 @@ class NewsController {
         NewsRequestValidators::validateNewNewsRequest($request);
 
         $id = $request->params['id'];
-        $this->newsRepository->updateById(["title" => $request->params['title'], "description" => $request->params['description'], "tags" => implode(';', $request->params['tags']), "date" => $request->params['date'],
-        ], $id);
+        $this->newsRepository->updateById(["title" => $request->params['title'], "description" => $request->params['description'], "tags" => implode(';', $request->params['tags']), "date" => $request->params['date'],], $id);
 
         return NewsDTO::from($this->newsRepository->findById($id));
     }

@@ -2,9 +2,9 @@
 
 namespace Hubert\BikeBlog\Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
-use Hubert\BikeBlog\Utils\HTMLTag;
 use Hubert\BikeBlog\Utils\CustomHTMLTagsParser;
+use Hubert\BikeBlog\Utils\HTMLTag;
+use PHPUnit\Framework\TestCase;
 
 class CustomHTMLParserTest extends TestCase {
 
@@ -20,8 +20,9 @@ class CustomHTMLParserTest extends TestCase {
         $parser = new CustomHTMLTagsParser();
         $toReplace = "<div>test</div>";
         $content = "<div>TEST<meter/></div>";
+
         $expected = "<div>TEST<div>test</div></div>";
 
-        self::assertSame($expected, $parser->parseTag($tag, $toReplace, $content));
+        self::assertSame($expected, $parser->parseTag($tag, $content, $toReplace));
     }
 }

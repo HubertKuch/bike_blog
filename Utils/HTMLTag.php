@@ -18,6 +18,6 @@ class HTMLTag {
     }
 
     public function getHTML(): string {
-        return "<$this->tag/>";
+        return "<{$this->tag}>";
     }
 }

@@ -5,6 +5,7 @@ namespace Hubert\BikeBlog\Configuration;
 use Avocado\AvocadoApplication\Attributes\Configuration;
 use Avocado\AvocadoApplication\Attributes\Leaf;
 use Avocado\ORM\AvocadoRepository;
+use Hubert\BikeBlog\Models\Image\Image;
 use Hubert\BikeBlog\Models\Meter\Meter;
 use Hubert\BikeBlog\Models\News\News;
 use Hubert\BikeBlog\Models\Tags\NewsTag;
@@ -43,5 +44,10 @@ class RepositoriesLeafs {
     #[Leaf("tagCategoriesRepository")]
     public function getTagsCategoriesRepository(): AvocadoRepository {
         return new AvocadoRepository(TagCategory::class);
+    }
+
+    #[Leaf("imagesRepository")]
+    public function getImagesRepository(): AvocadoRepository {
+        return new AvocadoRepository(Image::class);
     }
 }

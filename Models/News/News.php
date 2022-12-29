@@ -47,6 +47,10 @@ class News {
         return $this->description;
     }
 
+    public function setDescription(string $description): void {
+        $this->description = $description;
+    }
+
     public function getDate(): Carbon {
         return Carbon::createFromFormat("Y-m-d", $this->date);
     }

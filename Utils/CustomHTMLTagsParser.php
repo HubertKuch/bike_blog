@@ -10,7 +10,7 @@ class CustomHTMLTagsParser {
     public function __construct() {
     }
 
-    public function parseTag(HTMLTag $tag, string $to, string $content): string {
+    public function parseTag(HTMLTag $tag, string $content, $to): string {
         return str_replace($tag->getHTML(), $to, $content);
     }
 }

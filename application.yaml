@@ -6,3 +6,5 @@ data-source:
   port: 3306
   db: bike_blog
   charset: utf8
+images:
+  root: /var/bike-blog/img/
