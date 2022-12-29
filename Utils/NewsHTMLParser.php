@@ -4,6 +4,7 @@ namespace Hubert\BikeBlog\Utils;
 
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\Resource;
+use Hubert\BikeBlog\Configuration\ImagesConfiguration;
 use Hubert\BikeBlog\Models\News\News;
 use Hubert\BikeBlog\Services\ImagesService;
 
@@ -14,6 +15,8 @@ class NewsHTMLParser {
     private CustomHTMLTagsParser $customHTMLTagsParser;
     #[Autowired]
     private ImagesService $imagesService;
+    #[Autowired]
+    private ImagesConfiguration $imagesConfiguration;
 
     public function __construct() {
     }
@@ -34,8 +37,12 @@ class NewsHTMLParser {
 
         foreach ($newsImages as $image) {
             $name = $image->getName();
+            $path = $this->imagesConfiguration->getRoot() . $news->getId() . "/" . $image->getName();
 
-            $opening .= "<img src='resources/{$news->getId()}/$name/'  alt='$name' />";
+            $fileContent = file_get_contents($path);
+            $data = base64_encode($fileContent);
+
+            $opening .= "<img src='data: image/png;base64,$data'  alt='$name' />";
         }
 
         return $this->customHTMLTagsParser->parseTag(new HTMLTag("zdjecia"), $content, $opening . "</div>");
