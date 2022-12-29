@@ -11,3 +11,5 @@ images:
 gps:
   root: /var/bike-blog/img/
   longitudeAndLatitudePrecision: 9
+logs:
+  root: /var/bike-blog/logs/

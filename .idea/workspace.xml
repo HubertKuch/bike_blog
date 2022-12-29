@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Responsive version of map">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Removed logs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration/LoggerConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/LoggerConfiguration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,8 +246,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Create imports scripts" />
-    <MESSAGE value="Improved table style" />
     <MESSAGE value="Added `startState` and `endState` field to meter model" />
     <MESSAGE value="Added trip length field" />
     <MESSAGE value="Show added tags on edit action" />
@@ -270,7 +269,9 @@
     <MESSAGE value="Optimized rendering images" />
     <MESSAGE value="Moved longitude and latitude precision to configuration" />
     <MESSAGE value="Responsive version of map" />
-    <option name="LAST_COMMIT_MESSAGE" value="Responsive version of map" />
+    <MESSAGE value="Optimized displaying news by adding static id one of the news to prevent next request" />
+    <MESSAGE value="Removed logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed logs" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
