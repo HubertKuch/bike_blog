@@ -232,6 +232,8 @@ div.meter {
     top: 0;
     left: 0;
     z-index: 1000;
+
+    display: none;
 }
 
 .modal {
@@ -246,4 +248,6 @@ div.meter {
     background: white;
     border-radius: 5px;
     color: black;
+
+    display: none;
 }

@@ -88,7 +88,21 @@
   const content = document.querySelector("article.content tbody");
   const params = new URLSearchParams(window.location.search);
   const newsId = params.get("news_id");
+  const openModalButton = document.querySelector(".add-image");
   const addImageForm = document.querySelector("form");
+
+  const modal = document.querySelector(".modal");
+  const overlay = document.querySelector(".overlay");
+
+  openModalButton.addEventListener("click", () => {
+    overlay.style.display = "block";
+    modal.style.display = "block";
+  });
+
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    modal.style.display = "none";
+  })
 
   addImageForm.action = `/bike-blog/api/v1/images/news/${newsId}`;
 
