@@ -7,6 +7,7 @@ use AvocadoApplication\Attributes\Resource;
 use Handlebars\Handlebars;
 use Handlebars\Loader\FilesystemLoader;
 use Hubert\BikeBlog\Models\DTO\NewsDTO;
+use Hubert\BikeBlog\Models\Image\ImagesDTO;
 use Hubert\BikeBlog\Models\News\News;
 
 #[Resource]
@@ -52,5 +53,9 @@ class Views {
 
     public function tags(): void {
         echo @$this->handlebars->render("tags", []);
+    }
+
+    public function images(array $news, array $images): void {
+        echo @$this->handlebars->render("images", ["news" => "" . json_encode(NewsDTO::fromArray($news)), "images" => "" . json_encode(ImagesDTO::fromArray($images))]);
     }
 }

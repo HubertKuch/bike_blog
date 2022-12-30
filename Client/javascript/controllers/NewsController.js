@@ -79,4 +79,11 @@ class NewsController {
     static async getGpsData(newsId) {
         return await this.fetchData(`${this.baseUrl}/v1/gps/${newsId}`);
     }
+
+    /**
+     * @returns Promise<Array<{id: string, newsId: string, name: string }>>
+     * */
+    static async getNewsImages($newsId) {
+        return await this.fetchData(`${this.baseUrl}/v1/images/news/${$newsId}`);
+    }
 }

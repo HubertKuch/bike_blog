@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "1e876c9ad024304e209207d47145ca36",
+  "content-hash": "f07b7bc04eabc9aba61825d1ebe8e521",
   "packages": [
     {
       "name": "brick/math",
@@ -127,16 +127,16 @@
     },
     {
       "name": "hubert/avocado",
-      "version": "v5.2.0",
+      "version": "v5.4.0",
       "source": {
         "type": "git",
         "url": "https://github.com/HubertKuch/Avocado.git",
-        "reference": "07c62dd31d51ac9ef1c78838ab50b7a17b2b24ea"
+        "reference": "a9517b0f9e8e5c7340e7e64608d14a789c9540b1"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/07c62dd31d51ac9ef1c78838ab50b7a17b2b24ea",
-        "reference": "07c62dd31d51ac9ef1c78838ab50b7a17b2b24ea",
+        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/a9517b0f9e8e5c7340e7e64608d14a789c9540b1",
+        "reference": "a9517b0f9e8e5c7340e7e64608d14a789c9540b1",
         "shasum": ""
       },
       "require": {
@@ -177,9 +177,9 @@
       "homepage": "https://avocadoframework.com",
       "support": {
         "issues": "https://github.com/HubertKuch/Avocado/issues",
-        "source": "https://github.com/HubertKuch/Avocado/tree/v5.2.0"
+        "source": "https://github.com/HubertKuch/Avocado/tree/v5.4.0"
       },
-      "time": "2022-12-29T01:59:12+00:00"
+      "time": "2022-12-29T23:41:54+00:00"
     },
     {
       "name": "kcs/class-finder",
@@ -508,16 +508,16 @@
         }
       ],
       "time": "2022-12-27T19:12:24+00:00"
-        },
-        {
-            "name": "ramsey/uuid",
-            "version": "4.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ramsey/uuid.git",
-                "reference": "373f7bacfcf3de038778ff27dcce5672ddbf4c8a"
-            },
-            "dist": {
+    },
+    {
+      "name": "ramsey/uuid",
+      "version": "4.4.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ramsey/uuid.git",
+        "reference": "373f7bacfcf3de038778ff27dcce5672ddbf4c8a"
+      },
+      "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/ramsey/uuid/zipball/373f7bacfcf3de038778ff27dcce5672ddbf4c8a",
                 "reference": "373f7bacfcf3de038778ff27dcce5672ddbf4c8a",
@@ -600,8 +600,8 @@
                 "type": "tidelift"
               }
             ],
-          "time": "2022-08-05T17:58:37+00:00"
-        },
+      "time": "2022-08-05T17:58:37+00:00"
+    },
     {
       "name": "salesforce/handlebars-php",
       "version": "2.3.0",
@@ -742,20 +742,20 @@
       ],
       "time": "2022-11-03T14:55:06+00:00"
     },
-        {
-            "name": "symfony/polyfill-mbstring",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-              "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534"
-            },
-            "dist": {
-              "type": "zip",
-              "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
-              "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
-              "shasum": ""
-            },
+    {
+      "name": "symfony/polyfill-mbstring",
+      "version": "dev-main",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/polyfill-mbstring.git",
+        "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
+        "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
+        "shasum": ""
+      },
             "require": {
                 "php": ">=7.1"
             },
@@ -824,7 +824,7 @@
                     "type": "tidelift"
                 }
             ],
-          "time": "2022-11-03T14:55:06+00:00"
+      "time": "2022-11-03T14:55:06+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -1364,16 +1364,16 @@
           "generated/zip.php",
           "generated/zlib.php"
         ],
-                "psr-4": {
-                    "Safe\\": [
-                        "lib/",
-                        "deprecated/",
-                        "generated/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
+        "psr-4": {
+          "Safe\\": [
+            "lib/",
+            "deprecated/",
+            "generated/"
+          ]
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
                 "MIT"
             ],
             "description": "PHP core functions that throw exceptions instead of returning FALSE on error",
@@ -3816,7 +3816,8 @@
   "prefer-stable": false,
   "prefer-lowest": false,
   "platform": {
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "ext-dom": "*"
   },
   "platform-dev": [],
   "plugin-api-version": "2.3.0"

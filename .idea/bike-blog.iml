@@ -14,6 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Helpers" isTestSource="false" packagePrefix="Hubert\BikeBlog\Helpers\" />
       <sourceFolder url="file://$MODULE_DIR$/Logger" isTestSource="false" packagePrefix="Hubert\BikeBlog\Logger\" />
       <sourceFolder url="file://$MODULE_DIR$/Services" isTestSource="false" packagePrefix="Hubert\BikeBlog\Services\" />
+      <sourceFolder url="file://$MODULE_DIR$/Storage" isTestSource="false" packagePrefix="Hubert\BikeBlog\Storage\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kcs/class-finder" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/deprecation-contracts" />

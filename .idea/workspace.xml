@@ -4,10 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Removed logs">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Moved logs folder">
+      <change afterPath="$PROJECT_DIR$/Client/views/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/ImagesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Image/ImagesDTO.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Storage/StaticStorage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Storage/StaticStorageImpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bike-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bike-blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration/LoggerConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/LoggerConfiguration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/NewsTableRowElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/NewsTableRowElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/admin_nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/admin_nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ViewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ViewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ImagesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ImagesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/NewsHTMLParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/NewsHTMLParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +40,8 @@
         <option value="HTTP Request" />
         <option value="package.json" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -246,7 +260,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added `startState` and `endState` field to meter model" />
     <MESSAGE value="Added trip length field" />
     <MESSAGE value="Show added tags on edit action" />
     <MESSAGE value="Ignore logs" />
@@ -271,7 +284,8 @@
     <MESSAGE value="Responsive version of map" />
     <MESSAGE value="Optimized displaying news by adding static id one of the news to prevent next request" />
     <MESSAGE value="Removed logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed logs" />
+    <MESSAGE value="Moved logs folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved logs folder" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

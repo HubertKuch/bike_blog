@@ -27,11 +27,16 @@ class NewsTableRowElement {
         const deleteLink = document.createElement("a");
         deleteLink.innerText = "USUN";
 
+        const imagesColumn = document.createElement("td");
+        const imagesLink = document.createElement("a");
+        imagesLink.innerText = "ZDJECIA";
+        imagesLink.href = `images?news_id=${this.news.id}`
+
         editColumn.append(editLink);
+        imagesColumn.append(imagesLink);
         deleteColumn.append(deleteLink);
 
-
-        row.append(titleColumn, dateColumn, editColumn, deleteColumn);
+        row.append(titleColumn, dateColumn, editColumn, imagesColumn, deleteColumn);
 
         return row;
     }

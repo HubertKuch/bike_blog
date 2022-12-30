@@ -25,7 +25,8 @@
           "Hubert\\BikeBlog\\Client\\": "Client",
           "Hubert\\BikeBlog\\Helpers\\": "Helpers",
           "Hubert\\BikeBlog\\Logger\\": "Logger",
-          "Hubert\\BikeBlog\\Services\\": "Services"
+          "Hubert\\BikeBlog\\Services\\": "Services",
+          "Hubert\\BikeBlog\\Storage\\": "Storage"
         }
     },
     "authors": [
@@ -40,7 +41,7 @@
     "ramsey/uuid": "4.4.0",
     "nesbot/carbon": "2.62.0",
     "salesforce/handlebars-php": "2.3.0",
-    "hubert/avocado": "v5.2.0",
+    "hubert/avocado": "v5.4.0",
     "ext-pdo": "*",
     "ext-dom": "*"
   },

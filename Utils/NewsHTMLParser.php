@@ -33,7 +33,7 @@ class NewsHTMLParser {
 
     private function parseImages(string $content, News $news): string {
         $opening = "<div class='images-container'>";
-        $newsImages = $this->imagesService->getNewsImages($news);
+        $newsImages = $this->imagesService->getNewsImages($news->getId());
 
         foreach ($newsImages as $image) {
             $name = $image->getName();

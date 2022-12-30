@@ -16,6 +16,8 @@ class ViewsController {
     private Views $views;
     #[Autowired("newsRepository")]
     private AvocadoRepository $newsRepository;
+    #[Autowired("imagesRepository")]
+    private AvocadoRepository $imagesRepository;
 
     #[GetMapping("/")]
     public function mainPage(): void {
@@ -51,6 +53,14 @@ class ViewsController {
     #[GetMapping("/news")]
     public function news(): void {
         $this->views->news();
+    }
+
+    #[GetMapping("/images")]
+    public function images(): void {
+        $news = $this->newsRepository->findMany();
+        $images = $this->imagesRepository->findMany();
+
+        $this->views->images($news, $images);
     }
 
     #[GetMapping("/tags")]

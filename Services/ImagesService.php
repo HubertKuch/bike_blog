@@ -2,11 +2,11 @@
 
 namespace Hubert\BikeBlog\Services;
 
+use Avocado\AvocadoApplication\Files\MultipartFile;
 use Avocado\ORM\AvocadoRepository;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\Resource;
 use Hubert\BikeBlog\Models\Image\Image;
-use Hubert\BikeBlog\Models\News\News;
 
 #[Resource]
 class ImagesService {
@@ -20,7 +20,13 @@ class ImagesService {
     /**
      * @return Image[]
      * */
-    public function getNewsImages(News $news): array {
-        return $this->imageRepository->findMany(["news_id" => $news->getId()]);
+    public function getNewsImages(string $newsId): array {
+        return $this->imageRepository->findMany(["news_id" => $newsId]);
+    }
+
+    public function saveImage(MultipartFile $multipartFile, string $newsId): void {
+        $image = Image::from($multipartFile->getName(), $newsId);
+
+        $this->imageRepository->save($image);
     }
 }
