@@ -104,28 +104,34 @@
     modal.style.display = "none";
   })
 
-  addImageForm.action = `/bike-blog/api/v1/images/news/${newsId}`;
+  addImageForm.action = `${Configuration.BASE_URL}/api/v1/images/news/${newsId}`;
 
   async function main() {
     const images = await NewsController.getNewsImages(newsId);
 
     for (const image of images) {
-      const el = document.createElement("tr");
+        const el = document.createElement("tr");
 
-      const nameElCol = document.createElement("td");
-      nameElCol.innerText = image.name;
+        const nameElCol = document.createElement("td");
+        nameElCol.innerText = image.name;
 
-      const deleteCol = document.createElement("td");
-      const deleteAnchor = document.createElement("a");
+        const deleteCol = document.createElement("td");
+        const deleteButton = document.createElement("button");
 
-      deleteAnchor.textContent = "USUN";
-      deleteAnchor.href = "ds";
+        deleteButton.textContent = "USUN";
+        deleteButton.addEventListener("click", () => {
+            const url = `${Configuration.BASE_URL}/api/v1/images/news/${image.newsId}/image/${image.id}`;
 
-      deleteCol.append(deleteAnchor);
+            fetch(url, {method: "DELETE"});
+            window.location.reload();
+        });
 
-      el.append(nameElCol, deleteCol);
 
-      content.append(el);
+        deleteCol.append(deleteButton);
+
+        el.append(nameElCol, deleteCol);
+
+        content.append(el);
     }
   }
 

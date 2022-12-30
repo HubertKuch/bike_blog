@@ -2,10 +2,10 @@
 
 namespace Hubert\BikeBlog\Exceptions;
 
-use Exception;
-use Avocado\HTTP\HTTPStatus;
 use Avocado\AvocadoApplication\Attributes\Exceptions\ResponseStatus;
+use Avocado\HTTP\HTTPStatus;
+use Exception;
 
 #[ResponseStatus(HTTPStatus::BAD_REQUEST)]
-class InvalidRequest extends Exception {
+class InvalidRequestException extends Exception {
 }

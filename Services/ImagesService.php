@@ -29,4 +29,13 @@ class ImagesService {
 
         $this->imageRepository->save($image);
     }
+
+    public function removeImage(string $imageId) {
+        $this->imageRepository->deleteOneById($imageId);
+    }
+
+    public function getImageById(string $imageId): ?Image {
+        return $this->imageRepository->findById($imageId);
+    }
+
 }

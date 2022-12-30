@@ -2,7 +2,7 @@
 
 class NewsController {
 
-    static baseUrl = "/bike-blog/api";
+    static baseUrl = `${Configuration.BASE_URL}/api`;
 
     /**
      * @param {News} news

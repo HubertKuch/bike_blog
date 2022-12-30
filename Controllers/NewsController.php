@@ -13,7 +13,7 @@ use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Mappings\GetMapping;
 use AvocadoApplication\Mappings\PatchMapping;
 use AvocadoApplication\Mappings\PostMapping;
-use Hubert\BikeBlog\Exceptions\InvalidRequest;
+use Hubert\BikeBlog\Exceptions\InvalidRequestException;
 use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
 use Hubert\BikeBlog\Helpers\LoggerHelper;
 use Hubert\BikeBlog\Models\DTO\NewsByYearDTO;
@@ -41,7 +41,7 @@ class NewsController {
      * @throws AvocadoModelException
      * @throws ReflectionException
      * @throws AvocadoRepositoryException
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     #[PostMapping("/v1/news/")]
     public function newNews(AvocadoRequest $request, AvocadoResponse $response): array {
@@ -71,7 +71,7 @@ class NewsController {
     /**
      * @throws ReflectionException
      * @throws AvocadoModelException
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      * @throws NewsNotFoundException
      */
     #[GetMapping("/v1/news/:id")]
@@ -94,7 +94,7 @@ class NewsController {
 
     /**
      * @throws AvocadoModelException
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      * @throws NewsNotFoundException
      * @throws ReflectionException
      */
@@ -118,7 +118,7 @@ class NewsController {
     }
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     #[PatchMapping("/v1/news/:id")]
     public function updateNewsById(AvocadoRequest $request): NewsDTO {

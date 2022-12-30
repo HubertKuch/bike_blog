@@ -4,13 +4,13 @@ namespace Hubert\BikeBlog\Utils\Validators;
 
 use Avocado\AvocadoApplication\Attributes\Request\RequestBody;
 use Avocado\Router\AvocadoRequest;
-use Hubert\BikeBlog\Exceptions\InvalidRequest;
+use Hubert\BikeBlog\Exceptions\InvalidRequestException;
 use Hubert\BikeBlog\Models\User\NewUserDto;
 
 class UsersRequestValidators {
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     public static function validateRegisterUserRequest(AvocadoRequest $request, #[RequestBody] NewUserDto $userDto): void {
         $username = $request->body['username'] ?? null;
@@ -20,11 +20,11 @@ class UsersRequestValidators {
         if($username && $email && $password && is_string($username) && is_string($email) && is_string($password) && filter_var($email, FILTER_VALIDATE_EMAIL))
             return;
 
-        throw new InvalidRequest("Invalid request");
+        throw new InvalidRequestException("Invalid request");
     }
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     public static function validateDeleteUserRequest(AvocadoRequest $request): void {
         $uuid = $request->params['id'] ?? null;
@@ -33,11 +33,11 @@ class UsersRequestValidators {
             return;
         }
 
-        throw new InvalidRequest("Invalid request");
+        throw new InvalidRequestException("Invalid request");
     }
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     public static function validateLoginRequest(AvocadoRequest $request): void {
         $login = $request->body['username'] ?? null;
@@ -47,6 +47,6 @@ class UsersRequestValidators {
             return;
         }
 
-        throw new InvalidRequest("Invalid request");
+        throw new InvalidRequestException("Invalid request");
     }
 }

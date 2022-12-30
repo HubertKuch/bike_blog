@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Upload images action">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Closing modal by clicking in overlay">
+      <change afterPath="$PROJECT_DIR$/Configuration/FrontEndConfiguration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/MetersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/MetersController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/controllers/NewsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/views/images.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/images.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/scriptsSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/scriptsSource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ImagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/MetersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MetersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/TagsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/TagsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions/InvalidRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/InvalidRequestException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ImagesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ImagesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/MetersRequestValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/MetersRequestValidators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/NewsRequestValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/NewsRequestValidators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Validators/UsersRequestValidators.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Validators/UsersRequestValidators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +43,8 @@
         <option value="HTTP Request" />
         <option value="package.json" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -246,7 +263,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Show added tags on edit action" />
     <MESSAGE value="Ignore logs" />
     <MESSAGE value="Base tags view" />
     <MESSAGE value="Implement get tags endpoint" />
@@ -271,7 +287,8 @@
     <MESSAGE value="Removed logs" />
     <MESSAGE value="Moved logs folder" />
     <MESSAGE value="Upload images action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload images action" />
+    <MESSAGE value="Closing modal by clicking in overlay" />
+    <option name="LAST_COMMIT_MESSAGE" value="Closing modal by clicking in overlay" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

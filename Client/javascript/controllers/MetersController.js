@@ -2,7 +2,7 @@
 
 class MetersController {
 
-    static baseUrl = "/bike-blog/api/v1/meters/"
+    static baseUrl = `${Configuration.BASE_URL}/api/v1/meters/`
 
     /**
      *  @param {string} id

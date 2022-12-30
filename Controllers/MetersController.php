@@ -15,7 +15,7 @@ use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Mappings\GetMapping;
 use AvocadoApplication\Mappings\PatchMapping;
 use AvocadoApplication\Mappings\PostMapping;
-use Hubert\BikeBlog\Exceptions\InvalidRequest;
+use Hubert\BikeBlog\Exceptions\InvalidRequestException;
 use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
 use Hubert\BikeBlog\Helpers\LoggerHelper;
 use Hubert\BikeBlog\Models\DTO\MeterDTO;
@@ -36,7 +36,7 @@ class MetersController {
     private LoggerHelper $logger;
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      * @throws NewsNotFoundException
      * @throws AvocadoModelException
      * @throws ReflectionException
@@ -63,7 +63,7 @@ class MetersController {
     /**
      * @param AvocadoRequest $request
      * @throws AvocadoModelException
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      * @throws ReflectionException
      * @throws AvocadoRepositoryException
      */
@@ -75,7 +75,7 @@ class MetersController {
         $newsId = $meterDto->getNewsId();
 
         if(!$this->newsRepository->findById($newsId)) {
-            $exp = new InvalidRequest("Cannot create meter for news. News with id $newsId not exists.");
+            $exp = new InvalidRequestException("Cannot create meter for news. News with id $newsId not exists.");
             $this->logger->logException($request, $exp);
 
             throw $exp;
@@ -93,7 +93,7 @@ class MetersController {
      * @param AvocadoResponse $response
      * @return AvocadoResponse
      * @throws AvocadoModelException
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      * @throws ReflectionException
      */
     #[PatchMapping("/:id")]

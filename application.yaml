@@ -13,3 +13,6 @@ gps:
   longitudeAndLatitudePrecision: 9
 logs:
   root: /var/bike-blog/logs/
+front-end:
+  # Without / on the end
+  apiBaseURl: /bike-blog

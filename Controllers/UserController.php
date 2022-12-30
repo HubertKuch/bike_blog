@@ -16,7 +16,7 @@ use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Mappings\DeleteMapping;
 use AvocadoApplication\Mappings\GetMapping;
 use AvocadoApplication\Mappings\PostMapping;
-use Hubert\BikeBlog\Exceptions\InvalidRequest;
+use Hubert\BikeBlog\Exceptions\InvalidRequestException;
 use Hubert\BikeBlog\Exceptions\InvalidUserDataException;
 use Hubert\BikeBlog\Exceptions\UserBusyException;
 use Hubert\BikeBlog\Exceptions\UserNotFoundException;
@@ -37,7 +37,7 @@ class UserController {
     private LoggerHelper $logger;
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      * @throws AvocadoModelException
      * @throws ReflectionException
      * @throws UserNotFoundException
@@ -102,7 +102,7 @@ class UserController {
     }
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     #[DeleteMapping("/v1/users/:id")]
     #[ResponseStatus(HTTPStatus::OK)]

@@ -3,12 +3,12 @@
 namespace Hubert\BikeBlog\Utils\Validators;
 
 use Avocado\Router\AvocadoRequest;
-use Hubert\BikeBlog\Exceptions\InvalidRequest;
+use Hubert\BikeBlog\Exceptions\InvalidRequestException;
 
 class NewsRequestValidators {
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     public static function validateNewNewsRequest(AvocadoRequest $request): void {
         $title = $request->body['title'] ?? null;
@@ -18,22 +18,22 @@ class NewsRequestValidators {
         if($title && $description && $date && is_string($date))
             return;
 
-        throw new InvalidRequest("Invalid request");
+        throw new InvalidRequestException("Invalid request");
     }
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     public static function validateFindByTagRequest(AvocadoRequest $request): void {
         $tag = $request->params['tag'];
 
         if ($tag) return;
 
-        throw new InvalidRequest("Invalid request");
+        throw new InvalidRequestException("Invalid request");
     }
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     public static function validateFindByIdRequest(AvocadoRequest $request): void {
         $id = $request->params['id'] ?? null;
@@ -42,17 +42,17 @@ class NewsRequestValidators {
             return;
         }
 
-        throw new InvalidRequest("Invalid request");
+        throw new InvalidRequestException("Invalid request");
     }
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     public static function validateUpdateRequest(AvocadoRequest $request): void {
         $id = $request->params['id'] ?? null;
 
         if ($id) return;
 
-        throw new InvalidRequest("Invalid request");
+        throw new InvalidRequestException("Invalid request");
     }
 }

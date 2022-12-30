@@ -10,7 +10,7 @@ use Avocado\Router\AvocadoResponse;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Mappings\GetMapping;
-use Hubert\BikeBlog\Exceptions\InvalidRequest;
+use Hubert\BikeBlog\Exceptions\InvalidRequestException;
 use Hubert\BikeBlog\Services\TagsService;
 
 #[RestController]
@@ -27,7 +27,7 @@ class TagsController {
     }
 
     /**
-     * @throws InvalidRequest
+     * @throws InvalidRequestException
      */
     #[GetMapping("/v1/tags/:newsId")]
     #[ResponseStatus(HTTPStatus::OK)]
@@ -35,13 +35,13 @@ class TagsController {
         $newsId = $request->params['newsId'];
 
         if(!$newsId) {
-            throw new InvalidRequest("Missing `newsId` param.");
+            throw new InvalidRequestException("Missing `newsId` param.");
         }
 
         $tags = $this->tagsService->getTagsOfNews($newsId);
 
         if(!$tags) {
-            throw new InvalidRequest("News with that `newsId` doesn't exists.");
+            throw new InvalidRequestException("News with that `newsId` doesn't exists.");
         }
 
         return $this->tagsService->parseArrayToDto($tags);
