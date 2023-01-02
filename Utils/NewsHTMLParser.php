@@ -21,6 +21,8 @@ class NewsHTMLParser {
     private ImagesConfiguration $imagesConfiguration;
     #[Autowired("metersRepository")]
     private AvocadoRepository $metersRepository;
+    #[Autowired("newsRepository")]
+    private AvocadoRepository $newsRepository;
 
     public function __construct() {
     }
@@ -82,5 +84,26 @@ class NewsHTMLParser {
         $parsedContent = $opening . $parsedContent . $closing;
 
         return $this->customHTMLTagsParser->parseTag(new HTMLTag("statystyka"), $content, $parsedContent);
+    }
+
+    private function getBikeStatisticsContent(News $news): string {
+        /**
+         * @var News[] $newsBefore
+         * @var News[] $foundedNews
+         */
+        $foundedNews = $this->newsRepository->findMany();
+        $newsBefore = array_filter($foundedNews, fn($currNews) => $currNews->getDate()->isBefore($news->getDate()));
+
+        $routesBefore = count($newsBefore);
+
+        $parsedContent = <<<EOL
+                <div class="meter">
+                    <ul>
+                        <li>Liczba tras $routesBefore</li>
+                    </ul>    
+                </div>      
+        EOL;
+
+        return "";
     }
 }
