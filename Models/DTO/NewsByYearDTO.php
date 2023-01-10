@@ -2,8 +2,6 @@
 
 namespace Hubert\BikeBlog\Models\DTO;
 
-use Carbon\Carbon;
-
 class NewsByYearDTO {
 
     /**
@@ -18,8 +16,8 @@ class NewsByYearDTO {
      * */
     public static function fromArray(array &$news): array {
         usort($news, function ($a, $b) {
-            $aDate = Carbon::createFromFormat("Y-m-d", $a->time)->timestamp;
-            $bDate = Carbon::createFromFormat("Y-m-d", $b->time)->timestamp;
+            $aDate = strtotime($a->time);
+            $bDate = strtotime($b->time);
 
             return $aDate - $bDate;
         });
