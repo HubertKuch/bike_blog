@@ -1,8 +1,8 @@
 ---
 data-source:
-  user: root
-  password: ""
-  server: 127.0.0.1
+  user: user
+  password: user
+  server: database
   port: 3306
   db: bike_blog
   charset: utf8
@@ -15,4 +15,8 @@ logs:
   root: /var/bike-blog/logs/
 front-end:
   # Without / on the end
-  apiBaseURl: /bike-blog
+  apiBaseURl: ""
+avocado:
+  # PRODUCTION or DEVELOPMENT
+  environment: DEVELOPMENT
+  throws: false

@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Parsing meters tag">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/apache_sites/000-default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/dump/dump.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/avocado_test_db.T7ar5Q.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/bike_blog.QAmLKw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/086f6656-1b5d-45d8-92f2-fe0903d18d6d/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/NewsHTMLParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/NewsHTMLParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/migrateImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrateImages.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,51 +136,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Project.color&quot;: &quot;4e2c05&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected&quot;: &quot;true&quot;,
-    &quot;com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary&quot;: &quot;PHPUnit &lt; 6&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.17.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.9&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/opt/lampp/htdocs/bike-blog/Tests/Unit&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.09302324&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.1596594&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Project.color": "4e2c05",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected": "true",
+    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit < 6",
+    "database.data.extractors.current.export.id": "SQL-Insert-Multirow.sql.groovy",
+    "javascript.nodejs.core.library.configured.version": "19.4.0",
+    "javascript.nodejs.core.library.typings.version": "18.11.18",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "/home/hubert/IdeaProjects/bike_blog/bin/dump",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.09302324",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "fileTemplates",
+    "settings.editor.splitter.proportion": "0.1596594",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb",
+      "mysql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;086f6656-1b5d-45d8-92f2-fe0903d18d6d&quot;,
-      &quot;086f6656-1b5d-45d8-92f2-fe0903d18d6d/schema/\&quot;bike_blog\&quot;&quot;
+    "RunConfigurationTargetLRU": [
+      "086f6656-1b5d-45d8-92f2-fe0903d18d6d",
+      "086f6656-1b5d-45d8-92f2-fe0903d18d6d/schema/\"bike_blog\"",
+      "8b09381b-1097-49e1-bb68-c1bc8f806e6a"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Client/javascript/elements" />
@@ -174,14 +190,20 @@
       <recent name="$PROJECT_DIR$/Resources/Images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin/dump" />
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/Client/views" />
       <recent name="$PROJECT_DIR$/Client/javascript/controllers" />
       <recent name="$PROJECT_DIR$/Resources/Images/Banner" />
-      <recent name="$PROJECT_DIR$/Resources/img" />
-      <recent name="$PROJECT_DIR$/Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.migrateImages.php">
+  <component name="RunManager" selected="Docker.Container">
+    <configuration name="dump.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/bin/dump/dump.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="8b09381b-1097-49e1-bb68-c1bc8f806e6a" />
+      <method v="2" />
+    </configuration>
     <configuration name="CustomHTMLParserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Hubert\BikeBlog\Tests\Unit\CustomHTMLParserTest" directory="$PROJECT_DIR$/Tests" file="$PROJECT_DIR$/Tests/Unit/CustomHTMLParserTest.php" scope="Class" />
       <method v="2" />
@@ -194,20 +216,51 @@
       <TestRunner class="Hubert\BikeBlog\Tests\Unit\UserControllerTest" file="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" method="testDeleteUser" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserControllerTest.testRegisteringUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\UserControllerTest" directory="$PROJECT_DIR$/Tests" file="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" method="testRegisteringUser" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="migrateImages.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/bin/migrateImages.php">
       <method v="2" />
     </configuration>
+    <configuration name="Container" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="database" />
+              <option value="server" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Database Script.dump.sql" />
+      <item itemvalue="Docker.Container" />
+      <item itemvalue="PHP Script.migrateImages.php" />
+      <item itemvalue="PHPUnit.CustomHTMLParserTest" />
+      <item itemvalue="PHPUnit.Tests" />
+      <item itemvalue="PHPUnit.UserControllerTest.testDeleteUser" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHP Script.migrateImages.php" />
+        <item itemvalue="Database Script.dump.sql" />
         <item itemvalue="PHPUnit.CustomHTMLParserTest" />
         <item itemvalue="PHPUnit.Tests" />
         <item itemvalue="PHPUnit.UserControllerTest.testDeleteUser" />
-        <item itemvalue="PHPUnit.UserControllerTest.testRegisteringUser" />
       </list>
     </recent_temporary>
   </component>
@@ -223,6 +276,13 @@
       <workItem from="1660639786549" duration="1255000" />
       <workItem from="1660645936249" duration="448000" />
       <workItem from="1660646984987" duration="9000" />
+      <workItem from="1672934663102" duration="6439000" />
+      <workItem from="1672941742921" duration="5603000" />
+      <workItem from="1673198105177" duration="72000" />
+      <workItem from="1673199044849" duration="3000" />
+      <workItem from="1673199317273" duration="1553000" />
+      <workItem from="1673345984200" duration="3987000" />
+      <workItem from="1673353281036" duration="2284000" />
     </task>
     <servers />
   </component>

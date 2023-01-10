@@ -1,0 +1,41 @@
+version: "3.6"
+services:
+  database:
+    image: mysql/mysql-server:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+      - MYSQL_DATABASE=bike_blog
+
+    volumes:
+      - ./bin/dump:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    hostname: database
+    container_name: bike-blog-database
+    network_mode: bridge
+    networks:
+      - app
+
+  server:
+    image: silarhi/php-apache:8.1
+    container_name: bike-blog-server
+    ports:
+      - "80:80"
+    depends_on:
+      - database
+    volumes:
+      - .:/app
+      - ./bin/apache_sites:/etc/apache2/sites-available
+      - /var/bike-blog/img:/var/bike-blog/img
+      - /var/bike-blog/logs:/var/bike-blog/logs
+    networks:
+      - app
+    network_mode: bridge
+
+networks:
+  app: { }
+
+

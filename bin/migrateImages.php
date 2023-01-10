@@ -3,7 +3,7 @@
 error_reporting(E_ERROR | E_PARSE);
 
 $root = "/var/bike-blog/img/";
-$db = new PDO("mysql:host=127.0.0.1;dbname=bike_blog;port=3306", "root", "");
+$db = new PDO("mysql:host=172.17.0.1;dbname=bike_blog;port=3306", "user", "user");
 
 $newsQuery = "SELECT * FROM bike_blog.news";
 $insertImageQuery = "INSERT INTO bike_blog.images VALUE(UUID(), ?, ?)";
