@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Parsing meters tag">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Performed sorting">
+      <change afterPath="$PROJECT_DIR$/Models/DTO/NewsSnippet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/DTO/NewsByYearDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/NewsByYearDTO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,8 +271,16 @@
       <workItem from="1673345984200" duration="3987000" />
       <workItem from="1673353281036" duration="2284000" />
       <workItem from="1673367240646" duration="1853000" />
-      <workItem from="1673371692454" duration="322000" />
+      <workItem from="1673371692454" duration="887000" />
     </task>
+    <task id="LOCAL-00001" summary="Performed sorting">
+      <created>1673372133811</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673372133811</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +302,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Base tags view" />
     <MESSAGE value="Implement get tags endpoint" />
     <MESSAGE value="New tags system" />
     <MESSAGE value="Implement new logic for getting news by tag" />
@@ -319,7 +326,8 @@
     <MESSAGE value="Upload images action" />
     <MESSAGE value="Closing modal by clicking in overlay" />
     <MESSAGE value="Parsing meters tag" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parsing meters tag" />
+    <MESSAGE value="Performed sorting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Performed sorting" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

@@ -5,14 +5,14 @@ namespace Hubert\BikeBlog\Models\DTO;
 class NewsByYearDTO {
 
     /**
-     * @param NewsDTO[] $news
+     * @param NewsSnippet[] $news
      */
     public function __construct(public int $year, public array $news,) {
     }
 
     /**
      * @param NewsDTO[] $news
-     * @return NewsByYearDTO[]
+     * @return NewsDTO[]
      * */
     public static function fromArray(array &$news): array {
         usort($news, function ($a, $b) {
@@ -31,12 +31,14 @@ class NewsByYearDTO {
                 return $yearDTO->year == $newsDateYear;
             });
 
+            $snippet = new NewsSnippet($newsDTO->id, $newsDTO->title, $newsDTO->time);
+
             if (empty($yearDTOIfExists)) {
-                $yearsDTOs[] = new NewsByYearDTO($newsDateYear, [$newsDTO]);
+                $yearsDTOs[] = new NewsByYearDTO($newsDateYear, [$snippet]);
                 continue;
             }
 
-            $yearDTOIfExists[key($yearDTOIfExists)]->news[] = $newsDTO;
+            $yearDTOIfExists[key($yearDTOIfExists)]->news[] = $snippet;
         }
 
         usort($yearsDTOs, fn($a, $b) => $b->year - $a->year);
