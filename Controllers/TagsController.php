@@ -41,7 +41,7 @@ class TagsController {
         $tags = $this->tagsService->getTagsOfNews($newsId);
 
         if(!$tags) {
-            throw new InvalidRequestException("News with that `newsId` doesn't exists.");
+            return [];
         }
 
         return $this->tagsService->parseArrayToDto($tags);
