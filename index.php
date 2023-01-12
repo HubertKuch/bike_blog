@@ -14,4 +14,3 @@ error_reporting(E_ALL);
 AvocadoRouter::useJSON();
 
 BikeApplication::main();
-

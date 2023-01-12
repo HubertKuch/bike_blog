@@ -36,6 +36,8 @@ class NewsController {
     private LoggerHelper $logger;
     #[Autowired]
     private NewsHTMLParser $newsHTMLParser;
+    #[Autowired("metersRepository")]
+    private AvocadoRepository $metersRepository;
 
     /**
      * @throws AvocadoModelException

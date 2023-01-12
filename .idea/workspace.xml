@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Get all news are not returned as snippets of `id, title and time`">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Returning empty array when tags were not found">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/TagsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/TagsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/NewsHTMLParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/NewsHTMLParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +187,7 @@
       <recent name="$PROJECT_DIR$/Resources/Images/Banner" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Container">
+  <component name="RunManager" selected="Docker.compose.yaml: Compose Deployment">
     <configuration name="dump.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/bin/dump/dump.sql" />
       <script-mode>FILE</script-mode>
@@ -196,10 +200,6 @@
     </configuration>
     <configuration name="Tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner directory="$PROJECT_DIR$/Tests" />
-      <method v="2" />
-    </configuration>
-    <configuration name="UserControllerTest.testDeleteUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\UserControllerTest" file="$PROJECT_DIR$/Tests/Unit/UserControllerTest.php" method="testDeleteUser" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="migrateImages.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/bin/migrateImages.php">
@@ -232,21 +232,29 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Database Script.dump.sql" />
       <item itemvalue="Docker.Container" />
+      <item itemvalue="Docker.compose.yaml: Compose Deployment" />
       <item itemvalue="PHP Script.migrateImages.php" />
       <item itemvalue="PHPUnit.CustomHTMLParserTest" />
       <item itemvalue="PHPUnit.Tests" />
-      <item itemvalue="PHPUnit.UserControllerTest.testDeleteUser" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.compose.yaml: Compose Deployment" />
         <item itemvalue="PHP Script.migrateImages.php" />
         <item itemvalue="Database Script.dump.sql" />
         <item itemvalue="PHPUnit.CustomHTMLParserTest" />
         <item itemvalue="PHPUnit.Tests" />
-        <item itemvalue="PHPUnit.UserControllerTest.testDeleteUser" />
       </list>
     </recent_temporary>
   </component>
@@ -271,6 +279,11 @@
       <workItem from="1673353281036" duration="2284000" />
       <workItem from="1673367240646" duration="1853000" />
       <workItem from="1673371692454" duration="1386000" />
+      <workItem from="1673373574706" duration="137000" />
+      <workItem from="1673374422488" duration="4167000" />
+      <workItem from="1673400676927" duration="29000" />
+      <workItem from="1673454932701" duration="1145000" />
+      <workItem from="1673480965696" duration="3518000" />
     </task>
     <task id="LOCAL-00001" summary="Performed sorting">
       <created>1673372133811</created>
@@ -286,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673372664175</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Returning empty array when tags were not found">
+      <created>1673373647622</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673373647622</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +328,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="New tags system" />
     <MESSAGE value="Implement new logic for getting news by tag" />
     <MESSAGE value="Implements getting tags related to specific news" />
     <MESSAGE value="Written tags importer from old database" />
@@ -333,7 +352,8 @@
     <MESSAGE value="Parsing meters tag" />
     <MESSAGE value="Performed sorting" />
     <MESSAGE value="Get all news are not returned as snippets of `id, title and time`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get all news are not returned as snippets of `id, title and time`" />
+    <MESSAGE value="Returning empty array when tags were not found" />
+    <option name="LAST_COMMIT_MESSAGE" value="Returning empty array when tags were not found" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

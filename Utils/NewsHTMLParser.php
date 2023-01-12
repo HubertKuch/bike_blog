@@ -3,12 +3,14 @@
 namespace Hubert\BikeBlog\Utils;
 
 use Avocado\ORM\AvocadoRepository;
+use Avocado\Utils\Arrays;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\Resource;
 use Hubert\BikeBlog\Configuration\ImagesConfiguration;
 use Hubert\BikeBlog\Models\Meter\Meter;
 use Hubert\BikeBlog\Models\News\News;
 use Hubert\BikeBlog\Services\ImagesService;
+use function Hubert\BikeBlog\Controllers\fillEmptySpacesWithZeros;
 
 #[Resource]
 class NewsHTMLParser {
@@ -81,29 +83,60 @@ class NewsHTMLParser {
             EOL;
         }
 
+        $parsedContent .= $this->parseStats($news);
+
         $parsedContent = $opening . $parsedContent . $closing;
 
         return $this->customHTMLTagsParser->parseTag(new HTMLTag("statystyka"), $content, $parsedContent);
     }
 
-    private function getBikeStatisticsContent(News $news): string {
+    private function parseStats(News $news): string {
+        $EARTH_DISTANCE_IN_KM = 12800;
+
         /**
-         * @var News[] $newsBefore
-         * @var News[] $foundedNews
+         * @var News $news
+         * @var News[] $allNews
          */
-        $foundedNews = $this->newsRepository->findMany();
-        $newsBefore = array_filter($foundedNews, fn($currNews) => $currNews->getDate()->isBefore($news->getDate()));
+        $allNews = $this->newsRepository->findMany();
+        $allMeters = $this->metersRepository->findMany();
 
-        $routesBefore = count($newsBefore);
+        $newsYear = $news->getDate()->year;
+        $newsMonth = $this->fillEmptySpacesWithZeros($news->getDate()->month);
 
-        $parsedContent = <<<EOL
+        $routesBeforeCurrentRoute = Arrays::indexOf($allNews, fn($curr) => $curr->getId() === $news->getId());
+        $routesInThatMonth = count($this->newsRepository->findMany(["date" => $newsYear . "-" . $newsMonth . "-%"]));
+        $summaryBikeTripe = array_reduce($allMeters, fn($prev, $meter) => $prev + $meter->getTripLength(), 0);
+
+        $metersThatYear = array_filter($allMeters, function ($meter) use ($news) {
+            $relatedNews = $this->newsRepository->findById($meter->getNewsId());
+
+            return $relatedNews->getDate()->year === $news->getDate()->year;
+        });
+        $summaryBikeTripeInThatYear = array_reduce($metersThatYear, fn($prev, $meter) => $prev + $meter->getTripLength(), 0);
+        $aroundTheWorldPercentThatYear = ($summaryBikeTripeInThatYear * $EARTH_DISTANCE_IN_KM) / 100;
+        $aroundTheWorldPercent = ($summaryBikeTripe * $EARTH_DISTANCE_IN_KM) / 100;
+
+        return <<<EOL
                 <div class="meter">
                     <ul>
-                        <li>Liczba tras $routesBefore</li>
+                        <li>Liczba Jazd: $routesBeforeCurrentRoute</li>
+                        <li>W tym miesiacu: $routesInThatMonth</li>
+                        <li>Przejchalem w $newsYear: $summaryBikeTripeInThatYear km</li>
+                        <li>Sumaryczny przebieg roweru: $summaryBikeTripe km</li>
+                        <li>Dookola swiata ($newsYear): $aroundTheWorldPercentThatYear %</li>
+                        <li>Dookola swiata: $aroundTheWorldPercent %</li>
                     </ul>    
                 </div>      
         EOL;
+    }
 
-        return "";
+    private function fillEmptySpacesWithZeros(int $n): string {
+        $n = $n . "";
+
+        if (strlen($n) == 2) {
+            return $n;
+        }
+
+        return "0" . $n;
     }
 }
