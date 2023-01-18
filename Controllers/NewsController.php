@@ -8,8 +8,10 @@ use Avocado\ORM\AvocadoRepository;
 use Avocado\ORM\AvocadoRepositoryException;
 use Avocado\Router\AvocadoRequest;
 use Avocado\Router\AvocadoResponse;
+use Avocado\Tests\Unit\Application\RequestParam;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\BaseURL;
+use AvocadoApplication\Attributes\Resource;
 use AvocadoApplication\Mappings\GetMapping;
 use AvocadoApplication\Mappings\PatchMapping;
 use AvocadoApplication\Mappings\PostMapping;
@@ -24,6 +26,7 @@ use Hubert\BikeBlog\Utils\NewsHTMLParser;
 use Hubert\BikeBlog\Utils\Validators\NewsRequestValidators;
 use ReflectionException;
 
+#[Resource]
 #[RestController]
 #[BaseURL("/api")]
 class NewsController {
@@ -38,6 +41,8 @@ class NewsController {
     private NewsHTMLParser $newsHTMLParser;
     #[Autowired("metersRepository")]
     private AvocadoRepository $metersRepository;
+
+    public function __construct() {}
 
     /**
      * @throws AvocadoModelException
@@ -62,8 +67,7 @@ class NewsController {
      * @throws ReflectionException
      */
     #[GetMapping("/v2/news/")]
-    public function getAllNews(AvocadoRequest $request, AvocadoResponse $response): array {
-        $this->logger->logRequest($request);
+    public function getAllNews(): array {
         $news = $this->newsRepository->findMany();
         $newsDTOs = array_map(fn($n) => NewsDTO::from($n), $news);
 
@@ -77,15 +81,10 @@ class NewsController {
      * @throws NewsNotFoundException
      */
     #[GetMapping("/v1/news/:id")]
-    public function getNewsById(AvocadoRequest $request, AvocadoResponse $response): NewsDTO {
-        $this->logger->logRequest($request);
-        NewsRequestValidators::validateFindByIdRequest($request);
-
-        $id = $request->params['id'] ?? null;
-
+    public function getNewsById(#[RequestParam(name: "id", required: true)] string $id): NewsDTO {
         $news = $this->newsRepository->findById($id);
 
-        if(!$news) {
+        if (!$news) {
             throw new NewsNotFoundException("News with id $id not found.");
         }
 

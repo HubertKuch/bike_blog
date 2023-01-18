@@ -8,6 +8,7 @@ use AvocadoApplication\Attributes\Resource;
 use Handlebars\Handlebars;
 use Handlebars\Loader\FilesystemLoader;
 use Hubert\BikeBlog\Configuration\FrontEndConfiguration;
+use Hubert\BikeBlog\Controllers\NewsController;
 use Hubert\BikeBlog\Models\DTO\NewsDTO;
 use Hubert\BikeBlog\Models\Image\ImagesDTO;
 use Hubert\BikeBlog\Models\News\News;
@@ -18,6 +19,8 @@ class Views {
     private Handlebars $handlebars;
     #[Autowired]
     private FrontEndConfiguration $frontEndConfiguration;
+    #[Autowired]
+    private NewsController $newsController;
 
     public function __construct() {
         $templatesDir = "Client/views";
@@ -37,7 +40,16 @@ class Views {
     }
 
     public function news(): void {
-        echo @$this->handlebars->render("news", $this->getModelData());
+        $allNewsJsonData = json_encode($this->newsController->getAllNews());
+        $allNewsJsonData = str_replace('"', '\\"', $allNewsJsonData);
+
+        $id = $_GET['id'];
+        $actualNewsJsonData = json_encode($this->newsController->getNewsById($id));
+        $actualNewsJsonData = str_replace('"', '\\"', $actualNewsJsonData);
+        $actualNewsJsonData = str_replace("\\n", '', $actualNewsJsonData);
+        $actualNewsJsonData = str_replace("\\r", '', $actualNewsJsonData);
+
+        echo @$this->handlebars->render("news", $this->getModelData(["news" => $allNewsJsonData, "actual_news" => $actualNewsJsonData]));
     }
 
     public function admin(): void {

@@ -17,6 +17,9 @@ front-end:
   # Without / on the end
   apiBaseURl: ""
 avocado:
-  # PRODUCTION or DEVELOPMENT
-  environment: DEVELOPMENT
-  throws: false
+  environment:
+    # PRODUCTION or DEVELOPMENT
+    type: DEVELOPMENT
+    throws: false
+  router:
+    matchingStrategy: SELF

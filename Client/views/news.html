@@ -99,7 +99,7 @@
         let allNews = [];
 
         if (!CHOSEN_TAG) {
-            allNews = await NewsController.getNews()
+            allNews = JSON.parse(`{{{news}}}`);
         } else {
             allNews = await NewsController.getNewsByTag(CHOSEN_TAG);
         }
@@ -114,7 +114,7 @@
 
         showNewsNavigation(allNews);
 
-        const actualNews = await NewsController.getNewsById(urlParams.get("id"));
+        const actualNews = JSON.parse(`{{{actual_news}}}`);
 
         await showNews(actualNews);
         currentNews = actualNews;
