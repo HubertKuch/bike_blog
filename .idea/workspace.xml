@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Written tags migrator">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Removed dumping news data">
+      <change afterPath="$PROJECT_DIR$/bin/db.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bin/full_migration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/migrate_news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/migrateImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate_images.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/importTags.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/migrate_images.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate_images.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/migrate_links.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate_links.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,6 +173,9 @@
       "086f6656-1b5d-45d8-92f2-fe0903d18d6d",
       "086f6656-1b5d-45d8-92f2-fe0903d18d6d/schema/\"bike_blog\"",
       "8b09381b-1097-49e1-bb68-c1bc8f806e6a"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/Set Highlighting Language": [
+      "MySQL"
     ]
   }
 }]]></component>
@@ -312,7 +321,7 @@
       <workItem from="1674004118014" duration="4622000" />
       <workItem from="1674011855107" duration="59000" />
       <workItem from="1674014503757" duration="927000" />
-      <workItem from="1674015912620" duration="5564000" />
+      <workItem from="1674015912620" duration="14085000" />
     </task>
     <task id="LOCAL-00001" summary="Performed sorting">
       <created>1673372133811</created>
@@ -349,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674021328331</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Removed dumping news data">
+      <created>1674021503685</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674021503685</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +387,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Written tags importer from old database" />
     <MESSAGE value="Tags as seperated entities" />
     <MESSAGE value="Displaying tags" />
     <MESSAGE value="Displaying news only with matched tag" />
@@ -396,7 +411,8 @@
     <MESSAGE value="Returning empty array when tags were not found" />
     <MESSAGE value="Performed nes page" />
     <MESSAGE value="Written tags migrator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Written tags migrator" />
+    <MESSAGE value="Removed dumping news data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed dumping news data" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

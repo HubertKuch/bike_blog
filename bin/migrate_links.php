@@ -2,7 +2,8 @@
 
 error_reporting(E_CORE_ERROR);
 
-$db = new PDO("mysql:host=172.17.0.1;dbname=bike_blog;port=3306;charset=utf8mb4", "user", "user");
+/** @var PDO $db */
+$db = require "db.php";
 
 $currentNewsStmt = $db->prepare("SELECT * FROM news");
 $currentNewsStmt->execute();
@@ -70,4 +71,4 @@ foreach ($currentNews as $currentNew) {
     }
 }
 
-echo "\x1b[32m Successfully migrated links! ";
+echo "\x1b[32m Successfully migrated links! \n";

@@ -40,10 +40,11 @@ class Views {
     }
 
     public function news(): void {
-        $allNewsJsonData = json_encode($this->newsController->getAllNews());
+        $allNews = $this->newsController->getAllNews();
+        $allNewsJsonData = json_encode($allNews);
         $allNewsJsonData = str_replace('"', '\\"', $allNewsJsonData);
 
-        $id = $_GET['id'];
+        $id = $_GET['id'] ?? $allNews[0]->news[0]->id;
         $actualNewsJsonData = json_encode($this->newsController->getNewsById($id));
         $actualNewsJsonData = str_replace('"', '\\"', $actualNewsJsonData);
         $actualNewsJsonData = str_replace("\\n", '', $actualNewsJsonData);

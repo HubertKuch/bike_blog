@@ -3,6 +3,11 @@
 error_reporting(E_ERROR | E_PARSE);
 
 $root = "/var/bike-blog/img/";
+
+if ($argv[1]) {
+    $root = str_replace("--root=", "", $argv[1]);
+}
+
 $db = new PDO("mysql:host=172.17.0.1;dbname=bike_blog;port=3306", "user", "user");
 
 $newsQuery = "SELECT * FROM bike_blog.news";
