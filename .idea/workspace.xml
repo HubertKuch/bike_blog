@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Performed nes page">
-      <change afterPath="$PROJECT_DIR$/bin/migrate_links.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Written tags migrator">
+      <change afterPath="$PROJECT_DIR$/bin/full_migration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/dump/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bin/dump/dump.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/migrateImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate_images.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/migrate_links.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate_links.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +191,7 @@
       <data-source id="8b09381b-1097-49e1-bb68-c1bc8f806e6a" />
       <method v="2" />
     </configuration>
-    <configuration name="migrateImages.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/bin/migrateImages.php">
+    <configuration name="migrate_images.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/bin/migrate_images.php">
       <method v="2" />
     </configuration>
     <configuration name="Container" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
@@ -264,14 +261,14 @@
       <item itemvalue="Docker.compose.yaml.database: Compose Deployment" />
       <item itemvalue="Docker.compose.yaml.server: Compose Deployment" />
       <item itemvalue="Docker.compose.yaml: Compose Deployment" />
-      <item itemvalue="PHP Script.migrateImages.php" />
+      <item itemvalue="PHP Script.migrate_images.php" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.compose.yaml.server: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml.database: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml: Compose Deployment" />
-        <item itemvalue="PHP Script.migrateImages.php" />
+        <item itemvalue="PHP Script.migrate_images.php" />
         <item itemvalue="Database Script.dump.sql" />
       </list>
     </recent_temporary>
@@ -315,7 +312,7 @@
       <workItem from="1674004118014" duration="4622000" />
       <workItem from="1674011855107" duration="59000" />
       <workItem from="1674014503757" duration="927000" />
-      <workItem from="1674015912620" duration="5287000" />
+      <workItem from="1674015912620" duration="5564000" />
     </task>
     <task id="LOCAL-00001" summary="Performed sorting">
       <created>1673372133811</created>
@@ -345,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674006085389</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Written tags migrator">
+      <created>1674021328331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674021328331</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +371,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implements getting tags related to specific news" />
     <MESSAGE value="Written tags importer from old database" />
     <MESSAGE value="Tags as seperated entities" />
     <MESSAGE value="Displaying tags" />
@@ -392,7 +395,8 @@
     <MESSAGE value="Get all news are not returned as snippets of `id, title and time`" />
     <MESSAGE value="Returning empty array when tags were not found" />
     <MESSAGE value="Performed nes page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Performed nes page" />
+    <MESSAGE value="Written tags migrator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Written tags migrator" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

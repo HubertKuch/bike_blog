@@ -36,7 +36,6 @@ foreach ($currentNews as $currentNew) {
 
     foreach ($anchors as $anchor) {
         if (!str_contains($anchor->getAttribute("href"), "newsy.php?id=")) {
-            var_dump($anchor->getAttribute("href") . "    " . $anchor->textContent);
             continue;
         }
 
