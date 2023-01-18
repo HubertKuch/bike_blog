@@ -806,16 +806,16 @@
         "polyfill",
         "portable",
         "shim"
-            ],
-            "support": {
-              "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.27.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
+      ],
+      "support": {
+        "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.27.0"
+      },
+      "funding": [
+        {
+          "url": "https://symfony.com/sponsor",
+          "type": "custom"
+        },
+        {
                     "url": "https://github.com/fabpot",
                     "type": "github"
                 },
@@ -1426,23 +1426,23 @@
         "psr-4": {
           "Dotenv\\": "src/"
         }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-              {
-                "name": "Graham Campbell",
-                "email": "graham@alt-three.com",
-                "homepage": "https://gjcampbell.co.uk/"
-              },
-              {
-                "name": "Vance Lucas",
-                "email": "vance@vancelucas.com",
-                "homepage": "https://vancelucas.com/"
-              }
-            ],
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
+        {
+          "name": "Graham Campbell",
+          "email": "graham@alt-three.com",
+          "homepage": "https://gjcampbell.co.uk/"
+        },
+        {
+          "name": "Vance Lucas",
+          "email": "vance@vancelucas.com",
+          "homepage": "https://vancelucas.com/"
+        }
+      ],
       "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
       "keywords": [
         "dotenv",

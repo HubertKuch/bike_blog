@@ -22,13 +22,13 @@ class Meter {
     #[Field("trip_length")]
     private float $tripLength;
     #[Field]
-    private float $time;
+    private string $time;
     #[Field("to_show")]
     private bool $isToShow;
     #[Field("news_id")]
     private string $newsId;
 
-    public function __construct(UuidInterface $id, float $maxSpeed, float $startState, float $endState, float $tripLength, float $time, bool $isToShow, string $newsId) {
+    public function __construct(UuidInterface $id, float $maxSpeed, float $startState, float $endState, float $tripLength, string $time, bool $isToShow, string $newsId) {
         $this->id = $id->toString();
         $this->maxSpeed = $maxSpeed;
         $this->endState = $endState;
@@ -47,7 +47,7 @@ class Meter {
         return $this->maxSpeed;
     }
 
-    public function getTime(): float {
+    public function getTime(): string {
         return $this->time;
     }
 

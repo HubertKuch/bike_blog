@@ -8,7 +8,7 @@ if ($argv[1]) {
     $root = str_replace("--root=", "", $argv[1]);
 }
 
-$db = new PDO("mysql:host=172.17.0.1;dbname=bike_blog;port=3306", "user", "user");
+$db = require "db.php";
 
 $newsQuery = "SELECT * FROM bike_blog.news";
 $insertImageQuery = "INSERT INTO bike_blog.images VALUE(UUID(), ?, ?)";
@@ -17,11 +17,13 @@ $newsStmt->execute();
 
 foreach ($newsStmt->fetchAll(PDO::FETCH_CLASS) as $news) {
     try {
-        rename($root . $news->date, $root . $news->id);
+        if ($argv[2] === "--full-migration") {
+            rename($root . $news->date, $root . $news->id);
+        }
 
         $dir = scandir($root . $news->id);
 
-        if(!$dir) {
+        if (!$dir) {
             continue;
         }
 

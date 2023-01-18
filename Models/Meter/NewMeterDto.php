@@ -4,8 +4,7 @@ namespace Hubert\BikeBlog\Models\Meter;
 
 class NewMeterDto {
 
-    public function __construct(private readonly string $newsId, private readonly float $maxSpeed, private readonly string $description, private readonly float $startState, private readonly float $endState, private readonly float $tripLength, private readonly float $time, private readonly bool $toShow) {
-    }
+    public function __construct(private readonly string $newsId, private readonly float $maxSpeed, private readonly string $description, private readonly float $startState, private readonly float $endState, private readonly float $tripLength, private readonly string $time, private readonly bool $toShow) {}
 
     public function getNewsId(): string {
         return $this->newsId;
@@ -31,7 +30,7 @@ class NewMeterDto {
         return $this->tripLength;
     }
 
-    public function getTime(): float {
+    public function getTime(): string {
         return $this->time;
     }
 

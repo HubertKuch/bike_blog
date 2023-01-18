@@ -68,8 +68,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-invoker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/thecodingmachine/safe" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kcs/class-finder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/thecodingmachine/safe" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

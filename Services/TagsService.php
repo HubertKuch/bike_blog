@@ -45,9 +45,8 @@ class TagsService {
      * */
     public function getTagsOfNews(string $newsId): array {
         $newsTags = $this->newsTagRepo->findMany(["news_id" => $newsId]);
-        $tags = array_map(fn($newsTagData) => $this->tagsRepo->findById($newsTagData->getTagId()), $newsTags);
 
-        return $tags;
+        return array_map(fn($newsTagData) => $this->tagsRepo->findById($newsTagData->getTagId()), $newsTags);
     }
 
     public function getTagsByName(string $tagName): ?Tag {

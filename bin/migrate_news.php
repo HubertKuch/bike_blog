@@ -24,14 +24,14 @@ function saveNews($oldNews, PDO $db): void {
     $stmt->closeCursor();
 }
 
-function getDescriptorId(PDO $db) {
+function getCategoryId(PDO $db) {
     $unnamedDescriptorStmt = $db->prepare("SELECT id FROM tags_categories LIMIT 1");
     $unnamedDescriptorStmt->execute();
 
     return $unnamedDescriptorStmt->fetchAll(PDO::FETCH_CLASS)[0]->id;
 }
 
-function saveRawTag(string $tag, string $descriptorId, PDO $db) {
+function saveRawTag(string $tag, string $descriptorId, PDO $db): void {
     $isExists = $db->prepare("SELECT id FROM tags WHERE tag = ? LIMIT 1");
     $isExists->execute([$tag]);
 
@@ -45,7 +45,7 @@ function saveRawTag(string $tag, string $descriptorId, PDO $db) {
     $stmt->closeCursor();
 }
 
-function saveNewsTags(stdClass $news, PDO $db) {
+function saveNewsTags(stdClass $news, PDO $db): void {
     $tags = array_filter(array_unique(explode(";", $news->tagi)));
 
     $newsStmt = $db->prepare("SELECT id FROM news WHERE title = ?");
@@ -72,22 +72,22 @@ function saveNewsTags(stdClass $news, PDO $db) {
 }
 
 function saveTags(stdClass $oldNews, PDO $db): void {
-    $unnamedDescriptorId = getDescriptorId($db);
+    $unnamedCategoryId = getCategoryId($db);
 
-    if (!$unnamedDescriptorId) {
+    if (!$unnamedCategoryId) {
         $db->exec("INSERT INTO tags_categories(id, category) VALUE (UUID(), 'unnamed_category')");
     }
 
-    $unnamedDescriptorId = getDescriptorId($db);
+    $unnamedCategoryId = getCategoryId($db);
 
     $tags = array_filter(array_unique(explode(";", $oldNews->tagi)));
 
     foreach ($tags as $tag) {
-        saveRawTag($tag, $unnamedDescriptorId, $db);
+        saveRawTag($tag, $unnamedCategoryId, $db);
     }
 }
 
-function saveMeters(stdClass $news, PDO $db) {
+function saveMeters(stdClass $news, PDO $db): void {
     $newsStmt = $db->prepare("SELECT id FROM news WHERE title = ?");
     $newsStmt->execute([$news->tytul]);
 
