@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Returning empty array when tags were not found">
-      <change beforePath="$PROJECT_DIR$/.idea/bike-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bike-blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Performed nes page">
+      <change afterPath="$PROJECT_DIR$/bin/migrate_links.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/dump/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bin/dump/dump.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
@@ -128,53 +126,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Project.color&quot;: &quot;4e2c05&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected&quot;: &quot;true&quot;,
-    &quot;com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary&quot;: &quot;PHPUnit &lt; 6&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL-Insert-Multirow.sql.groovy&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;19.4.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.18&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/hubert/IdeaProjects/bike_blog/bin/dump&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.09302324&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.1596594&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Project.color": "4e2c05",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected": "true",
+    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit < 6",
+    "database.data.extractors.current.export.id": "SQL-Insert-Multirow.sql.groovy",
+    "javascript.nodejs.core.library.configured.version": "19.4.0",
+    "javascript.nodejs.core.library.typings.version": "18.11.18",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "/home/hubert/IdeaProjects/bike_blog/bin/dump",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.09302324",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.splitter.proportion": "0.1596594",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb",
+      "mysql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;086f6656-1b5d-45d8-92f2-fe0903d18d6d&quot;,
-      &quot;086f6656-1b5d-45d8-92f2-fe0903d18d6d/schema/\&quot;bike_blog\&quot;&quot;,
-      &quot;8b09381b-1097-49e1-bb68-c1bc8f806e6a&quot;
+    "RunConfigurationTargetLRU": [
+      "086f6656-1b5d-45d8-92f2-fe0903d18d6d",
+      "086f6656-1b5d-45d8-92f2-fe0903d18d6d/schema/\"bike_blog\"",
+      "8b09381b-1097-49e1-bb68-c1bc8f806e6a"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Client/javascript/elements" />
@@ -189,19 +187,11 @@
       <recent name="$PROJECT_DIR$/Resources/Images/Banner" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.compose.yaml: Compose Deployment">
+  <component name="RunManager" selected="Docker.compose.yaml.server: Compose Deployment">
     <configuration name="dump.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/bin/dump/dump.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="8b09381b-1097-49e1-bb68-c1bc8f806e6a" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CustomHTMLParserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Hubert\BikeBlog\Tests\Unit\CustomHTMLParserTest" directory="$PROJECT_DIR$/Tests" file="$PROJECT_DIR$/Tests/Unit/CustomHTMLParserTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner directory="$PROJECT_DIR$/Tests" />
       <method v="2" />
     </configuration>
     <configuration name="migrateImages.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/bin/migrateImages.php">
@@ -242,21 +232,47 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="compose.yaml.database: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="database" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="compose.yaml.server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="server" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Database Script.dump.sql" />
       <item itemvalue="Docker.Container" />
+      <item itemvalue="Docker.compose.yaml.database: Compose Deployment" />
+      <item itemvalue="Docker.compose.yaml.server: Compose Deployment" />
       <item itemvalue="Docker.compose.yaml: Compose Deployment" />
       <item itemvalue="PHP Script.migrateImages.php" />
-      <item itemvalue="PHPUnit.CustomHTMLParserTest" />
-      <item itemvalue="PHPUnit.Tests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.compose.yaml.server: Compose Deployment" />
+        <item itemvalue="Docker.compose.yaml.database: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml: Compose Deployment" />
         <item itemvalue="PHP Script.migrateImages.php" />
         <item itemvalue="Database Script.dump.sql" />
-        <item itemvalue="PHPUnit.CustomHTMLParserTest" />
-        <item itemvalue="PHPUnit.Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +312,10 @@
       <workItem from="1673874485326" duration="908000" />
       <workItem from="1673991537904" duration="416000" />
       <workItem from="1673992295499" duration="476000" />
-      <workItem from="1674004118014" duration="1906000" />
+      <workItem from="1674004118014" duration="4622000" />
+      <workItem from="1674011855107" duration="59000" />
+      <workItem from="1674014503757" duration="927000" />
+      <workItem from="1674015912620" duration="5287000" />
     </task>
     <task id="LOCAL-00001" summary="Performed sorting">
       <created>1673372133811</created>
@@ -319,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673373647622</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Performed nes page">
+      <created>1674006085389</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674006085389</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +367,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implement new logic for getting news by tag" />
     <MESSAGE value="Implements getting tags related to specific news" />
     <MESSAGE value="Written tags importer from old database" />
     <MESSAGE value="Tags as seperated entities" />
@@ -366,7 +391,8 @@
     <MESSAGE value="Performed sorting" />
     <MESSAGE value="Get all news are not returned as snippets of `id, title and time`" />
     <MESSAGE value="Returning empty array when tags were not found" />
-    <option name="LAST_COMMIT_MESSAGE" value="Returning empty array when tags were not found" />
+    <MESSAGE value="Performed nes page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Performed nes page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
