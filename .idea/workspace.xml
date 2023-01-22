@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Added return type to get image by news id">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Migration to new Avocado version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration/DataSourceConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/DataSourceConfiguration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,7 +326,7 @@
       <workItem from="1674406493324" duration="135000" />
       <workItem from="1674406650395" duration="153000" />
       <workItem from="1674411077805" duration="900000" />
-      <workItem from="1674424487189" duration="87000" />
+      <workItem from="1674424487189" duration="648000" />
     </task>
     <task id="LOCAL-00001" summary="Performed sorting">
       <created>1673372133811</created>
@@ -407,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674411367462</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Migration to new Avocado version">
+      <created>1674424604039</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674424604039</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +434,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rendering map" />
     <MESSAGE value="Parsing `zdjecia` tag" />
     <MESSAGE value="Created controller to serve static images" />
     <MESSAGE value="Changed images and map size" />
@@ -454,7 +458,8 @@
     <MESSAGE value="Small refactor" />
     <MESSAGE value="Fixed adding meters" />
     <MESSAGE value="Added return type to get image by news id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added return type to get image by news id" />
+    <MESSAGE value="Migration to new Avocado version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migration to new Avocado version" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

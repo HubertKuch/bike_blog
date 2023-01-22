@@ -29,10 +29,11 @@ header {
 .banner {
     margin: 0 auto 0;
     display: block;
+    width: 50%;
 }
 
 header .banner {
-    width: 85%;
+    width: 50%;
     bottom: -0.3px;
     position: relative;
     z-index: 10;
@@ -63,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-content {
-    width: 85%;
+    width: 50%;
     background: black;
     left: 50%;
     position: relative;
