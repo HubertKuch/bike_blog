@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-content {
-    width: 50%;
+    width: 85%;
     background: black;
     left: 50%;
     position: relative;
@@ -160,7 +160,7 @@ footer {
 }
 
 .news-navigation .year {
-    color: pink;
+    color: #fc6eba;
 }
 
 div.news > * {
@@ -262,3 +262,10 @@ div.meter {
     list-style: unset;
 }
 
+.news-navigation__year-container .news {
+    display: none;
+}
+
+.news-navigation__year-container .news.toggle {
+    display: block;
+}

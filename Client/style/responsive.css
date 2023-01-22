@@ -34,4 +34,8 @@
     .leaflet-container {
         height: 52rem !important;
     }
+
+    .main-content {
+        width: 50%;
+    }
 }

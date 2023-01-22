@@ -116,7 +116,9 @@
 
         const actualNews = JSON.parse(`{{{actual_news}}}`);
 
-        await showNews(actualNews);
+        await showNews(actualNews).then(() => {
+            document.querySelector(".year").parentElement.querySelector(".news").classList.toggle("toggle");
+        });
         currentNews = actualNews;
     }
 

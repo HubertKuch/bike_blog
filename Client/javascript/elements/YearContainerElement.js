@@ -22,6 +22,9 @@ class YearContainerElement {
 
         span.innerText = `${this.newsGroup.year}`;
         span.classList.add("year");
+        span.addEventListener("click", () => {
+            span.parentElement.querySelector(".news").classList.toggle("toggle");
+        });
 
         return span;
     }
