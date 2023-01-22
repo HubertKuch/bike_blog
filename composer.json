@@ -1,50 +1,51 @@
 {
-    "name": "hubert/bike-blog",
-    "type": "project",
-    "autoload": {
-        "classmap": [
-          "Configuration",
-          "Controllers",
-          "Exceptions",
-          "Models",
-          "Resources",
-          "Tests",
-          "BikeApplication.php",
-          "Helpers",
-          "Logger",
-          "Services",
-          "vendor/salesforce/handlebars-php"
-        ],
-        "psr-4": {
-          "Hubert\\BikeBlog\\Configuration\\": "Configuration",
-          "Hubert\\BikeBlog\\Models\\": "Models",
-          "Hubert\\BikeBlog\\Exceptions\\": "Exceptions",
-          "Hubert\\BikeBlog\\Controllers\\": "Controllers",
-          "Hubert\\BikeBlog\\Resources\\": "Resources",
-          "Hubert\\BikeBlog\\Tests\\": "Tests",
-          "Hubert\\BikeBlog\\Utils\\": "Utils",
-          "Hubert\\BikeBlog\\Client\\": "Client",
-          "Hubert\\BikeBlog\\Helpers\\": "Helpers",
-          "Hubert\\BikeBlog\\Logger\\": "Logger",
-          "Hubert\\BikeBlog\\Services\\": "Services",
-          "Hubert\\BikeBlog\\Storage\\": "Storage"
-        }
-    },
-    "authors": [
-        {
-          "name": "hubert",
-          "email": "kuchhubert@gmail.com"
-        }
+  "name": "hubert/bike-blog",
+  "type": "project",
+  "autoload": {
+    "classmap": [
+      "Configuration",
+      "Controllers",
+      "Exceptions",
+      "Models",
+      "Resources",
+      "Tests",
+      "BikeApplication.php",
+      "Helpers",
+      "Logger",
+      "Services",
+      "vendor/salesforce/handlebars-php"
     ],
+    "psr-4": {
+      "Hubert\\BikeBlog\\Configuration\\": "Configuration",
+      "Hubert\\BikeBlog\\Models\\": "Models",
+      "Hubert\\BikeBlog\\Exceptions\\": "Exceptions",
+      "Hubert\\BikeBlog\\Controllers\\": "Controllers",
+      "Hubert\\BikeBlog\\Resources\\": "Resources",
+      "Hubert\\BikeBlog\\Tests\\": "Tests",
+      "Hubert\\BikeBlog\\Utils\\": "Utils",
+      "Hubert\\BikeBlog\\Client\\": "Client",
+      "Hubert\\BikeBlog\\Helpers\\": "Helpers",
+      "Hubert\\BikeBlog\\Logger\\": "Logger",
+      "Hubert\\BikeBlog\\Services\\": "Services",
+      "Hubert\\BikeBlog\\Storage\\": "Storage"
+    }
+  },
+  "authors": [
+    {
+      "name": "hubert",
+      "email": "kuchhubert@gmail.com"
+    }
+  ],
   "minimum-stability": "dev",
   "require": {
     "vlucas/phpdotenv": "v5.0.0",
     "ramsey/uuid": "4.4.0",
     "nesbot/carbon": "2.62.0",
     "salesforce/handlebars-php": "3.0.1",
-    "hubert/avocado": "v7.1.1",
+    "hubert/avocado": "v7.1.2",
     "ext-pdo": "*",
-    "ext-dom": "*"
+    "ext-dom": "*",
+    "php": "8.1"
   },
   "require-dev": {
     "guzzlehttp/guzzle": "7.5.0",

@@ -81,7 +81,7 @@ class MetersController {
             throw $exp;
         }
 
-        $meter = Meter::from($request);
+        $meter = Meter::from($meterDto);
         $this->metersRepository->save($meter);
 
         return ["message" => "Success"];
@@ -101,7 +101,7 @@ class MetersController {
         $this->logger->logRequest($request);
         MetersRequestValidators::validateUpdateMeterRequest($request);
 
-        $meter = Meter::from($request);
+        $meter = Meter::from($newMeterDto);
 
         $this->metersRepository->updateById(["max_speed" => $meter->getMaxSpeed(), "meter_start_state" => $meter->getStartState(), "meter_end_state" => $meter->getEndState(), "trip_length" => $meter->getTripLength(),
             "time" => $meter->getTime(),

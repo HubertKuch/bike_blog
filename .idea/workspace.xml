@@ -4,19 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Changed `time` field in `meter` table to text">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Small refactor">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/bike-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bike-blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Meter/Meter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Meter/Meter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/ElementsUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/ElementsUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/MeterElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/MeterElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/TagElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/TagElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/elements/TagInnerFormElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/elements/TagInnerFormElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/javascript/models/Tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/javascript/models/Tag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/images.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/images.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration/FrontEndConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/FrontEndConfiguration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration/GpsFilesConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/GpsFilesConfiguration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration/ImagesConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/ImagesConfiguration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/GpsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GpsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ImagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/MetersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MetersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/TagsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/TagsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/NewsSnippet.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/NewsSnippet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/OutgoingTagCategoryDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/OutgoingTagCategoryDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTO/OutgoingTagDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTO/OutgoingTagDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Image/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Image/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Image/ImagesDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Image/ImagesDTO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Meter/NewMeterDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Meter/NewMeterDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Tags/NewsTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tags/NewsTag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Tags/TagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tags/TagCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/User/NewUserDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User/NewUserDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/User/UserRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User/UserRole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ImagesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ImagesService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/TagsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/TagsService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Storage/StaticStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Storage/StaticStorage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Storage/StaticStorageImpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/Storage/StaticStorageImpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Unit/TagsServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/GpsLogFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/GpsLogFile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/NewsHTMLParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/NewsHTMLParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/apache_sites/000-default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/bin/apache_sites/000-default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/dump/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bin/dump/dump.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/full_migration.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/full_migration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/migrate_images.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate_images.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/migrate_links.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate_links.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/migrate_news.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate_news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,61 +103,62 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
     <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/nette/finder" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/nette/robot-loader" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/hubert/avocado" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/vendor/salesforce/handlebars-php" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
-      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
-      <path value="$PROJECT_DIR$/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/vendor/hubert/avocado" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/kcs/class-finder" />
-      <path value="$PROJECT_DIR$/vendor/thecodingmachine/safe" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/symplely/yaml" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/salesforce/handlebars-php" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -148,7 +189,7 @@
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;19.4.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.18&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/hubert/IdeaProjects/bike_blog/bin/dump&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/hubert/IdeaProjects/bike_blog/bin&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -195,7 +236,7 @@
       <recent name="$PROJECT_DIR$/Resources/Images/Banner" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.compose.yaml.server: Compose Deployment">
+  <component name="RunManager" selected="Docker.compose.yaml: Compose Deployment">
     <configuration name="dump.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/bin/dump/dump.sql" />
       <script-mode>FILE</script-mode>
@@ -276,10 +317,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.compose.yaml.server: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.compose.yaml.server: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml.database: Compose Deployment" />
-        <item itemvalue="PHP Script.migrate_images.php" />
         <item itemvalue="Database Script.dump.sql" />
       </list>
     </recent_temporary>
@@ -324,7 +364,18 @@
       <workItem from="1674011855107" duration="59000" />
       <workItem from="1674014503757" duration="927000" />
       <workItem from="1674015912620" duration="17496000" />
-      <workItem from="1674038732725" duration="4183000" />
+      <workItem from="1674038732725" duration="5902000" />
+      <workItem from="1674131470547" duration="50000" />
+      <workItem from="1674340463640" duration="1072000" />
+      <workItem from="1674376432262" duration="1551000" />
+      <workItem from="1674378009796" duration="153000" />
+      <workItem from="1674378280933" duration="519000" />
+      <workItem from="1674386285384" duration="1320000" />
+      <workItem from="1674404891759" duration="883000" />
+      <workItem from="1674405850100" duration="361000" />
+      <workItem from="1674406493324" duration="135000" />
+      <workItem from="1674406650395" duration="153000" />
+      <workItem from="1674411077805" duration="217000" />
     </task>
     <task id="LOCAL-00001" summary="Performed sorting">
       <created>1673372133811</created>
@@ -382,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674030463759</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Small refactor">
+      <created>1674044736936</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674044736936</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +462,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Displaying news only with matched tag" />
     <MESSAGE value="Moved configuration to yaml file" />
     <MESSAGE value="Allowed parsing html tags in tags container" />
     <MESSAGE value="Rendering map" />
@@ -429,7 +486,8 @@
     <MESSAGE value="Removed dumping news data" />
     <MESSAGE value="Migration tools" />
     <MESSAGE value="Changed `time` field in `meter` table to text" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed `time` field in `meter` table to text" />
+    <MESSAGE value="Small refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small refactor" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
