@@ -32,7 +32,7 @@ class ImagesController {
     private readonly ImagesConfiguration $imagesConfiguration;
 
     #[GetMapping("/news/:newsId")]
-    public function getImagesByNewsId(#[RequestParam(name: "newsId", required: true)] string $newsId) {
+    public function getImagesByNewsId(#[RequestParam(name: "newsId", required: true)] string $newsId): array {
         return ImagesDTO::fromArray($this->imagesService->getNewsImages($newsId));
     }
 
