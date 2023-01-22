@@ -42,7 +42,7 @@
     "ramsey/uuid": "4.4.0",
     "nesbot/carbon": "2.62.0",
     "salesforce/handlebars-php": "3.0.1",
-    "hubert/avocado": "v7.1.2",
+    "hubert/avocado": "dev-main",
     "ext-pdo": "*",
     "ext-dom": "*",
     "php": "8.1"

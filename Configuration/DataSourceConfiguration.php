@@ -5,9 +5,10 @@ namespace Hubert\BikeBlog\Configuration;
 use Avocado\AvocadoApplication\Attributes\Configuration;
 use Avocado\AvocadoApplication\Attributes\ConfigurationProperties;
 use Avocado\AvocadoApplication\Attributes\Leaf;
-use Avocado\DataSource\Database\DatabaseType;
 use Avocado\DataSource\DataSource;
 use Avocado\DataSource\DataSourceBuilder;
+use Avocado\DataSource\Drivers\MySQLDriver;
+use Avocado\DataSource\Exceptions\CannotBuildDataSourceException;
 
 #[Configuration]
 #[ConfigurationProperties(prefix: "data-source")]
@@ -20,8 +21,11 @@ class DataSourceConfiguration {
     private readonly string $db;
     private readonly string $charset;
 
+    /**
+     * @throws CannotBuildDataSourceException
+     */
     #[Leaf]
     public function getDataSource(): DataSource {
-        return (new DataSourceBuilder())->username($this->user)->password($this->password)->server($this->server)->port($this->port)->databaseType(DatabaseType::MYSQL)->databaseName($this->db)->charset($this->charset)->build();
+        return (new DataSourceBuilder())->username($this->user)->password($this->password)->server($this->server)->port($this->port)->driver(MySQLDriver::class)->databaseName($this->db)->charset($this->charset)->build();
     }
 }

@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "27bfce91a36dd62b32f78988104c34ba",
+  "content-hash": "86f9f4c62e3441ab60d78066bd2a4d37",
   "packages": [
     {
       "name": "brick/math",
@@ -127,16 +127,16 @@
     },
     {
       "name": "hubert/avocado",
-      "version": "v7.1.2",
+      "version": "dev-main",
       "source": {
         "type": "git",
         "url": "https://github.com/HubertKuch/Avocado.git",
-        "reference": "2da697908ba848aa58814b42cdfc857b2c355fa9"
+        "reference": "1cc5e5726db7b1a9d52a5525eddf53330a0e2c9c"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/2da697908ba848aa58814b42cdfc857b2c355fa9",
-        "reference": "2da697908ba848aa58814b42cdfc857b2c355fa9",
+        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/1cc5e5726db7b1a9d52a5525eddf53330a0e2c9c",
+        "reference": "1cc5e5726db7b1a9d52a5525eddf53330a0e2c9c",
         "shasum": ""
       },
       "require": {
@@ -150,6 +150,7 @@
         "phpstan/phpstan": "1.9.14",
         "phpunit/phpunit": "9.5.18"
       },
+      "default-branch": true,
       "type": "framework",
       "autoload": {
         "psr-4": {
@@ -177,9 +178,9 @@
       "homepage": "https://avocadoframework.com",
       "support": {
         "issues": "https://github.com/HubertKuch/Avocado/issues",
-        "source": "https://github.com/HubertKuch/Avocado/tree/v7.1.2"
+        "source": "https://github.com/HubertKuch/Avocado/tree/json-serializing"
       },
-      "time": "2023-01-22T18:06:57+00:00"
+      "time": "2023-01-22T21:52:53+00:00"
     },
     {
       "name": "nesbot/carbon",
@@ -986,20 +987,20 @@
       ],
       "time": "2022-11-03T14:55:06+00:00"
     },
-        {
-            "name": "symfony/polyfill-php80",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php80.git",
-              "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936"
-            },
-            "dist": {
-              "type": "zip",
-              "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
-              "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
-              "shasum": ""
-            },
+    {
+      "name": "symfony/polyfill-php80",
+      "version": "dev-main",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/polyfill-php80.git",
+        "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
+        "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
+        "shasum": ""
+      },
             "require": {
                 "php": ">=7.1"
             },
@@ -1068,7 +1069,7 @@
                     "type": "tidelift"
                 }
             ],
-          "time": "2022-11-03T14:55:06+00:00"
+      "time": "2022-11-03T14:55:06+00:00"
         },
         {
             "name": "symfony/polyfill-php81",
@@ -3818,7 +3819,9 @@
   ],
   "aliases": [],
   "minimum-stability": "dev",
-  "stability-flags": [],
+  "stability-flags": {
+    "hubert/avocado": 20
+  },
   "prefer-stable": false,
   "prefer-lowest": false,
   "platform": {
