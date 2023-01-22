@@ -269,3 +269,7 @@ div.meter {
 .news-navigation__year-container .news.toggle {
     display: block;
 }
+
+.blog-description.tags-page {
+    display: inline-block;
+}
