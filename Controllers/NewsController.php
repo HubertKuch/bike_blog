@@ -100,14 +100,12 @@ class NewsController {
      * @throws ReflectionException
      */
     #[GetMapping("/v3/news/tag/:tag")]
-    public function getNewsByTag(AvocadoRequest $request, AvocadoResponse $response): array {
+    public function getNewsByTag(AvocadoRequest $request, #[RequestParam(name: "tag")] string $id): array {
         $this->logger->logRequest($request);
-        NewsRequestValidators::validateFindByTagRequest($request);
 
-        $byTag = $request->params['tag'];
-        $tag = $this->tagsService->getTagsByName($byTag);
+        $tag = $this->tagsService->getTagById($id);
 
-        if(!$tag) {
+        if (!$tag) {
             throw new NewsNotFoundException();
         }
 

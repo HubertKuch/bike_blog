@@ -20,8 +20,9 @@
         <article class="blog-description tags-page">
             <div>
                 Aby wybrać kategorię kliknij w wytłuszczoną nazwę związaną z kategorią w danej grupie!
+                Wybrany tag: <span class="chosen-tag pink pointer"
+                                   onclick="localStorage.removeItem('chosen-tag'); window.location.reload();">brak</span>!
                 <br> <br>
-
             </div>
 
             <div class="tags-container tags-categories">
@@ -38,43 +39,39 @@
 
     const tagsContainer = document.querySelector(".tags-container.tags-categories");
 
-    /** @param {Tag} tag */
-    const behindTagElement = (tag) => {
-        const element = document.createElement("div");
-
-        element.setAttribute("data-tag-id", tag.id);
-        element.setAttribute("data-tag-category-id", tag.category.id);
-
-        new TagElement(tag).render(element);
-
-        return element;
-    }
-
     const main = async function () {
-        const tags = await NewsController.getTags();
+        const categories = await NewsController.getTags();
+        const chosenTag = localStorage.getItem("chosen-tag") ?? "";
 
-        /** @param {Tag[]} tags */
-        function createTagsCategoriesContainers(tags) {
-            for (const tag of tags) {
-                const el = document.createElement("div");
-                const nameEl = document.createElement("div");
+        for (const category of categories) {
+            const categoryEl = document.createElement("div");
+            const categoryName = document.createElement("div")
 
-                nameEl.classList.add("pink");
-                el.setAttribute("data-category-id", tag.category.id);
-                nameEl.textContent = `[${tag.category.category}]`;
+            categoryName.textContent = `[${category.category.category}]`;
+            categoryName.classList.add("pink")
+            categoryEl.append(categoryName, document.createElement("br"));
 
-                el.append(nameEl);
-                tagsContainer.append(el);
+            for (const tag of category.tags) {
+                if (chosenTag === tag.id) {
+                    document.querySelector(".chosen-tag").textContent = tag.tag;
+                }
+
+                const tagElement = document.createElement("div");
+                tagElement.innerHTML = `<b>${tag.tag}</b> = ${tag.descriptor}`;
+
+                tagElement.classList.add("pointer")
+
+                tagElement.addEventListener("click", () => {
+                    localStorage.setItem("chosen-tag", tag.id);
+                    window.location.reload();
+                })
+
+                categoryEl.append(tagElement);
             }
+
+
+            tagsContainer.append(categoryEl, document.createElement("br"));
         }
-
-        createTagsCategoriesContainers(tags);
-
-        tags.forEach(tag => {
-            const el = document.querySelector(`[data-category-id="${tag.category.id}"]`);
-
-            el.append(behindTagElement(tag))
-        });
     }
 
     main();

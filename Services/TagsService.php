@@ -6,6 +6,7 @@ use Avocado\ORM\AvocadoRepository;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\Resource;
 use Hubert\BikeBlog\Models\DTO\OutgoingTagDto;
+use Hubert\BikeBlog\Models\Tags\CategoriesWIthTagsCredentials;
 use Hubert\BikeBlog\Models\Tags\NewsTag;
 use Hubert\BikeBlog\Models\Tags\Tag;
 use Hubert\BikeBlog\Models\Tags\TagCategory;
@@ -20,21 +21,27 @@ class TagsService {
     #[Autowired("tagCategoriesRepository")]
     private AvocadoRepository $newsCategoryRepo;
 
-    public function __construct() {
+    public function __construct() {}
+
+    public function getAllTagsAsDto(): array {
+        /** @var TagCategory[] $categories */
+        $categories = $this->newsCategoryRepo->findMany();
+        $data = [];
+
+        foreach ($categories as $category) {
+            $relatedTags = $this->tagsRepo->findMany(["category_id" => $category->getId()]);
+
+            $data[] = new CategoriesWIthTagsCredentials($category, $this->parseArrayToDto($relatedTags));
+        }
+
+        return $data;
     }
 
-    public function getAllTagsAsDto() {
-        /** @var Tag[] $tags */
-        $tags = $this->tagsRepo->findMany();
-
-        return $this->parseArrayToDto($tags);
-    }
-
-    public function parseArrayToDto(array $tags) {
+    public function parseArrayToDto(array $tags): array {
         return array_map(fn($tag) => $this->parseSingleToDto($tag), $tags);
     }
 
-    public function parseSingleToDto(Tag $tag) {
+    public function parseSingleToDto(Tag $tag): OutgoingTagDto {
         $category = $this->newsCategoryRepo->findById($tag->getCategoryId());
 
         return OutgoingTagDto::from($tag, $category);
@@ -72,5 +79,9 @@ class TagsService {
         $newsTag = new NewsTag($newsId, $tag->getId());
 
         $this->newsTagRepo->save($newsTag);
+    }
+
+    public function getTagById(string $id): Tag {
+        return $this->tagsRepo->findById($id);
     }
 }

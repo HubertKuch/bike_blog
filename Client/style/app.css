@@ -273,3 +273,7 @@ div.meter {
 .blog-description.tags-page {
     display: inline-block;
 }
+
+.pointer {
+    cursor: pointer;
+}
