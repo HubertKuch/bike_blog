@@ -81,7 +81,7 @@ class TagsService {
         $this->newsTagRepo->save($newsTag);
     }
 
-    public function getTagById(string $id): Tag {
+    public function getTagById(string $id): ?Tag {
         return $this->tagsRepo->findById($id);
     }
 }

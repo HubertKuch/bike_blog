@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Migrate tags script">
-      <change afterPath="$PROJECT_DIR$/Models/Tags/CategoriesWIthTagsCredentials.php" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Fixed getting news by tag id">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/TagsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/TagsService.php" afterDir="false" />
     </list>
@@ -336,7 +334,7 @@
       <workItem from="1674647168130" duration="5830000" />
       <workItem from="1674661769208" duration="4551000" />
       <workItem from="1674681976003" duration="160000" />
-      <workItem from="1674682208293" duration="201000" />
+      <workItem from="1674682208293" duration="675000" />
     </task>
     <task id="LOCAL-00001" summary="Performed sorting">
       <created>1673372133811</created>
@@ -443,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674664757510</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed getting news by tag id">
+      <created>1674682461003</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674682461004</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +470,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Displaying map from .log files" />
     <MESSAGE value="Optimized rendering images" />
     <MESSAGE value="Moved longitude and latitude precision to configuration" />
     <MESSAGE value="Responsive version of map" />
@@ -490,7 +494,8 @@
     <MESSAGE value="Changed main content size" />
     <MESSAGE value="Toggling news in menu by year" />
     <MESSAGE value="Migrate tags script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrate tags script" />
+    <MESSAGE value="Fixed getting news by tag id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed getting news by tag id" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

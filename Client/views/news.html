@@ -79,10 +79,22 @@
     }
 
     /**
-     * @param {string[]} tags
+     * @param {Tag[]} tags
      * */
     const showTags = (tags) => {
-        tags.forEach(tag => new TagElement(tag).render(tagsContainer))
+        tags.forEach(tag => {
+            const tagEL = document.createElement("span");
+
+            tagEL.classList.add("pink", "pointer");
+            tagEL.textContent = tag.tag + " ";
+
+            tagEL.addEventListener("click", () => {
+                localStorage.setItem("chosen-tag", tag.id);
+                location.reload();
+            });
+
+            tagsContainer.append(tagEL);
+        });
     }
 
     /**
