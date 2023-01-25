@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Fixed getting news by tag id">
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Properly displaying tags in news page">
+      <change afterPath="$PROJECT_DIR$/Client/views/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/views/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/TagsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/TagsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/views/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/views/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ViewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ViewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Views.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +335,7 @@
       <workItem from="1674647168130" duration="5830000" />
       <workItem from="1674661769208" duration="4551000" />
       <workItem from="1674681976003" duration="160000" />
-      <workItem from="1674682208293" duration="675000" />
+      <workItem from="1674682208293" duration="985000" />
     </task>
     <task id="LOCAL-00001" summary="Performed sorting">
       <created>1673372133811</created>
@@ -448,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674682461004</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Properly displaying tags in news page">
+      <created>1674682990709</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674682990709</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +478,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Optimized rendering images" />
     <MESSAGE value="Moved longitude and latitude precision to configuration" />
     <MESSAGE value="Responsive version of map" />
     <MESSAGE value="Optimized displaying news by adding static id one of the news to prevent next request" />
@@ -495,7 +502,8 @@
     <MESSAGE value="Toggling news in menu by year" />
     <MESSAGE value="Migrate tags script" />
     <MESSAGE value="Fixed getting news by tag id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed getting news by tag id" />
+    <MESSAGE value="Properly displaying tags in news page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Properly displaying tags in news page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

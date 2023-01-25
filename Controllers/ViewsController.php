@@ -67,4 +67,9 @@ class ViewsController {
     public function tags(): void {
         $this->views->tags();
     }
+
+    #[GetMapping("/contact")]
+    public function contact(): void {
+        $this->views->contact();
+    }
 }

@@ -74,6 +74,11 @@ class Views {
     }
 
     public function images(array $news, array $images): void {
-        echo @$this->handlebars->render("images", $this->getModelData(["news" => "" . json_encode(NewsDTO::fromArray($news)), "images" => "" . json_encode(ImagesDTO::fromArray($images))]));
+        echo @$this->handlebars->render("images",
+            $this->getModelData(["news" => "" . json_encode(NewsDTO::fromArray($news)), "images" => "" . json_encode(ImagesDTO::fromArray($images))]));
+    }
+
+    public function contact(): void {
+        echo @$this->handlebars->render("contact", $this->getModelData());
     }
 }
