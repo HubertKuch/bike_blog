@@ -1,0 +1,291 @@
+[
+  {
+    "name": "TOWARZYSZE",
+    "tags": [
+      {
+        "tagName": "AS",
+        "descriptor": "INICJAŁY TOWARZYSZA AS"
+      },
+      {
+        "tagName": "MM",
+        "descriptor": "INICJAŁY TOWARZYSZA MM"
+      },
+      {
+        "tagName": "HB",
+        "descriptor": "INICJAŁY TOWARZYSZA HB"
+      },
+      {
+        "tagName": "MK",
+        "descriptor": "INICJAŁY TOWARZYSZA MK"
+      },
+      {
+        "tagName": "PŻ",
+        "descriptor": "INICJAŁY TOWARZYSZA PŻ"
+      },
+      {
+        "tagName": "RK",
+        "descriptor": "INICJAŁY TOWARZYSZA RK"
+      },
+      {
+        "tagName": "AG",
+        "descriptor": "INICJAŁY TOWARZYSZA AG"
+      },
+      {
+        "tagName": "WG",
+        "descriptor": "INICJAŁY TOWARZYSZA WG"
+      },
+      {
+        "tagName": "GŻ",
+        "descriptor": "INICJAŁY TOWARZYSZA GŻ"
+      },
+      {
+        "tagName": "GM",
+        "descriptor": "INICJAŁY TOWARZYSZA GM"
+      },
+      {
+        "tagName": "KW",
+        "descriptor": "INICJAŁY TOWARZYSZA KW"
+      },
+      {
+        "tagName": "BB",
+        "descriptor": "INICJAŁY TOWARZYSZA BB"
+      },
+      {
+        "tagName": "JS",
+        "descriptor": "INICJAŁY TOWARZYSZA JS"
+      }
+    ]
+  },
+  {
+    "name": "CYKLICZNE TRASY",
+    "tags": [
+      {
+        "tagName": "sw_cykliczne",
+        "descriptor": "ŚWIĘTO CYKLICZNE"
+      },
+      {
+        "tagName": "tr20stka",
+        "descriptor": "TRASA 20-STKA"
+      },
+      {
+        "tagName": "tr50stka",
+        "descriptor": "TRASA 50-STKA"
+      },
+      {
+        "tagName": "tr100stka",
+        "descriptor": "TRASY 100-KM"
+      },
+      {
+        "tagName": "zs_tr20stka",
+        "descriptor": "SZCZECIŃSKA TRASA 20-TKA"
+      },
+      {
+        "tagName": "zs_tr50stka",
+        "descriptor": "SZCZECIŃSKA TRASA 50-TKA"
+      },
+      {
+        "tagName": "zs_tr100stka",
+        "descriptor": "SZCZECIŃSKA TRASA 100-TKA"
+      },
+      {
+        "tagName": "trio_trudu",
+        "descriptor": "WYJĄTKOWO CIĘŻKA TRASA PRZEZ GRYFICE I RESKO"
+      },
+      {
+        "tagName": "busz_zboz",
+        "descriptor": "TRASY BUSZUJĄCEGO W ZBOŻU I PODOBNE"
+      },
+      {
+        "tagName": "tr_przygod",
+        "descriptor": "WIELE NAZW NA BLOGU, TRASA PRZEZ GOLCZEWO, GRYFICE zazwyczaj, BĄDŹ MODYFIKACJE TRASY"
+      },
+      {
+        "tagName": "tr_brodniki",
+        "descriptor": "TRASA NA BRODNIKI"
+      },
+      {
+        "tagName": "tr_fajna",
+        "descriptor": "TRASA FAJNA"
+      },
+      {
+        "tagName": "dobre_trasy",
+        "descriptor": "DOBRA TRASA W DOBRYCH STRONACH"
+      },
+      {
+        "tagName": "zalew_kamienski",
+        "descriptor": "TRASA DOOKOŁA ZALEWU KAMIEŃSKIEGO"
+      },
+      {
+        "tagName": "zalew_szczecinski",
+        "descriptor": "TRASA DOOKOŁA ZALEWU SZCZECIŃSKIEGO"
+      },
+      {
+        "tagName": "jezioro_woswin",
+        "descriptor": "TRASA DOOKOŁA JEZIORA WOŚWIN"
+      },
+      {
+        "tagName": "sludwia",
+        "descriptor": "TRASA PRZEZ SŁUDWIA, DOBIESŁAW, TE MAŁE KÓŁKO"
+      },
+      {
+        "tagName": "narnia",
+        "descriptor": "TRASY ZWIĄZANE Z MOIM MIEJSCEM, MOJĄ NARNIĄ i OKOLICE"
+      },
+      {
+        "tagName": "zs_polickie",
+        "descriptor": "POLICKIE ŚCIEŻKI"
+      },
+      {
+        "tagName": "zs_dino",
+        "descriptor": "MOJE TRASY DO SKLEPU DINO, BĄDŹ PODOBNE"
+      },
+      {
+        "tagName": "zs_smutna",
+        "descriptor": "SMUTNE TRASY :( w Szczecinie"
+      }
+    ]
+  },
+  {
+    "name": "ZESPOŁOWE TRASY",
+    "tags": [
+      {
+        "tagName": "Gryfus",
+        "descriptor": "JAZDY Z GRYFUSEM"
+      },
+      {
+        "tagName": "Singlove",
+        "descriptor": "JAZDY Z SINGLOVE"
+      }
+    ]
+  },
+  {
+    "name": "NATURA",
+    "tags": [
+      {
+        "tagName": "morze",
+        "descriptor": "MOJE TRASY NAD MORZEM"
+      },
+      {
+        "tagName": "drzewa",
+        "descriptor": "NISZCZENIE NATURY .. LASÓW, WYŻYNANIE JEJ"
+      },
+      {
+        "tagName": "wsch_slonca",
+        "descriptor": "TRASY ZE WSCHODEM SŁOŃCA <3 KTÓRYCH CELEM BĄDŹ DODATKOWĄ ATRAKCJĄ JEST TE PIĘKNE ZJAWISKO"
+      },
+      {
+        "tagName": "zach_slonca",
+        "descriptor": "TRASY Z ZACHODEM SŁOŃCA <3 KTÓRYCH CELEM BĄDŹ DODATKOWĄ ATRAKCJĄ JEST TE PIĘKNE ZJAWISKO"
+      },
+      {
+        "tagName": "wiejskie_przygody",
+        "descriptor": "W ZASADZIE WSZYSTKIE TRASY, PO WSIACH, DO MAŁYCH MIASTECZEK PO ZA WYKLUCZONYMI Z GRUPY JAK MIEJSKIE WOJAŻE, TRASE PRACY, I INNE WYKLUCZONE CZYLI TAKIE BĘDĄCE MIASTEM (TJ. SZCZECIŃSKA 20-STKA, POLICKIE ŚCIEŻKI)"
+      }
+    ]
+  },
+  {
+    "name": "MIEJSCOWOŚCi i MIEJSKIE WOJAŻE",
+    "tags": [
+      {
+        "tagName": "miejski_wojaz",
+        "descriptor": "MIEJSKI WOJAŻ! w Płotach"
+      },
+      {
+        "tagName": "makowice",
+        "descriptor": "TRASY do MAKOWIC, Lotnisko i okolice"
+      },
+      {
+        "tagName": "zagorcze",
+        "descriptor": "TRASY ZWIĄZANE Z MIEJSCOWOŚCIĄ ZAGÓRCZE"
+      },
+      {
+        "tagName": "iglice",
+        "descriptor": "MOJE JAZDY DO PAŁACYKU W IGLICACH"
+      },
+      {
+        "tagName": "poznan",
+        "descriptor": "MOJE JAZDY PO POZNANIU I OKOLICY"
+      },
+      {
+        "tagName": "zs",
+        "descriptor": "WSZYSTKIE MOJE JAZDY W SZCZECINIE I OKOLICY"
+      },
+      {
+        "tagName": "trPracy",
+        "descriptor": "WSZYSTKIE TRASY DO SZKOY W TRZYGOWIE (PRACA)"
+      }
+    ]
+  },
+  {
+    "name": "PROJEKTY",
+    "tags": [
+      {
+        "tagName": "urbex",
+        "descriptor": "TRASY ZWIĄZANE ZE ZWIEDZANIEM TAJEMNICZYCH, OPUSZCZONYCH MIEJSC"
+      },
+      {
+        "tagName": "urbanizacja",
+        "descriptor": "TRASY ZWIĄZANE Z DZIKĄ ROZBUDOWĄ M. GRYFICE I OKOLIC"
+      }
+    ]
+  },
+  {
+    "name": "WYGASŁE PROJEKTY",
+    "tags": [
+      {
+        "tagName": "rury",
+        "descriptor": "TRASY ZWIĄZANE Z PROJEKTEM ROZBUDOWY GAZOCIĄGU"
+      },
+      {
+        "tagName": "S6",
+        "descriptor": "SZLAKI S6"
+      },
+      {
+        "tagName": "dw109",
+        "descriptor": "TRASY ZWIĄZANE Z PRZEBUDOWĄ DROGI DW109"
+      },
+      {
+        "tagName": "dw108",
+        "descriptor": "TRASY ZWIĄZANE Z PRZEBUDOWĄ DROGI DW108"
+      },
+      {
+        "tagName": "pl_drogi",
+        "descriptor": "PROJEKT POLSKICH DRÓG"
+      },
+      {
+        "tagName": "powr_czas",
+        "descriptor": "POWROTU CZAS ZE SZCZECINA ORAZ JAZDY DO I ZE SZCZECINA"
+      },
+      {
+        "tagName": "zs_trPracy",
+        "descriptor": "MOJE TRASY DO PRACY / Z PRACY"
+      },
+      {
+        "tagName": "zaginione_drogi",
+        "descriptor": "TRASY ZWIĄZANE Z EVENTEM, POZNAWANIA HISTORII LASU GOLCZEWSKIEGO"
+      }
+    ]
+  },
+  {
+    "name": "KRAJE",
+    "tags": [
+      {
+        "tagName": "Niemcy",
+        "descriptor": "TRASY PO NIEMCZECH"
+      }
+    ]
+  },
+  {
+    "name": "INNE",
+    "tags": [
+      {
+        "tagName": "aurelia",
+        "descriptor": "TRASY DOTYCZĄCE AURELII"
+      },
+      {
+        "tagName": "inne",
+        "descriptor": "CAŁKIEM INNE, JAK JAKIEŚ TESTY, PODSUMOWANIE ROKU, TAKIE PIERDOŁY"
+      }
+    ]
+  }
+]

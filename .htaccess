@@ -1,3 +1,6 @@
+Options -Indexes
+IndexIgnore *
+
 rewriteEngine on
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
