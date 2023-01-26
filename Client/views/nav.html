@@ -13,8 +13,20 @@
           <a href="tags">TAGI</a>
           <span class="navigation-divider">|</span>
       </li>
-    <li>
-      <a href="contact">KONTAKT</a>
-    </li>
+      <li>
+          <a href="contact">KONTAKT</a>
+      </li>
   </ul>
+
+    <script>
+        "use strict";
+
+        const currentHref = document.location.href.replace(location.search, "");
+
+        document.querySelectorAll("li a").forEach(el => {
+            if (el.href === currentHref) {
+                el.classList.add("pink")
+            }
+        });
+    </script>
 </nav>
