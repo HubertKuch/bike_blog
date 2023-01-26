@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Coloring active route">
-      <change afterPath="$PROJECT_DIR$/Client/style/fonts/Oxygen-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/style/fonts/Oxygen-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/style/fonts/Oxygen-Regular.ttf" afterDir="false" />
+    <list default="true" id="0a24f495-84a1-4d01-8332-fdbeb22d37dc" name="Changes" comment="Import Oxygen font">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/style/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/style/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/style/responsive.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,7 +335,7 @@
       <workItem from="1674661769208" duration="4551000" />
       <workItem from="1674681976003" duration="160000" />
       <workItem from="1674682208293" duration="985000" />
-      <workItem from="1674717944556" duration="863000" />
+      <workItem from="1674717944556" duration="1143000" />
     </task>
     <task id="LOCAL-00001" summary="Performed sorting">
       <created>1673372133811</created>
@@ -465,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674718609392</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Import Oxygen font">
+      <created>1674718827090</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674718827090</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +492,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Responsive version of map" />
     <MESSAGE value="Optimized displaying news by adding static id one of the news to prevent next request" />
     <MESSAGE value="Removed logs" />
     <MESSAGE value="Moved logs folder" />
@@ -512,7 +516,8 @@
     <MESSAGE value="Fixed getting news by tag id" />
     <MESSAGE value="Properly displaying tags in news page" />
     <MESSAGE value="Coloring active route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coloring active route" />
+    <MESSAGE value="Import Oxygen font" />
+    <option name="LAST_COMMIT_MESSAGE" value="Import Oxygen font" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
