@@ -7,7 +7,6 @@ use Avocado\ORM\AvocadoModelException;
 use Avocado\ORM\AvocadoRepository;
 use Avocado\ORM\AvocadoRepositoryException;
 use Avocado\Router\AvocadoRequest;
-use Avocado\Router\AvocadoResponse;
 use Avocado\Tests\Unit\Application\RequestParam;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\BaseURL;
@@ -51,7 +50,7 @@ class NewsController {
      * @throws InvalidRequestException
      */
     #[PostMapping("/v1/news/")]
-    public function newNews(AvocadoRequest $request, AvocadoResponse $response): array {
+    public function newNews(AvocadoRequest $request): array {
         $this->logger->logRequest($request);
         NewsRequestValidators::validateNewNewsRequest($request);
 

@@ -40,13 +40,13 @@ function saveMeters(stdClass $news, PDO $db): void {
 
     $saveStmt = $db->prepare("INSERT INTO meter(id, max_speed, time, news_id, meter_start_state, meter_end_state, trip_length) VALUE (UUID(), ?, ?, ?, ?, ?, ?)");
 
-    $saveStmt->execute([$news->MaxPredkosc, $news->Czas, $newsId, $news->StanLicznikaPoczatkowy, $news->StanLicznika2Koncowy, $news->Przejechalem,]);
+    $saveStmt->execute([$news->MaxPredkosc, $news->Czas, $newsId, $news->StanLicznikaPoczatkowy, $news->StanLicznikaPoczatkowy + $news->Przejechalem, $news->Przejechalem]);
 
     $saveStmt->execute([$news->MaxPredkosc, $news->Czas, $newsId, $news->StanLicznika2Poczatkowy, $news->StanLicznika2Koncowy, $news->Przejechalem,]);
 }
 
 foreach ($oldNews as $oldNew) {
-    saveNews($oldNew, $db);
+//    saveNews($oldNew, $db);
     saveMeters($oldNew, $db);
 }
 

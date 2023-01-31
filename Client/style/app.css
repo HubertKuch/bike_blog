@@ -285,3 +285,13 @@ div.meter {
 .pointer {
     cursor: pointer;
 }
+
+button.icon {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.news-navigation .orders {
+    width: max-content;
+}

@@ -7,13 +7,7 @@ use Hubert\BikeBlog\Models\Meter\Meter;
 class MeterDTO {
 
     public function __construct(
-        public readonly string $id,
-        public readonly float  $maxSpeed,
-        public readonly float  $startState,
-        public readonly float  $endState,
-        public readonly float  $tripLength,
-        public readonly float  $time,
-        public readonly string $newsId
+        public readonly string $id, public readonly float $maxSpeed, public readonly float $startState, public readonly float $endState, public readonly float $tripLength, public readonly string $time, public readonly string $newsId
     ) {
     }
 
