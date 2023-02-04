@@ -12,9 +12,9 @@ class NewsByYearDTO {
 
     /**
      * @param NewsDTO[] $news
-     * @return NewsDTO[]
+     * @return NewsByYearDTO[]
      * */
-    public static function fromArray(array &$news): array {
+    public static function fromArray(array $news): array {
         usort($news, function ($a, $b) {
             $aDate = strtotime($a->time);
             $bDate = strtotime($b->time);

@@ -2,7 +2,7 @@
 
 namespace Hubert\BikeBlog\Utils\Validators;
 
-use Avocado\Router\AvocadoRequest;
+use Avocado\Router\HttpRequest;
 use Hubert\BikeBlog\Exceptions\InvalidRequestException;
 
 class MetersRequestValidators {
@@ -10,7 +10,7 @@ class MetersRequestValidators {
     /**
      * @throws InvalidRequestException
      */
-    public static function validateGetMetersByNewsIdRequest(AvocadoRequest $request): void {
+    public static function validateGetMetersByNewsIdRequest(HttpRequest $request): void {
         $newsId = $request->params['newsId'] ?? null;
 
         if ($newsId) return;
@@ -21,17 +21,16 @@ class MetersRequestValidators {
     /**
      * @throws InvalidRequestException
      */
-    public static function validateNewMeterRequest(AvocadoRequest $request): void {
+    public static function validateNewMeterRequest(HttpRequest $request): void {
         self::validateMainData($request);
     }
 
     /**
-     * @param AvocadoRequest $request
+     * @param HttpRequest $request
      * @return void
      * @throws InvalidRequestException
      */
-    private static function validateMainData(AvocadoRequest $request): void
-    {
+    private static function validateMainData(HttpRequest $request): void {
         $newsId = $request->body['newsId'] ?? null;
         $maxSpeed = $request->body['maxSpeed'] ?? null;
         $starState = $request->body['description'] ?? null;
@@ -48,11 +47,10 @@ class MetersRequestValidators {
     /**
      * @throws InvalidRequestException
      */
-    public static function validateUpdateMeterRequest(AvocadoRequest $request): void {
+    public static function validateUpdateMeterRequest(HttpRequest $request): void {
         $id = $request->params['id'] ?? null;
 
-        if(!$id)
-            throw new InvalidRequestException("Invalid request");
+        if (!$id) throw new InvalidRequestException("Invalid request");
 
         self::validateMainData($request);
     }

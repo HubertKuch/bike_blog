@@ -6,14 +6,16 @@ use Avocado\Application\RestController;
 use Avocado\ORM\AvocadoModelException;
 use Avocado\ORM\AvocadoRepository;
 use Avocado\ORM\AvocadoRepositoryException;
-use Avocado\Router\AvocadoRequest;
+use Avocado\Router\HttpRequest;
 use Avocado\Tests\Unit\Application\RequestParam;
+use Avocado\Tests\Unit\Application\RequestQuery;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Attributes\Resource;
 use AvocadoApplication\Mappings\GetMapping;
 use AvocadoApplication\Mappings\PatchMapping;
 use AvocadoApplication\Mappings\PostMapping;
+use Carbon\Carbon;
 use Hubert\BikeBlog\Exceptions\InvalidRequestException;
 use Hubert\BikeBlog\Exceptions\NewsNotFoundException;
 use Hubert\BikeBlog\Helpers\LoggerHelper;
@@ -21,6 +23,8 @@ use Hubert\BikeBlog\Models\DTO\NewsByYearDTO;
 use Hubert\BikeBlog\Models\DTO\NewsDTO;
 use Hubert\BikeBlog\Models\News\News;
 use Hubert\BikeBlog\Services\TagsService;
+use Hubert\BikeBlog\Sorting\NewsSorting;
+use Hubert\BikeBlog\Utils\CookiesUtils;
 use Hubert\BikeBlog\Utils\NewsHTMLParser;
 use Hubert\BikeBlog\Utils\Validators\NewsRequestValidators;
 use ReflectionException;
@@ -40,6 +44,8 @@ class NewsController {
     private NewsHTMLParser $newsHTMLParser;
     #[Autowired("metersRepository")]
     private AvocadoRepository $metersRepository;
+    #[Autowired]
+    private readonly NewsSorting $newsSorting;
 
     public function __construct() {}
 
@@ -50,8 +56,7 @@ class NewsController {
      * @throws InvalidRequestException
      */
     #[PostMapping("/v1/news/")]
-    public function newNews(AvocadoRequest $request): array {
-        $this->logger->logRequest($request);
+    public function newNews(HttpRequest $request): array {
         NewsRequestValidators::validateNewNewsRequest($request);
 
         $news = News::from($request);
@@ -66,11 +71,35 @@ class NewsController {
      * @throws ReflectionException
      */
     #[GetMapping("/v2/news/")]
-    public function getAllNews(): array {
+    public function getAllNews(#[RequestQuery(name: "sort_by", required: false)] ?string $sortBy = ""): array {
+        $cookiesExpiringAt = Carbon::now()->addDays(30);
         $news = $this->newsRepository->findMany();
         $newsDTOs = array_map(fn($n) => NewsDTO::from($n), $news);
 
-        return NewsByYearDTO::fromArray($newsDTOs);
+        $newsByYearDTOS = NewsByYearDTO::fromArray($newsDTOs);
+        $this->newsSorting->sortByDateDesc($newsByYearDTOS);
+
+        if ($sortBy === "date") {
+            CookiesUtils::setCookie("sort_by", "date", $cookiesExpiringAt);
+            $this->newsSorting->sortByDateDesc($newsByYearDTOS);
+        } else if ($sortBy === "-date") {
+            CookiesUtils::setCookie("sort_by", "-date", $cookiesExpiringAt);
+            $this->newsSorting->sortByDateAsc($newsByYearDTOS);
+        } else if ($sortBy === "-length") {
+            CookiesUtils::setCookie("sort_by", "-length", $cookiesExpiringAt);
+            return NewsByYearDTO::fromArray(NewsDTO::fromArray($this->newsSorting->sortByLengthAsc()));
+        } else if ($sortBy === "length") {
+            CookiesUtils::setCookie("sort_by", "length", $cookiesExpiringAt);
+            $this->newsSorting->sortByLengthDesc($newsByYearDTOS);
+        } else if ($sortBy === "time") {
+            CookiesUtils::setCookie("sort_by", "time", $cookiesExpiringAt);
+            $this->newsSorting->sortByTimeDesc($newsByYearDTOS);
+        } else if ($sortBy === "-time") {
+            CookiesUtils::setCookie("sort_by", "-time", $cookiesExpiringAt);
+            $this->newsSorting->sortByTimeAsc($newsByYearDTOS);
+        }
+
+        return $newsByYearDTOS;
     }
 
     /**
@@ -99,9 +128,7 @@ class NewsController {
      * @throws ReflectionException
      */
     #[GetMapping("/v3/news/tag/:tag")]
-    public function getNewsByTag(AvocadoRequest $request, #[RequestParam(name: "tag")] string $id): array {
-        $this->logger->logRequest($request);
-
+    public function getNewsByTag(#[RequestParam(name: "tag")] string $id): array {
         $tag = $this->tagsService->getTagById($id);
 
         if (!$tag) {
@@ -119,13 +146,13 @@ class NewsController {
      * @throws InvalidRequestException
      */
     #[PatchMapping("/v1/news/:id")]
-    public function updateNewsById(AvocadoRequest $request): NewsDTO {
-        $this->logger->logRequest($request);
+    public function updateNewsById(HttpRequest $request): NewsDTO {
         NewsRequestValidators::validateFindByTagRequest($request);
         NewsRequestValidators::validateNewNewsRequest($request);
 
         $id = $request->params['id'];
-        $this->newsRepository->updateById(["title" => $request->params['title'], "description" => $request->params['description'], "tags" => implode(';', $request->params['tags']), "date" => $request->params['date'],], $id);
+        $this->newsRepository->updateById(["title" => $request->params['title'], "description" => $request->params['description'], "tags" => implode(';',
+            $request->params['tags']), "date" => $request->params['date'],], $id);
 
         return NewsDTO::from($this->newsRepository->findById($id));
     }

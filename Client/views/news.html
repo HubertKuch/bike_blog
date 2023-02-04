@@ -17,19 +17,19 @@
             <div class="orders">
                 <span class="order order-by-date">
                     <button class="icon" style="color: #da2e44;">📅</button>
-                    <button class="icon" style="color: #fff;">↓</button>
-                    <button class="icon" style="color: #fff;">↑</button>
+                    <button class="icon" data-sort-by="-date" style="color: #fff;">↓</button>
+                    <button class="icon" data-sort-by="date" style="color: #fff;">↑</button>
                 </span>
 
                 <span class="order oder-by-ride">
                     <button class="icon" style="color: #da2e44;">🚲</button>
-                    <button class="icon" style="color: #fff;">↓</button>
-                    <button class="icon" style="color: #fff;">↑</button>
+                    <button class="icon" data-sort-by="-length" style="color: #fff;">↓</button>
+                    <button class="icon" data-sort-by="length" style="color: #fff;">↑</button>
                 </span>
                 <span class="order oder-by-ride">
                     <button class="icon" style="color: #da2e44;">⏰</button>
-                    <button class="icon" style="color: #fff;">↓</button>
-                    <button class="icon" style="color: #fff;">↑</button>
+                    <button class="icon" data-sort-by="-time" style="color: #fff;">↓</button>
+                    <button class="icon" data-sort-by="time" style="color: #fff;">↑</button>
                 </span>
 
             </div>
@@ -66,7 +66,20 @@
     const newsNavigationListElement = document.querySelector(".news-navigation");
     const newsContentElement = document.querySelector(".news-content");
     const tagsContainer = document.querySelector(".tags");
+    const orders = document.querySelectorAll(".orders .icon[data-sort-by]");
     let currentNews = null;
+
+    orders.forEach(order => {
+        if (order.getAttribute("data-sort-by") === (localStorage.getItem("sort_by") ?? "")) {
+            order.classList.add("pink")
+        }
+
+        order.addEventListener("click", ({target}) => {
+            let sortBy = target.getAttribute("data-sort-by");
+            localStorage.setItem("sort_by", sortBy);
+            document.cookie = `sort_by=${sortBy};`;
+        });
+    });
 
     /**
      * @param {NewsGroup[]} news

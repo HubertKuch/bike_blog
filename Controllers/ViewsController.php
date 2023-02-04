@@ -4,7 +4,7 @@ namespace Hubert\BikeBlog\Controllers;
 
 use Avocado\Application\RestController;
 use Avocado\ORM\AvocadoRepository;
-use Avocado\Router\AvocadoRequest;
+use Avocado\Router\HttpRequest;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Mappings\GetMapping;
 use Hubert\BikeBlog\Utils\Views;
@@ -30,7 +30,7 @@ class ViewsController {
     }
 
     #[GetMapping("/edit-news/:id")]
-    public function editNews(AvocadoRequest $request): void {
+    public function editNews(HttpRequest $request): void {
         if (!isset($_SESSION['user'])) {
             header("Location: login");
         }

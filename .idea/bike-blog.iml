@@ -15,6 +15,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Logger" isTestSource="false" packagePrefix="Hubert\BikeBlog\Logger\" />
       <sourceFolder url="file://$MODULE_DIR$/Services" isTestSource="false" packagePrefix="Hubert\BikeBlog\Services\" />
       <sourceFolder url="file://$MODULE_DIR$/Storage" isTestSource="false" packagePrefix="Hubert\BikeBlog\Storage\" />
+      <sourceFolder url="file://$MODULE_DIR$/Interceptors" isTestSource="false" packagePrefix="Hubert\BikeBlog\Interceptors\" />
+      <sourceFolder url="file://$MODULE_DIR$/Sorting" isTestSource="false" packagePrefix="Hubert\BikeBlog\Sorting\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-factory" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
@@ -71,6 +73,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/salesforce/handlebars-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/hubert/avocado-mysql-driver" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

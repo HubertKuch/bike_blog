@@ -7,8 +7,7 @@ use Avocado\AvocadoApplication\Attributes\Request\RequestBody;
 use Avocado\ORM\AvocadoModelException;
 use Avocado\ORM\AvocadoRepository;
 use Avocado\ORM\AvocadoRepositoryException;
-use Avocado\Router\AvocadoRequest;
-use Avocado\Router\AvocadoResponse;
+use Avocado\Router\HttpRequest;
 use Avocado\Tests\Unit\Application\RequestParam;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\BaseURL;
@@ -42,13 +41,12 @@ class MetersController {
      * @throws ReflectionException
      */
     #[GetMapping("/:newsId")]
-    public function getMetersByNewsId(AvocadoRequest $request, #[RequestParam(name: "newsId", required: true)] string $newsId): array {
-        $this->logger->logRequest($request);
+    public function getMetersByNewsId(HttpRequest $request, #[RequestParam(name: "newsId", required: true)] string $newsId): array {
         MetersRequestValidators::validateGetMetersByNewsIdRequest($request);
 
         $news = $this->newsRepository->findById($newsId);
 
-        if(!$news) {
+        if (!$news) {
             $exp = new NewsNotFoundException("News with id $newsId not found.");
             $this->logger->logException($request, $exp);
 
@@ -61,20 +59,21 @@ class MetersController {
     }
 
     /**
-     * @param AvocadoRequest $request
+     * @param HttpRequest $request
+     * @param NewMeterDto $meterDto
+     * @return array
      * @throws AvocadoModelException
+     * @throws AvocadoRepositoryException
      * @throws InvalidRequestException
      * @throws ReflectionException
-     * @throws AvocadoRepositoryException
      */
     #[PostMapping("/")]
-    public function addNewMeter(AvocadoRequest $request, #[RequestBody] NewMeterDto $meterDto): array {
-        $this->logger->logRequest($request);
+    public function addNewMeter(HttpRequest $request, #[RequestBody] NewMeterDto $meterDto): array {
         MetersRequestValidators::validateNewMeterRequest($request);
 
         $newsId = $meterDto->getNewsId();
 
-        if(!$this->newsRepository->findById($newsId)) {
+        if (!$this->newsRepository->findById($newsId)) {
             $exp = new InvalidRequestException("Cannot create meter for news. News with id $newsId not exists.");
             $this->logger->logException($request, $exp);
 
@@ -89,25 +88,18 @@ class MetersController {
 
 
     /**
-     * @param AvocadoRequest $request
-     * @param AvocadoResponse $response
-     * @return AvocadoResponse
+     * @throws ReflectionException
      * @throws AvocadoModelException
      * @throws InvalidRequestException
-     * @throws ReflectionException
      */
     #[PatchMapping("/:id")]
-    public function updateMeterById(AvocadoRequest $request, #[RequestBody] NewMeterDto $newMeterDto): array {
-        $this->logger->logRequest($request);
+    public function updateMeterById(HttpRequest $request, #[RequestBody] NewMeterDto $newMeterDto): array {
         MetersRequestValidators::validateUpdateMeterRequest($request);
 
         $meter = Meter::from($newMeterDto);
 
-        $this->metersRepository->updateById(["max_speed" => $meter->getMaxSpeed(), "meter_start_state" => $meter->getStartState(), "meter_end_state" => $meter->getEndState(), "trip_length" => $meter->getTripLength(),
-            "time" => $meter->getTime(),
-            "isToShow" => $meter->isToShow(),
-            "newsId" => $meter->getNewsId(),
-        ], $meter->getId());
+        $this->metersRepository->updateById(["max_speed" => $meter->getMaxSpeed(), "meter_start_state" => $meter->getStartState(), "meter_end_state" => $meter->getEndState(), "trip_length" => $meter->getTripLength(), "time" => $meter->getTime(), "isToShow" => $meter->isToShow(), "newsId" => $meter->getNewsId(),],
+            $meter->getId());
 
         return ["message" => "updated"];
     }

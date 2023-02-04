@@ -7,8 +7,8 @@ use Avocado\AvocadoApplication\Attributes\ConfigurationProperties;
 use Avocado\AvocadoApplication\Attributes\Leaf;
 use Avocado\DataSource\DataSource;
 use Avocado\DataSource\DataSourceBuilder;
-use Avocado\DataSource\Drivers\MySQLDriver;
 use Avocado\DataSource\Exceptions\CannotBuildDataSourceException;
+use Avocado\MysqlDriver\MySQLDriver;
 
 #[Configuration]
 #[ConfigurationProperties(prefix: "data-source")]
@@ -26,6 +26,13 @@ class DataSourceConfiguration {
      */
     #[Leaf]
     public function getDataSource(): DataSource {
-        return (new DataSourceBuilder())->username($this->user)->password($this->password)->server($this->server)->port($this->port)->driver(MySQLDriver::class)->databaseName($this->db)->charset($this->charset)->build();
+        return (new DataSourceBuilder())->username($this->user)
+                                        ->password($this->password)
+                                        ->server($this->server)
+                                        ->port($this->port)
+                                        ->driver(MySQLDriver::class)
+                                        ->databaseName($this->db)
+                                        ->charset($this->charset)
+                                        ->build();
     }
 }

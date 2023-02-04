@@ -5,8 +5,8 @@ namespace Hubert\BikeBlog\Controllers;
 use Avocado\Application\RestController;
 use Avocado\AvocadoApplication\Attributes\Exceptions\ResponseStatus;
 use Avocado\HTTP\HTTPStatus;
-use Avocado\Router\AvocadoRequest;
-use Avocado\Router\AvocadoResponse;
+use Avocado\Router\HttpRequest;
+use Avocado\Router\HttpResponse;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\BaseURL;
 use AvocadoApplication\Mappings\GetMapping;
@@ -22,7 +22,7 @@ class TagsController {
 
     #[GetMapping("/v1/tags")]
     #[ResponseStatus(HTTPStatus::OK)]
-    public function getAllTags(AvocadoRequest $request, AvocadoResponse $response): array {
+    public function getAllTags(HttpRequest $request, HttpResponse $response): array {
         return $this->tagsService->getAllTagsAsDto();
     }
 
@@ -31,16 +31,16 @@ class TagsController {
      */
     #[GetMapping("/v1/tags/:newsId")]
     #[ResponseStatus(HTTPStatus::OK)]
-    public function getTagsRelatedWithNews(AvocadoRequest $request, AvocadoResponse $response): array {
+    public function getTagsRelatedWithNews(HttpRequest $request, HttpResponse $response): array {
         $newsId = $request->params['newsId'];
 
-        if(!$newsId) {
+        if (!$newsId) {
             throw new InvalidRequestException("Missing `newsId` param.");
         }
 
         $tags = $this->tagsService->getTagsOfNews($newsId);
 
-        if(!$tags) {
+        if (!$tags) {
             return [];
         }
 

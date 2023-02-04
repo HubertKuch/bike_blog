@@ -40,7 +40,7 @@ class Views {
     }
 
     public function news(): void {
-        $allNews = $this->newsController->getAllNews();
+        $allNews = $this->newsController->getAllNews($_COOKIE['sort_by'] ?? "");
         $allNewsJsonData = json_encode($allNews);
         $allNewsJsonData = str_replace('"', '\\"', $allNewsJsonData);
 

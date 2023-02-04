@@ -9,7 +9,7 @@ function saveCategories(PDO $db, array $tagsDat): void {
         $ifExistsStmt = $db->prepare("SELECT COUNT(id) FROM tags_categories WHERE category = ?");
         $ifExistsStmt->bindParam(1, $item->name);
         $ifExistsStmt->execute();
-        $isExists = count($ifExistsStmt->fetchAll(PDO::FETCH_CLASS)) > 0;
+        $isExists = empty($ifExistsStmt->fetchAll(PDO::FETCH_CLASS));
 
         if (!$isExists) {
             $saveCategoryQuery = "INSERT INTO tags_categories(id, category) VALUES (UUID(), ?)";
@@ -85,6 +85,6 @@ function saveNewsTags(PDO $db, array $tags): void {
     }
 }
 
-//saveCategories($db, $tagsData);
-//saveRawTagsData($db, $tagsData);
+saveCategories($db, $tagsData);
+saveRawTagsData($db, $tagsData);
 saveNewsTags($db, $tagsData);

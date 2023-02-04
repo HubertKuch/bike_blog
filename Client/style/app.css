@@ -290,6 +290,7 @@ button.icon {
     border: none;
     outline: none;
     background: transparent;
+    cursor: pointer;
 }
 
 .news-navigation .orders {

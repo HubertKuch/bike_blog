@@ -27,7 +27,9 @@
       "Hubert\\BikeBlog\\Helpers\\": "Helpers",
       "Hubert\\BikeBlog\\Logger\\": "Logger",
       "Hubert\\BikeBlog\\Services\\": "Services",
-      "Hubert\\BikeBlog\\Storage\\": "Storage"
+      "Hubert\\BikeBlog\\Storage\\": "Storage",
+      "Hubert\\BikeBlog\\Sorting\\": "Sorting",
+      "Hubert\\BikeBlog\\Interceptors\\": "Interceptors"
     }
   },
   "authors": [
@@ -45,7 +47,8 @@
     "hubert/avocado": "dev-main",
     "ext-pdo": "*",
     "ext-dom": "*",
-    "php": "8.1"
+    "php": "8.1",
+    "hubert/avocado-mysql-driver": "v2.0.0"
   },
   "require-dev": {
     "guzzlehttp/guzzle": "7.5.0",

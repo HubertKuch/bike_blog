@@ -6,6 +6,7 @@ use Avocado\ORM\Attributes\Field;
 use Avocado\ORM\Attributes\Id;
 use Avocado\ORM\Attributes\Table;
 use Avocado\Router\AvocadoRequest;
+use Avocado\Router\HttpRequest;
 use Carbon\Carbon;
 use Hubert\BikeBlog\Models\Tags\Tag;
 use Ramsey\Uuid\Rfc4122\UuidV4;
@@ -31,8 +32,11 @@ class News {
         $this->date = $date->toDateString();
     }
 
-    public static function from(AvocadoRequest $request): News {
-        return new News(UuidV4::uuid4(), $request->body['title'], $request->body['description'], Carbon::createFromFormat("Y-m-d H:i:s", "{$request->body['date']} 00:00:00"));
+    public static function from(HttpRequest $request): News {
+        return new News(UuidV4::uuid4(),
+            $request->body['title'],
+            $request->body['description'],
+            Carbon::createFromFormat("Y-m-d H:i:s", "{$request->body['date']} 00:00:00"));
     }
 
     public function getId(): string {

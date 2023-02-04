@@ -8,8 +8,7 @@ use Avocado\AvocadoApplication\Attributes\Request\RequestBody;
 use Avocado\HTTP\HTTPStatus;
 use Avocado\ORM\AvocadoModelException;
 use Avocado\ORM\AvocadoRepository;
-use Avocado\Router\AvocadoRequest;
-use Avocado\Router\AvocadoResponse;
+use Avocado\Router\HttpRequest;
 use Avocado\Tests\Unit\Application\RequestParam;
 use AvocadoApplication\Attributes\Autowired;
 use AvocadoApplication\Attributes\BaseURL;
@@ -45,7 +44,7 @@ class UserController {
      */
     #[PostMapping("/v2/users/login/")]
     #[ResponseStatus(HTTPStatus::OK)]
-    public function login(AvocadoRequest $request, AvocadoResponse $response): array {
+    public function login(HttpRequest $request, HttpRequest $response): array {
         $this->logger->logRequest($request);
         UsersRequestValidators::validateLoginRequest($request);
 
@@ -54,7 +53,7 @@ class UserController {
 
         $user = $this->usersRepository->findFirst(["username" => $login]);
 
-        if(!$user) {
+        if (!$user) {
             $exp = new UserNotFoundException("User `$login` not found");
 
             $this->logger->logException($request, $exp);
@@ -82,13 +81,13 @@ class UserController {
 
     #[PostMapping("/v1/users/")]
     #[ResponseStatus(HTTPStatus::CREATED)]
-    public function registerUser(AvocadoRequest $request, #[RequestBody] NewUserDto $newUserDto): UserDTO {
+    public function registerUser(HttpRequest $request, #[RequestBody] NewUserDto $newUserDto): UserDTO {
         $this->logger->logRequest($request);
         $username = $newUserDto->getUsername();
 
         $isUserExists = $this->usersRepository->findFirst(["username" => $username]) !== null;
 
-        if($isUserExists) {
+        if ($isUserExists) {
             $exp = new UserBusyException("Username $username is busy.");
             $this->logger->logException($request, $exp);
 
@@ -106,7 +105,7 @@ class UserController {
      */
     #[DeleteMapping("/v1/users/:id")]
     #[ResponseStatus(HTTPStatus::OK)]
-    public function deleteUser(AvocadoRequest $request, #[RequestParam(name: "id", required: true)] string $uuid): array {
+    public function deleteUser(HttpRequest $request, #[RequestParam(name: "id", required: true)] string $uuid): array {
         $this->logger->logRequest($request);
         UsersRequestValidators::validateDeleteUserRequest($request);
 

@@ -19,7 +19,7 @@ front-end:
 avocado:
   environment:
     # PRODUCTION or DEVELOPMENT
-    type: PRODUCTION
+    type: DEVELOPMENT
     throws: false
   router:
     matchingStrategy: SELF
