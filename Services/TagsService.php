@@ -57,7 +57,7 @@ class TagsService {
     }
 
     public function getTagsByName(string $tagName): ?Tag {
-        return $this->tagsRepo->findFirst(["tag" => "$tagName"]);
+        return $this->tagsRepo->findFirst(["tag" => $tagName]);
     }
 
     /**
@@ -67,15 +67,17 @@ class TagsService {
         return $this->newsTagRepo->findMany(["tag_id" => $tagId]);
     }
 
+    public function getNewsTagByTagName(string $name, string $newsId): ?NewsTag {
+        return $this->newsTagRepo->customWithSingleDataset("SELECT news_tag.* FROM news_tag JOIN tags t ON news_tag.tag_id = t.id WHERE t.tag = \"$name\" AND news_id = \"$newsId\" ");
+    }
+
     public function getTagCategory(string $tagId): TagCategory {
         $tag = $this->tagsRepo->findById($tagId);
-        $category = $this->newsCategoryRepo->findById($tag->getCategoryId());
 
-        return $category;
+        return $this->newsCategoryRepo->findById($tag->getCategoryId());
     }
 
     public function addTagToNews(Tag $tag, string $newsId): void {
-        $this->tagsRepo->save($tag);
         $newsTag = new NewsTag($newsId, $tag->getId());
 
         $this->newsTagRepo->save($newsTag);
@@ -83,5 +85,9 @@ class TagsService {
 
     public function getTagById(string $id): ?Tag {
         return $this->tagsRepo->findById($id);
+    }
+
+    public function removeAllNewsTags(string $newsId): void {
+        $this->newsTagRepo->deleteMany(['news_id' => $newsId]);
     }
 }

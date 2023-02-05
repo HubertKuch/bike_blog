@@ -83,7 +83,21 @@ class NewsController {
     /**
      * @returns Promise<Array<{id: string, newsId: string, name: string }>>
      * */
-    static async getNewsImages($newsId) {
-        return await this.fetchData(`${this.baseUrl}/v1/images/news/${$newsId}`);
+    static async getNewsImages(newsId) {
+        return await this.fetchData(`${this.baseUrl}/v1/images/news/${newsId}`);
+    }
+
+    static async update(newsId, data) {
+        return await (await fetch(`${this.baseUrl}/v1/news/${newsId}`, {
+            method: "PATCH",
+            body: JSON.stringify(data)
+        })).json();
+    }
+
+    static async putTags(newsId, data) {
+        return await (await fetch(`${this.baseUrl}/v1/tags/${newsId}`, {
+            method: "PUT",
+            body: JSON.stringify(data)
+        })).json();
     }
 }

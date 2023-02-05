@@ -8,9 +8,9 @@ class MetersSerializer {
      *     maxSpeed: number,
      *     time: number,
      *     newsId: string,
-     *     meterEndState: number,
+     *     endState: number,
      *     tripLength: number,
-     *     meterStartState: number
+     *     startState: number
      * }} meterData
      * */
     static serialize(meterData) {
@@ -20,14 +20,14 @@ class MetersSerializer {
     /**
      * @param {Meter} meter
      * */
-    static deserialize({id, maxSpeed, newsId, time, meterStartState, meterEndState, tripLength}) {
+    static deserialize({id, maxSpeed, newsId, time, starState, endState, tripLength}) {
         return {
             id,
             maxSpeed,
             newsId,
             time,
-            meterEndState,
-            meterStartState,
+            endState: endState,
+            starState: starState,
             tripLength
         };
     }

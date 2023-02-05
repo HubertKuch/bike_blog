@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "a2dcb412ff6a8bb927dc0e755fbbad57",
+  "content-hash": "8bc7af920fcab5839219b61b628b8546",
   "packages": [
     {
       "name": "brick/math",
@@ -131,12 +131,12 @@
       "source": {
         "type": "git",
         "url": "https://github.com/HubertKuch/Avocado.git",
-        "reference": "4197356162c404da0dcbbb4edf6a7ec241c414bc"
+        "reference": "5310abc2d78f6ee09da603720e72debd230b6368"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/4197356162c404da0dcbbb4edf6a7ec241c414bc",
-        "reference": "4197356162c404da0dcbbb4edf6a7ec241c414bc",
+        "url": "https://api.github.com/repos/HubertKuch/Avocado/zipball/5310abc2d78f6ee09da603720e72debd230b6368",
+        "reference": "5310abc2d78f6ee09da603720e72debd230b6368",
         "shasum": ""
       },
       "require": {
@@ -181,20 +181,20 @@
         "issues": "https://github.com/HubertKuch/Avocado/issues",
         "source": "https://github.com/HubertKuch/Avocado/tree/main"
       },
-      "time": "2023-02-02T05:29:02+00:00"
+      "time": "2023-02-04T22:23:24+00:00"
     },
     {
       "name": "hubert/avocado-mysql-driver",
-      "version": "v2.0.0",
+      "version": "dev-main",
       "source": {
         "type": "git",
         "url": "https://github.com/HubertKuch/avocado-mysql-driver.git",
-        "reference": "df6b83c353f3296851abbc7a85a178bc0d28b22c"
+        "reference": "7e5c2d7fbca974b484f559f1c3dbe4f76c92488b"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/HubertKuch/avocado-mysql-driver/zipball/df6b83c353f3296851abbc7a85a178bc0d28b22c",
-        "reference": "df6b83c353f3296851abbc7a85a178bc0d28b22c",
+        "url": "https://api.github.com/repos/HubertKuch/avocado-mysql-driver/zipball/7e5c2d7fbca974b484f559f1c3dbe4f76c92488b",
+        "reference": "7e5c2d7fbca974b484f559f1c3dbe4f76c92488b",
         "shasum": ""
       },
       "require": {
@@ -202,6 +202,7 @@
         "hubert/avocado": "dev-main",
         "php": "8.*"
       },
+      "default-branch": true,
       "type": "library",
       "autoload": {
         "psr-4": {
@@ -223,9 +224,9 @@
       ],
       "support": {
         "issues": "https://github.com/HubertKuch/avocado-mysql-driver/issues",
-        "source": "https://github.com/HubertKuch/avocado-mysql-driver/tree/v2.0.0"
+        "source": "https://github.com/HubertKuch/avocado-mysql-driver/tree/v2.0.1"
       },
-      "time": "2023-02-01T17:54:20+00:00"
+      "time": "2023-02-04T21:53:34+00:00"
     },
     {
       "name": "nesbot/carbon",
@@ -1056,16 +1057,16 @@
           "dev-main": "1.28-dev"
         },
         "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
+          "name": "symfony/polyfill",
+          "url": "https://github.com/symfony/polyfill"
+        }
+      },
+      "autoload": {
+        "files": [
+          "bootstrap.php"
+        ],
+        "psr-4": {
+          "Symfony\\Polyfill\\Php80\\": ""
                 },
                 "classmap": [
                     "Resources/stubs"
@@ -3865,7 +3866,8 @@
   "aliases": [],
   "minimum-stability": "dev",
   "stability-flags": {
-    "hubert/avocado": 20
+    "hubert/avocado": 20,
+    "hubert/avocado-mysql-driver": 20
   },
   "prefer-stable": false,
   "prefer-lowest": false,

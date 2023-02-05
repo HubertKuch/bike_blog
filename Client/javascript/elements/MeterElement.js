@@ -48,7 +48,7 @@ class MeterElement {
         const input = ElementsUtils.getInput("text");
         input.name = "meter-end-state";
 
-        input.value = this.meter.meterEndState ?? "";
+        input.value = this.meter.endState ?? "";
 
 
         return ElementsUtils.appendInLabel(input, "Licznik koncowy");
@@ -57,7 +57,7 @@ class MeterElement {
     getStartState() {
         const input = ElementsUtils.getInput("text");
         input.name = "meter-start-state";
-        input.value = this.meter.meterStartState ?? "";
+        input.value = this.meter.startState ?? "";
 
         return ElementsUtils.appendInLabel(input, "Licznik poczatkowy");
     }
@@ -65,6 +65,8 @@ class MeterElement {
     render(element) {
         const container = this.getContainer();
         const inputsContainer = document.createElement("div");
+
+        inputsContainer.setAttribute("data-id", this.meter.id);
 
         inputsContainer.append(this.getMaxSpeed(), this.getTime(), this.getStartState(), this.getEndState(), this.getTripLength());
 

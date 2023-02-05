@@ -93,13 +93,11 @@ class MetersController {
      * @throws InvalidRequestException
      */
     #[PatchMapping("/:id")]
-    public function updateMeterById(HttpRequest $request, #[RequestBody] NewMeterDto $newMeterDto): array {
-        MetersRequestValidators::validateUpdateMeterRequest($request);
-
+    public function updateMeterById(#[RequestBody] NewMeterDto $newMeterDto, #[RequestParam(name: 'id', required: true)] string $id): array {
         $meter = Meter::from($newMeterDto);
 
-        $this->metersRepository->updateById(["max_speed" => $meter->getMaxSpeed(), "meter_start_state" => $meter->getStartState(), "meter_end_state" => $meter->getEndState(), "trip_length" => $meter->getTripLength(), "time" => $meter->getTime(), "isToShow" => $meter->isToShow(), "newsId" => $meter->getNewsId(),],
-            $meter->getId());
+        $this->metersRepository->updateById(["max_speed" => $meter->getMaxSpeed(), "meter_start_state" => $meter->getStartState(), "meter_end_state" => $meter->getEndState(), "trip_length" => $meter->getTripLength(), "time" => $meter->getTime(), "to_show" => $meter->isToShow()],
+            $id);
 
         return ["message" => "updated"];
     }

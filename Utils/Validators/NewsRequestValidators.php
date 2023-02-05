@@ -12,10 +12,10 @@ class NewsRequestValidators {
      */
     public static function validateNewNewsRequest(HttpRequest $request): void {
         $title = $request->body['title'] ?? null;
-        $description = $request->body['endState'] ?? null;
+        $description = $request->body['description'] ?? null;
         $date = $request->body['date'] ?? null;
 
-        if ($title && $description && $date && is_string($date)) return;
+        if ($title && $description && $date) return;
 
         throw new InvalidRequestException("Invalid request");
     }

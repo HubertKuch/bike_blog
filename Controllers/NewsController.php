@@ -147,12 +147,11 @@ class NewsController {
      */
     #[PatchMapping("/v1/news/:id")]
     public function updateNewsById(HttpRequest $request): NewsDTO {
-        NewsRequestValidators::validateFindByTagRequest($request);
+        NewsRequestValidators::validateFindByIdRequest($request);
         NewsRequestValidators::validateNewNewsRequest($request);
 
         $id = $request->params['id'];
-        $this->newsRepository->updateById(["title" => $request->params['title'], "description" => $request->params['description'], "tags" => implode(';',
-            $request->params['tags']), "date" => $request->params['date'],], $id);
+        $this->newsRepository->updateById(["title" => $request->body['title']], $id);
 
         return NewsDTO::from($this->newsRepository->findById($id));
     }

@@ -74,14 +74,14 @@
      * @param {News} news
      * @param {Meter[]} meters
      * */
-    function showActualData({title, description, date, tags}, meters) {
+    function showActualData({title, description, date}, meters, tags) {
         titleElement.value = title;
         descriptionElement.textContent = description;
         dateElement.value = date;
         submitButton.textContent = "ZAPISZ";
 
         meters.forEach(meter => new MeterElement(meter).render(metersContainer))
-        tags.forEach(tag => new TagInnerFormElement().render(tagsContainer, tag))
+        tags.forEach(tag => new TagInnerFormElement().render(tagsContainer, tag.tag))
     }
 
     function addMeterHandler() {
@@ -104,27 +104,39 @@
         const meters = document.querySelectorAll(".meter");
 
         return [...meters].map(meter => {
-            return MetersSerializer.serialize({
-                maxSpeed: parseFloat(meter.querySelector("[name='max-speed']").value),
-                meterStartState: parseFloat(meter.querySelector("[name='meter-start-state']").value),
-                tripLength: parseFloat(meter.querySelector("[name='trip-length']").value),
-                meterEndState: parseFloat(meter.querySelector("[name='meter-end-state']").value),
-                time: parseFloat(meter.querySelector("[name='time']").value),
+            return {
+                id: meter.querySelector("div").getAttribute("data-id"),
+                maxSpeed: parseFloat(meter.querySelector("[name='max-speed']").value) ?? 0,
+                startState: parseFloat(meter.querySelector("[name='meter-start-state']").value) ?? 0,
+                tripLength: parseFloat(meter.querySelector("[name='trip-length']").value) ?? 0,
+                endState: parseFloat(meter.querySelector("[name='meter-end-state']").value) ?? 0,
+                time: parseFloat(meter.querySelector("[name='time']").value) ?? 0,
                 newsId: newsId,
-           })
+                description: '',
+                toShow: true,
+            }
         });
+    }
 
+    function buildTagsRequest() {
+        return {"tags": [...document.querySelectorAll("input[name=tag-name]")].map(tag => tag.value)};
     }
 
     function saveData(newsId) {
         const newsRequestBody = buildNewsRequest();
         const metersRequestBody = buildMetersRequest(newsId);
+        const tagsRequestBody = buildTagsRequest(newsId);
+
+        NewsController.update(newsId, newsRequestBody);
+        NewsController.putTags(newsId, tagsRequestBody);
+        metersRequestBody.forEach(meter => MetersController.updateMeter(meter));
     }
 
     async function main() {
         const newsData = {{{news}}};
         const news = NewsSerializer.serializeSingleNews(newsData);
         const meters = await MetersController.getMetersForNews(news.id);
+        const tags = await NewsController.getNewsTags(news.id);
 
         buttonAddMeter.addEventListener("click", addMeterHandler);
         buttonAddTag.addEventListener("click", addTagHandler);
@@ -134,7 +146,7 @@
             saveData(newsData.id);
         });
 
-        showActualData(news, meters);
+        showActualData(news, meters, tags);
     }
 
     main()
